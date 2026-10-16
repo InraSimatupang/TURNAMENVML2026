@@ -5095,6 +5095,462 @@
       background: var(--cyber-darker);
       outline: none;
     }
+  
+    /* =========================================================
+       HERO POOL & DRAFTPICK STYLES
+    ========================================================= */
+    .hero-pool-header {
+      background: linear-gradient(135deg, rgba(6, 24, 54, 0.95) 0%, rgba(2, 45, 97, 0.85) 50%, rgba(6, 24, 54, 0.95) 100%);
+      border: 1px solid var(--line-glow);
+      border-radius: 12px;
+      padding: 24px;
+      margin-bottom: 24px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.4);
+    }
+    .hero-pool-header::before {
+      content: "";
+      position: absolute;
+      top: -50px;
+      right: -50px;
+      width: 200px;
+      height: 200px;
+      background: radial-gradient(circle, rgba(41, 178, 225, 0.25) 0%, transparent 70%);
+      border-radius: 50%;
+      pointer-events: none;
+    }
+    .hero-pool-title-row {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin-bottom: 16px;
+    }
+    .hero-pool-title {
+      font-family: var(--font-display);
+      font-size: 26px;
+      font-weight: 800;
+      color: #fff;
+      letter-spacing: 1px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-pool-title .accent {
+      color: var(--neon-cyan);
+      text-shadow: 0 0 12px rgba(41, 178, 225, 0.6);
+    }
+    .hero-pool-sub {
+      color: var(--text-dim);
+      font-size: 13px;
+      margin-top: 4px;
+    }
+    .hero-meta-stats-row {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+      gap: 12px;
+    }
+    .hero-meta-stat-card {
+      background: rgba(4, 15, 34, 0.7);
+      border: 1px solid var(--line-soft);
+      border-radius: 8px;
+      padding: 12px 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .hero-meta-stat-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .hero-meta-stat-val {
+      font-family: var(--font-display);
+      font-size: 20px;
+      font-weight: 800;
+      color: var(--neon-cyan);
+    }
+
+    /* Subtabs for Hero Page */
+    .hero-subtabs-bar {
+      display: flex;
+      gap: 8px;
+      margin-bottom: 20px;
+      border-bottom: 1px solid var(--line-soft);
+      padding-bottom: 12px;
+      flex-wrap: wrap;
+    }
+    .hero-subtab-btn {
+      background: var(--navy-900);
+      border: 1px solid var(--line-soft);
+      color: var(--text-dim);
+      padding: 8px 18px;
+      border-radius: 6px;
+      font-family: var(--font-display);
+      font-size: 13px;
+      font-weight: 700;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .hero-subtab-btn:hover {
+      background: var(--navy-800);
+      color: #fff;
+      border-color: var(--neon-cyan);
+    }
+    .hero-subtab-btn.active {
+      background: linear-gradient(135deg, var(--color-blue-dark), var(--color-blue));
+      color: #fff;
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 12px rgba(41, 178, 225, 0.4);
+    }
+
+    /* Controls & Filters Bar */
+    .hero-filters-bar {
+      background: rgba(6, 24, 54, 0.85);
+      border: 1px solid var(--line-soft);
+      border-radius: 10px;
+      padding: 16px;
+      margin-bottom: 24px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+    }
+    .hero-filter-group {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      flex-wrap: wrap;
+    }
+    .hero-filter-label {
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--text-dim);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      min-width: 65px;
+    }
+    .hero-pill-btn {
+      background: var(--navy-900);
+      border: 1px solid var(--line-soft);
+      color: var(--text-dim);
+      padding: 6px 14px;
+      border-radius: 20px;
+      font-size: 12px;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.15s ease;
+      white-space: nowrap;
+    }
+    .hero-pill-btn:hover {
+      background: var(--navy-800);
+      color: #fff;
+      border-color: var(--neon-cyan);
+    }
+    .hero-pill-btn.active {
+      background: var(--color-blue);
+      color: #fff;
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 8px rgba(41, 178, 225, 0.4);
+    }
+
+    .hero-search-input {
+      background: var(--navy-950);
+      border: 1px solid var(--line);
+      color: #fff;
+      padding: 8px 14px;
+      border-radius: 6px;
+      font-size: 13px;
+      width: 100%;
+      max-width: 350px;
+      transition: border-color 0.2s ease;
+    }
+    .hero-search-input:focus {
+      outline: none;
+      border-color: var(--neon-cyan);
+      box-shadow: 0 0 10px rgba(41, 178, 225, 0.3);
+    }
+
+    /* Player Hero Cards Grid */
+    .hero-players-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+      gap: 16px;
+    }
+    .hero-player-card {
+      background: var(--panel-card);
+      border: 1px solid var(--line-soft);
+      border-radius: 10px;
+      padding: 16px;
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero-player-card:hover {
+      transform: translateY(-2px);
+      border-color: var(--neon-cyan);
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.4), 0 0 12px rgba(41, 178, 225, 0.2);
+    }
+    .hero-player-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+    .hero-player-team-logo {
+      width: 44px;
+      height: 44px;
+      object-fit: contain;
+      border-radius: 8px;
+      background: rgba(2, 11, 24, 0.8);
+      padding: 4px;
+      border: 1px solid var(--line-soft);
+      flex-shrink: 0;
+    }
+    .hero-player-title-box {
+      flex-grow: 1;
+      min-width: 0;
+    }
+    .hero-player-name-row {
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      flex-wrap: wrap;
+    }
+    .hero-player-ign {
+      font-family: var(--font-display);
+      font-size: 15px;
+      font-weight: 800;
+      color: #fff;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      white-space: nowrap;
+    }
+    .hero-player-realname {
+      font-size: 12px;
+      color: var(--text-dim);
+      margin-top: 2px;
+    }
+    .hero-role-pill {
+      font-size: 10px;
+      font-weight: 700;
+      padding: 2px 8px;
+      border-radius: 4px;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+    }
+    .role-jungler { background: rgba(239, 68, 68, 0.2); color: #f87171; border: 1px solid rgba(239, 68, 68, 0.4); }
+    .role-exp { background: rgba(245, 158, 11, 0.2); color: #fbbf24; border: 1px solid rgba(245, 158, 11, 0.4); }
+    .role-mid { background: rgba(59, 130, 246, 0.2); color: #60a5fa; border: 1px solid rgba(59, 130, 246, 0.4); }
+    .role-gold { background: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid rgba(168, 85, 247, 0.4); }
+    .role-roamer { background: rgba(16, 185, 129, 0.2); color: #34d399; border: 1px solid rgba(16, 185, 129, 0.4); }
+
+    /* Heroes Used Face List */
+    .hero-chips-container {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .hero-chips-label {
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--text-faint);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding-bottom: 4px;
+      border-bottom: 1px dashed rgba(255, 255, 255, 0.08);
+    }
+    .hero-chips-list {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      align-items: center;
+    }
+    .hero-face-chip {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 6px;
+      background: rgba(15, 23, 42, 0.65);
+      border: 1px solid rgba(41, 178, 225, 0.28);
+      border-radius: 12px;
+      padding: 8px 12px 6px;
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+    .hero-face-chip:hover {
+      border-color: var(--neon-cyan);
+      background: rgba(41, 178, 225, 0.15);
+      transform: translateY(-2px);
+      box-shadow: 0 4px 14px rgba(41, 178, 225, 0.35);
+    }
+    .hero-avatar-ring {
+      position: relative;
+      display: inline-block;
+    }
+    .hero-face-avatar {
+      width: 52px;
+      height: 52px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 2px solid #29B2E1;
+      box-shadow: 0 0 10px rgba(41, 178, 225, 0.35);
+      background: #020617;
+      display: block;
+      transition: transform 0.2s ease;
+    }
+    .hero-face-chip:hover .hero-face-avatar {
+      transform: scale(1.08);
+      border-color: #2BC3B3;
+    }
+    .hero-game-tag {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: #fef08a;
+      background: rgba(245, 158, 11, 0.2);
+      padding: 2px 7px;
+      border-radius: 6px;
+      border: 1px solid rgba(245, 158, 11, 0.35);
+      letter-spacing: 0.3px;
+    }
+
+    /* All Weeks Breakdown inside Player Card */
+    .hero-all-weeks-grid {
+      display: flex;
+      flex-direction: column;
+      gap: 8px;
+      width: 100%;
+    }
+    .hero-week-row {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      background: rgba(4, 15, 34, 0.45);
+      padding: 6px 10px;
+      border-radius: 8px;
+      border: 1px solid rgba(255, 255, 255, 0.05);
+    }
+    .hero-week-badge-title {
+      font-size: 11px;
+      font-weight: 800;
+      color: var(--neon-cyan);
+      min-width: 54px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+    .hero-week-faces-row {
+      display: flex;
+      gap: 8px;
+      flex-wrap: wrap;
+      align-items: center;
+    }
+    .hero-face-mini-chip {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(15, 23, 42, 0.85);
+      border: 1px solid rgba(41, 178, 225, 0.3);
+      padding: 3px 8px 3px 4px;
+      border-radius: 20px;
+      transition: all 0.15s ease;
+      cursor: pointer;
+    }
+    .hero-face-mini-chip:hover {
+      border-color: var(--neon-cyan);
+      background: rgba(41, 178, 225, 0.25);
+      transform: translateY(-1px);
+    }
+    .hero-face-mini-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1.5px solid #29B2E1;
+      background: #020617;
+      display: block;
+    }
+    .hero-face-mini-tag {
+      font-size: 10.5px;
+      font-weight: 800;
+      color: #fef08a;
+    }
+    .hero-wo-tag {
+      font-size: 11px;
+      font-style: italic;
+      color: var(--text-faint);
+    }
+    .hero-no-match {
+      font-size: 12px;
+      font-style: italic;
+      color: var(--text-faint);
+      padding: 8px 0;
+    }
+
+    .hero-empty-state {
+      padding: 30px;
+      text-align: center;
+      color: var(--text-faint);
+      font-size: 13px;
+      background: rgba(4, 15, 34, 0.5);
+      border-radius: 8px;
+      grid-column: 1 / -1;
+    }
+
+    /* Meta Table Styles */
+    .hero-meta-table-wrap {
+      background: var(--panel-card);
+      border: 1px solid var(--line-soft);
+      border-radius: 10px;
+      overflow-x: auto;
+    }
+    .hero-meta-table {
+      width: 100%;
+      border-collapse: collapse;
+      text-align: left;
+    }
+    .hero-meta-table th {
+      background: var(--navy-950);
+      color: var(--text-dim);
+      font-size: 11px;
+      font-weight: 700;
+      text-transform: uppercase;
+      padding: 12px 14px;
+      border-bottom: 2px solid var(--line);
+    }
+    .hero-meta-table td {
+      padding: 12px 14px;
+      border-bottom: 1px solid var(--line-soft);
+      font-size: 13px;
+      color: #fff;
+    }
+    .hero-meta-table tr:hover td {
+      background: rgba(41, 178, 225, 0.05);
+    }
+    .hero-meta-cell {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hero-meta-avatar {
+      width: 32px;
+      height: 32px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 1px solid var(--color-blue);
+      background: #000;
+    }
+
   </style>
 </head>
 
@@ -5123,6 +5579,7 @@
         <button class="mpl-nav-link" data-page="schedule">JADWAL</button>
         <button class="mpl-nav-link" data-page="dashboard">DASHBOARD</button>
         <button class="mpl-nav-link" data-page="kills">STATISTIK</button>
+          <button class="mpl-nav-link" data-page="heroes">HERO</button>
         <button class="mpl-nav-link" data-page="results"><span>INPUT SKOR</span> <span class="mpl-nav-lock"
             id="lockTagResults">🔒</span></button>
         <button class="mpl-nav-link" data-page="history"><span>RIWAYAT</span> <span class="mpl-nav-lock"
@@ -5348,6 +5805,93 @@
           </div>
         </div>
       </section>
+
+      
+      <!-- =========================================================
+           HERO POOL & DRAFTPICK PEMAIN (WEEK 1 - 5)
+      ========================================================= -->
+            <!-- =========================================================
+           WAJAH HERO PEMAIN (WEEK 1 - 5)
+      ========================================================= -->
+      <section class="page" id="page-heroes">
+        <div class="hero-pool-header">
+          <div class="hero-pool-title-row">
+            <div>
+              <div class="hero-pool-title">
+                <span>🦸 WAJAH HERO PEMAIN <span class="accent">(WEEK 1 - 5)</span></span>
+              </div>
+              <p class="hero-pool-sub">Wajah hero yang digunakan oleh setiap pemain VML 2026, diambil langsung dari screenshot bukti pertandingan Pekan 1 hingga 5.</p>
+            </div>
+            <div style="display: flex; gap: 8px;">
+              <a href="Daftar Hero Mobile Legends dan Iconnya.pdf" target="_blank" class="btn btn-ghost btn-sm" style="color:var(--neon-cyan); border-color:var(--line-glow);">
+                📥 Unduh PDF Katalog Hero
+              </a>
+            </div>
+          </div>
+
+          <div class="hero-meta-stats-row">
+            <div class="hero-meta-stat-card">
+              <span class="hero-meta-stat-label">Total Pemain</span>
+              <span class="hero-meta-stat-val" id="hStatTotalPlayers">50</span>
+            </div>
+            <div class="hero-meta-stat-card">
+              <span class="hero-meta-stat-label">Total Pertandingan</span>
+              <span class="hero-meta-stat-val">52 Game</span>
+            </div>
+            <div class="hero-meta-stat-card">
+              <span class="hero-meta-stat-label">Total Wajah Hero</span>
+              <span class="hero-meta-stat-val" id="hStatTotalPicks">520</span>
+            </div>
+            <div class="hero-meta-stat-card">
+              <span class="hero-meta-stat-label">Filter Pekan</span>
+              <span class="hero-meta-stat-val" id="hStatTopHero" style="font-size:15px; color:var(--neon-cyan);">Semua Pekan (W1-5)</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Filter & Toolbar -->
+        <div class="hero-filters-bar">
+          <!-- Week Filter -->
+          <div class="hero-filter-group">
+            <span class="hero-filter-label">Pekan:</span>
+            <button type="button" class="hero-pill-btn active" data-week-filter="all">Semua Pekan (Week 1-5)</button>
+            <button type="button" class="hero-pill-btn" data-week-filter="1">Week 1</button>
+            <button type="button" class="hero-pill-btn" data-week-filter="2">Week 2</button>
+            <button type="button" class="hero-pill-btn" data-week-filter="3">Week 3</button>
+            <button type="button" class="hero-pill-btn" data-week-filter="4">Week 4</button>
+            <button type="button" class="hero-pill-btn" data-week-filter="5">Week 5</button>
+          </div>
+
+          <!-- Team Filter -->
+          <div class="hero-filter-group">
+            <span class="hero-filter-label">Tim:</span>
+            <button type="button" class="hero-pill-btn active" data-team-filter="all">Semua Tim</button>
+            <button type="button" class="hero-pill-btn" data-team-filter="Forge Wolf">Forge Wolf</button>
+            <button type="button" class="hero-pill-btn" data-team-filter="Black Owl">Black Owl</button>
+            <button type="button" class="hero-pill-btn" data-team-filter="Bahaya & Jahil ( BAHLIL )">Bahlil</button>
+            <button type="button" class="hero-pill-btn" data-team-filter="Kaum Begadang">Kaum Begadang</button>
+            <button type="button" class="hero-pill-btn" data-team-filter="Vortex">Vortex</button>
+            <button type="button" class="hero-pill-btn" data-team-filter="Manis Manja">Manis Manja</button>
+            <button type="button" class="hero-pill-btn" data-team-filter="Pantang Mundur">Pantang Mundur</button>
+            <button type="button" class="hero-pill-btn" data-team-filter="Leviathan">Leviathan</button>
+            <button type="button" class="hero-pill-btn" data-team-filter="Nightfall Syndicate">Nightfall</button>
+            <button type="button" class="hero-pill-btn" data-team-filter="Ulat Nangka">Ulat Nangka</button>
+          </div>
+
+          <!-- Search Filter -->
+          <div class="hero-filter-group" style="justify-content: flex-end;">
+            <div style="width: 100%; max-width: 400px;">
+              <input type="text" id="heroSearchInput" class="hero-search-input" placeholder="🔍 Cari nama pemain, IGN, atau tim..." style="width: 100%;" />
+            </div>
+          </div>
+        </div>
+
+        <!-- Container: Cards View -->
+        <div id="heroViewCards" class="hero-players-grid">
+          <!-- Populated dynamically -->
+        </div>
+      </section>
+
 
       <!-- STANDINGS -->
       <section class="page active" id="page-standings">
@@ -6012,7 +6556,7 @@
 
         // 9. Nightfall Syndicate
         { id: "ns_1", name: "Sahabat", ign: "{*._Sahabat_Tal_.*}", team: "Nightfall Syndicate", role: "Jungler", kills: 38, assists: 86, deaths: 66, weekKills: { 1: 8, 2: 13, 3: 6, 4: 5, 5: 6, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "ns_2", name: "Tio Simatupang", ign: "Words", team: "Nightfall Syndicate", role: "EXP Lane", kills: 79, assists: 69, deaths: 57, weekKills: { 1: 6, 2: 21, 3: 26, 4: 20, 5: 6, 6: 0, 7: 0, 8: 0, 9: 0 } },
+        { id: "ns_2", name: "Tio Simatupang", ign: "Swords", team: "Nightfall Syndicate", role: "EXP Lane", kills: 0, assists: 0, deaths: 0, weekKills: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0 } },
         { id: "ns_3", name: "Adrian Dwi", ign: "nafas kambing", team: "Nightfall Syndicate", role: "Mid Lane", kills: 45, assists: 104, deaths: 37, weekKills: { 1: 6, 2: 13, 3: 6, 4: 16, 5: 4, 6: 0, 7: 0, 8: 0, 9: 0 } },
         { id: "ns_4", name: "Putri Nur Isha", ign: "E¢sσтιc", team: "Nightfall Syndicate", role: "Roamer", kills: 12, assists: 151, deaths: 50, weekKills: { 1: 1, 2: 3, 3: 4, 4: 2, 5: 2, 6: 0, 7: 0, 8: 0, 9: 0 } },
         { id: "ns_5", name: "Fiqri", ign: "Dnanz", team: "Nightfall Syndicate", role: "Gold Lane", kills: 59, assists: 77, deaths: 52, weekKills: { 1: 4, 2: 23, 3: 18, 4: 12, 5: 2, 6: 0, 7: 0, 8: 0, 9: 0 } },
@@ -6310,6 +6854,7 @@
         }
         return "Logo Per Team VML/" + teamName + ".jpeg";
       }
+      const getTeamLogo = getTeamLogoUrl;
 
       /* =========================================================
          FIREBASE REALTIME DATABASE & CLOUD SYNC
@@ -6380,7 +6925,7 @@
           const localP = localStorage.getItem(PLAYERS_STORAGE_KEY);
           if (localP) {
             const parsed = JSON.parse(localP);
-            if (Array.isArray(parsed) && (parsed.some(p => p.name === "NNAEL" || p.name === "Veri Sirait" || p.ign === "Zyye BCN" || p.ign === "NED nonok tegap" || p.assists === undefined || ((p.team === "Vortex" || p.team === "Pantang Mundur") && p.weekKills && p.weekKills[2] === 0)) || parsed.reduce((s, p) => s + (Number(p.kills) || 0), 0) < 2195)) {
+            if (Array.isArray(parsed) && (parsed.some(p => p.name === "NNAEL" || p.name === "Veri Sirait" || p.ign === "Zyye BCN" || p.ign === "Words" || p.ign === "NED nonok tegap" || p.assists === undefined || ((p.team === "Vortex" || p.team === "Pantang Mundur") && p.weekKills && p.weekKills[2] === 0)) || parsed.reduce((s, p) => s + (Number(p.kills) || 0), 0) < 2116)) {
               players = getDefaultPlayers();
               try { localStorage.setItem(PLAYERS_STORAGE_KEY, JSON.stringify(players)); } catch (e) { }
             } else {
@@ -6423,7 +6968,8 @@
 
               if (data.players && Array.isArray(data.players) && data.players.length > 0) {
                 const cloudKills = data.players.reduce((s, p) => s + (Number(p.kills) || 0), 0);
-                if (cloudKills >= 2195) {
+                const hasOutdated = data.players.some(p => p.ign === "Words" || p.name === "Veri Sirait" || p.name === "NNAEL" || p.ign === "Zyye BCN");
+                if (cloudKills >= 2116 && !hasOutdated) {
                   players = data.players;
                   try { localStorage.setItem(PLAYERS_STORAGE_KEY, JSON.stringify(players)); } catch (e) { }
                   syncTeamKillsFromPlayers();
@@ -6773,6 +7319,10 @@
         if (target) target.classList.add("active");
         document.querySelectorAll('.mpl-nav-link[data-page="' + pageId + '"], .mpl-mobile-link[data-page="' + pageId + '"]').forEach(n => n.classList.add("active"));
         closeMobileNav();
+        if (pageId === "heroes") {
+          renderHeroesPage();
+        }
+        try { history.replaceState(null, "", "#" + pageId); } catch(e) {}
         window.scrollTo(0, 0);
       }
 
@@ -8978,6 +9528,7 @@
       function renderKillsPage() {
         populatePlayerTeamSelects();
         setupStatistikSubnav();
+        setupHeroesPage();
 
         const completedMatches = matches.filter(m => m.status === "COMPLETED");
         const currentWeek = completedMatches.length > 0 ? Math.max(5, ...completedMatches.map(m => m.week || 1)) : 5;
@@ -9382,20 +9933,227 @@
         renderResultsPage();
         renderKillsInput();
         if (currentTeamDetail) renderTeamDetail();
+        renderHeroesPage();
       }
 
       /* =========================================================
          INIT
       ========================================================= */
-      async function init() {
+      
+            /* =========================================================
+         OFFICIAL HERO CROPS DATABASE (WEEK 1 - 5)
+      ========================================================= */
+      const PLAYER_HERO_CROPS = {"fw_1":{"1":["hero_crops/w1_fw_1_g1.png","hero_crops/w1_fw_1_g2.png"],"2":["hero_crops/w2_fw_1_g1.png","hero_crops/w2_fw_1_g2.png","hero_crops/w2_fw_1_g3.png"],"3":[],"4":["hero_crops/w4_fw_1_g1.png","hero_crops/w4_fw_1_g2.png"],"5":["hero_crops/w5_fw_1_g1.png","hero_crops/w5_fw_1_g2.png"]},"fw_2":{"1":["hero_crops/w1_fw_2_g1.png","hero_crops/w1_fw_2_g2.png"],"2":["hero_crops/w2_fw_2_g1.png","hero_crops/w2_fw_2_g2.png","hero_crops/w2_fw_2_g3.png"],"3":[],"4":["hero_crops/w4_fw_2_g1.png","hero_crops/w4_fw_2_g2.png"],"5":["hero_crops/w5_fw_2_g1.png","hero_crops/w5_fw_2_g2.png"]},"fw_3":{"1":["hero_crops/w1_fw_3_g1.png","hero_crops/w1_fw_3_g2.png"],"2":["hero_crops/w2_fw_3_g1.png","hero_crops/w2_fw_3_g2.png","hero_crops/w2_fw_3_g3.png"],"3":[],"4":["hero_crops/w4_fw_3_g1.png","hero_crops/w4_fw_3_g2.png"],"5":["hero_crops/w5_fw_3_g1.png","hero_crops/w5_fw_3_g2.png"]},"fw_4":{"1":["hero_crops/w1_fw_4_g1.png","hero_crops/w1_fw_4_g2.png"],"2":["hero_crops/w2_fw_4_g1.png","hero_crops/w2_fw_4_g2.png","hero_crops/w2_fw_4_g3.png"],"3":[],"4":["hero_crops/w4_fw_4_g1.png","hero_crops/w4_fw_4_g2.png"],"5":["hero_crops/w5_fw_4_g1.png","hero_crops/w5_fw_4_g2.png"]},"fw_5":{"1":["hero_crops/w1_fw_5_g1.png","hero_crops/w1_fw_5_g2.png"],"2":["hero_crops/w2_fw_5_g1.png","hero_crops/w2_fw_5_g2.png","hero_crops/w2_fw_5_g3.png"],"3":[],"4":["hero_crops/w4_fw_5_g1.png","hero_crops/w4_fw_5_g2.png"],"5":["hero_crops/w5_fw_5_g1.png","hero_crops/w5_fw_5_g2.png"]},"bo_1":{"1":["hero_crops/w1_bo_1_g1.png","hero_crops/w1_bo_1_g2.png"],"2":["hero_crops/w2_bo_1_g1.png","hero_crops/w2_bo_1_g2.png"],"3":[],"4":["hero_crops/w4_bo_1_g1.png","hero_crops/w4_bo_1_g2.png"],"5":["hero_crops/w5_bo_1_g1.png","hero_crops/w5_bo_1_g2.png"]},"bo_2":{"1":["hero_crops/w1_bo_2_g1.png","hero_crops/w1_bo_2_g2.png"],"2":["hero_crops/w2_bo_2_g1.png","hero_crops/w2_bo_2_g2.png"],"3":[],"4":["hero_crops/w4_bo_2_g1.png","hero_crops/w4_bo_2_g2.png"],"5":["hero_crops/w5_bo_2_g1.png","hero_crops/w5_bo_2_g2.png"]},"bo_3":{"1":["hero_crops/w1_bo_3_g1.png","hero_crops/w1_bo_3_g2.png"],"2":["hero_crops/w2_bo_3_g1.png","hero_crops/w2_bo_3_g2.png"],"3":[],"4":["hero_crops/w4_bo_3_g1.png","hero_crops/w4_bo_3_g2.png"],"5":["hero_crops/w5_bo_3_g1.png","hero_crops/w5_bo_3_g2.png"]},"bo_4":{"1":["hero_crops/w1_bo_4_g1.png","hero_crops/w1_bo_4_g2.png"],"2":["hero_crops/w2_bo_4_g1.png","hero_crops/w2_bo_4_g2.png"],"3":[],"4":["hero_crops/w4_bo_4_g1.png","hero_crops/w4_bo_4_g2.png"],"5":["hero_crops/w5_bo_4_g1.png","hero_crops/w5_bo_4_g2.png"]},"bo_5":{"1":["hero_crops/w1_bo_5_g1.png","hero_crops/w1_bo_5_g2.png"],"2":["hero_crops/w2_bo_5_g1.png","hero_crops/w2_bo_5_g2.png"],"3":[],"4":["hero_crops/w4_bo_5_g1.png","hero_crops/w4_bo_5_g2.png"],"5":["hero_crops/w5_bo_5_g1.png","hero_crops/w5_bo_5_g2.png"]},"bj_1":{"1":["hero_crops/w1_bj_1_g1.png","hero_crops/w1_bj_1_g2.png","hero_crops/w1_bj_1_g3.png"],"2":["hero_crops/w2_bj_1_g1.png","hero_crops/w2_bj_1_g2.png","hero_crops/w2_bj_1_g3.png"],"3":["hero_crops/w3_bj_1_g1.png","hero_crops/w3_bj_1_g2.png"],"4":[],"5":["hero_crops/w5_bj_1_g1.png","hero_crops/w5_bj_1_g2.png"]},"bj_2":{"1":["hero_crops/w1_bj_2_g1.png","hero_crops/w1_bj_2_g2.png","hero_crops/w1_bj_2_g3.png"],"2":["hero_crops/w2_bj_2_g1.png","hero_crops/w2_bj_2_g2.png","hero_crops/w2_bj_2_g3.png"],"3":["hero_crops/w3_bj_2_g1.png","hero_crops/w3_bj_2_g2.png"],"4":[],"5":["hero_crops/w5_bj_2_g1.png","hero_crops/w5_bj_2_g2.png"]},"bj_3":{"1":["hero_crops/w1_bj_3_g1.png","hero_crops/w1_bj_3_g2.png","hero_crops/w1_bj_3_g3.png"],"2":["hero_crops/w2_bj_3_g1.png","hero_crops/w2_bj_3_g2.png","hero_crops/w2_bj_3_g3.png"],"3":["hero_crops/w3_bj_3_g1.png","hero_crops/w3_bj_3_g2.png"],"4":[],"5":["hero_crops/w5_bj_3_g1.png","hero_crops/w5_bj_3_g2.png"]},"bj_4":{"1":["hero_crops/w1_bj_4_g1.png","hero_crops/w1_bj_4_g2.png","hero_crops/w1_bj_4_g3.png"],"2":["hero_crops/w2_bj_4_g1.png","hero_crops/w2_bj_4_g2.png","hero_crops/w2_bj_4_g3.png"],"3":["hero_crops/w3_bj_4_g1.png","hero_crops/w3_bj_4_g2.png"],"4":[],"5":["hero_crops/w5_bj_4_g1.png","hero_crops/w5_bj_4_g2.png"]},"bj_5":{"1":["hero_crops/w1_bj_5_g1.png","hero_crops/w1_bj_5_g2.png","hero_crops/w1_bj_5_g3.png"],"2":["hero_crops/w2_bj_5_g1.png","hero_crops/w2_bj_5_g2.png","hero_crops/w2_bj_5_g3.png"],"3":["hero_crops/w3_bj_5_g1.png","hero_crops/w3_bj_5_g2.png"],"4":[],"5":["hero_crops/w5_bj_5_g1.png","hero_crops/w5_bj_5_g2.png"]},"kb_1":{"1":[],"2":[],"3":[],"4":["hero_crops/w4_kb_1_g1.png","hero_crops/w4_kb_1_g2.png"],"5":["hero_crops/w5_kb_1_g1.png","hero_crops/w5_kb_1_g2.png","hero_crops/w5_kb_1_g3.png"]},"kb_2":{"1":["hero_crops/w1_kb_2_g1.png","hero_crops/w1_kb_2_g2.png"],"2":["hero_crops/w2_kb_2_g1.png","hero_crops/w2_kb_2_g2.png"],"3":[],"4":["hero_crops/w4_kb_2_g1.png","hero_crops/w4_kb_2_g2.png"],"5":["hero_crops/w5_kb_2_g1.png","hero_crops/w5_kb_2_g2.png","hero_crops/w5_kb_2_g3.png"]},"kb_3":{"1":["hero_crops/w1_kb_3_g1.png","hero_crops/w1_kb_3_g2.png"],"2":["hero_crops/w2_kb_3_g1.png","hero_crops/w2_kb_3_g2.png"],"3":[],"4":["hero_crops/w4_kb_3_g1.png","hero_crops/w4_kb_3_g2.png"],"5":["hero_crops/w5_kb_3_g1.png","hero_crops/w5_kb_3_g2.png","hero_crops/w5_kb_3_g3.png"]},"kb_4":{"1":["hero_crops/w1_kb_4_g1.png","hero_crops/w1_kb_4_g2.png"],"2":["hero_crops/w2_kb_4_g1.png","hero_crops/w2_kb_4_g2.png"],"3":[],"4":["hero_crops/w4_kb_4_g1.png","hero_crops/w4_kb_4_g2.png"],"5":["hero_crops/w5_kb_4_g1.png","hero_crops/w5_kb_4_g2.png","hero_crops/w5_kb_4_g3.png"]},"kb_5":{"1":["hero_crops/w1_kb_5_g1.png","hero_crops/w1_kb_5_g2.png"],"2":["hero_crops/w2_kb_5_g1.png","hero_crops/w2_kb_5_g2.png"],"3":[],"4":["hero_crops/w4_kb_5_g1.png","hero_crops/w4_kb_5_g2.png"],"5":["hero_crops/w5_kb_5_g1.png","hero_crops/w5_kb_5_g2.png","hero_crops/w5_kb_5_g3.png"]},"vx_1":{"1":["hero_crops/w1_vx_1_g1.png","hero_crops/w1_vx_1_g2.png","hero_crops/w1_vx_1_g3.png"],"2":["hero_crops/w2_vx_1_g1.png","hero_crops/w2_vx_1_g2.png"],"3":["hero_crops/w3_vx_1_g1.png","hero_crops/w3_vx_1_g2.png"],"4":["hero_crops/w4_vx_1_g1.png","hero_crops/w4_vx_1_g2.png","hero_crops/w4_vx_1_g3.png"],"5":["hero_crops/w5_vx_1_g1.png","hero_crops/w5_vx_1_g2.png"]},"vx_2":{"1":["hero_crops/w1_vx_2_g1.png","hero_crops/w1_vx_2_g2.png","hero_crops/w1_vx_2_g3.png"],"2":["hero_crops/w2_vx_2_g1.png","hero_crops/w2_vx_2_g2.png"],"3":["hero_crops/w3_vx_2_g1.png","hero_crops/w3_vx_2_g2.png"],"4":["hero_crops/w4_vx_2_g1.png","hero_crops/w4_vx_2_g2.png","hero_crops/w4_vx_2_g3.png"],"5":["hero_crops/w5_vx_2_g1.png","hero_crops/w5_vx_2_g2.png"]},"vx_3":{"1":["hero_crops/w1_vx_3_g1.png","hero_crops/w1_vx_3_g2.png","hero_crops/w1_vx_3_g3.png"],"2":["hero_crops/w2_vx_3_g1.png","hero_crops/w2_vx_3_g2.png"],"3":["hero_crops/w3_vx_3_g1.png","hero_crops/w3_vx_3_g2.png"],"4":["hero_crops/w4_vx_3_g1.png","hero_crops/w4_vx_3_g2.png","hero_crops/w4_vx_3_g3.png"],"5":["hero_crops/w5_vx_3_g1.png","hero_crops/w5_vx_3_g2.png"]},"vx_4":{"1":["hero_crops/w1_vx_4_g1.png","hero_crops/w1_vx_4_g2.png","hero_crops/w1_vx_4_g3.png"],"2":["hero_crops/w2_vx_4_g1.png","hero_crops/w2_vx_4_g2.png"],"3":["hero_crops/w3_vx_4_g1.png","hero_crops/w3_vx_4_g2.png"],"4":["hero_crops/w4_vx_4_g1.png","hero_crops/w4_vx_4_g2.png","hero_crops/w4_vx_4_g3.png"],"5":["hero_crops/w5_vx_4_g1.png","hero_crops/w5_vx_4_g2.png"]},"vx_5":{"1":["hero_crops/w1_vx_5_g1.png","hero_crops/w1_vx_5_g2.png","hero_crops/w1_vx_5_g3.png"],"2":["hero_crops/w2_vx_5_g1.png","hero_crops/w2_vx_5_g2.png"],"3":["hero_crops/w3_vx_5_g1.png","hero_crops/w3_vx_5_g2.png"],"4":["hero_crops/w4_vx_5_g1.png","hero_crops/w4_vx_5_g2.png","hero_crops/w4_vx_5_g3.png"],"5":["hero_crops/w5_vx_5_g1.png","hero_crops/w5_vx_5_g2.png"]},"mm_1":{"1":["hero_crops/w1_mm_1_g1.png","hero_crops/w1_mm_1_g2.png","hero_crops/w1_mm_1_g3.png"],"2":["hero_crops/w2_mm_1_g1.png","hero_crops/w2_mm_1_g2.png","hero_crops/w2_mm_1_g3.png"],"3":["hero_crops/w3_mm_1_g1.png","hero_crops/w3_mm_1_g2.png","hero_crops/w3_mm_1_g3.png"],"4":["hero_crops/w4_mm_1_g1.png","hero_crops/w4_mm_1_g2.png"],"5":["hero_crops/w5_mm_1_g1.png","hero_crops/w5_mm_1_g2.png"]},"mm_2":{"1":["hero_crops/w1_mm_2_g1.png","hero_crops/w1_mm_2_g2.png","hero_crops/w1_mm_2_g3.png"],"2":["hero_crops/w2_mm_2_g1.png","hero_crops/w2_mm_2_g2.png","hero_crops/w2_mm_2_g3.png"],"3":["hero_crops/w3_mm_2_g1.png","hero_crops/w3_mm_2_g2.png","hero_crops/w3_mm_2_g3.png"],"4":["hero_crops/w4_mm_2_g1.png","hero_crops/w4_mm_2_g2.png"],"5":["hero_crops/w5_mm_2_g1.png","hero_crops/w5_mm_2_g2.png"]},"mm_3":{"1":["hero_crops/w1_mm_3_g1.png","hero_crops/w1_mm_3_g2.png","hero_crops/w1_mm_3_g3.png"],"2":["hero_crops/w2_mm_3_g1.png","hero_crops/w2_mm_3_g2.png","hero_crops/w2_mm_3_g3.png"],"3":["hero_crops/w3_mm_3_g1.png","hero_crops/w3_mm_3_g2.png","hero_crops/w3_mm_3_g3.png"],"4":["hero_crops/w4_mm_3_g1.png","hero_crops/w4_mm_3_g2.png"],"5":["hero_crops/w5_mm_3_g1.png","hero_crops/w5_mm_3_g2.png"]},"mm_4":{"1":["hero_crops/w1_mm_4_g1.png","hero_crops/w1_mm_4_g2.png","hero_crops/w1_mm_4_g3.png"],"2":["hero_crops/w2_mm_4_g1.png","hero_crops/w2_mm_4_g2.png","hero_crops/w2_mm_4_g3.png"],"3":["hero_crops/w3_mm_4_g1.png","hero_crops/w3_mm_4_g2.png","hero_crops/w3_mm_4_g3.png"],"4":["hero_crops/w4_mm_4_g1.png","hero_crops/w4_mm_4_g2.png"],"5":["hero_crops/w5_mm_4_g1.png","hero_crops/w5_mm_4_g2.png"]},"mm_5":{"1":["hero_crops/w1_mm_5_g1.png","hero_crops/w1_mm_5_g2.png","hero_crops/w1_mm_5_g3.png"],"2":["hero_crops/w2_mm_5_g1.png","hero_crops/w2_mm_5_g2.png","hero_crops/w2_mm_5_g3.png"],"3":["hero_crops/w3_mm_5_g1.png","hero_crops/w3_mm_5_g2.png","hero_crops/w3_mm_5_g3.png"],"4":["hero_crops/w4_mm_5_g1.png","hero_crops/w4_mm_5_g2.png"],"5":["hero_crops/w5_mm_5_g1.png","hero_crops/w5_mm_5_g2.png"]},"pm_1":{"1":["hero_crops/w1_pm_1_g1.png","hero_crops/w1_pm_1_g2.png"],"2":["hero_crops/w2_pm_1_g1.png","hero_crops/w2_pm_1_g2.png"],"3":["hero_crops/w3_pm_1_g1.png","hero_crops/w3_pm_1_g2.png","hero_crops/w3_pm_1_g3.png"],"4":["hero_crops/w4_pm_1_g1.png","hero_crops/w4_pm_1_g2.png"],"5":["hero_crops/w5_pm_1_g1.png","hero_crops/w5_pm_1_g2.png","hero_crops/w5_pm_1_g3.png"]},"pm_2":{"1":["hero_crops/w1_pm_2_g1.png","hero_crops/w1_pm_2_g2.png"],"2":["hero_crops/w2_pm_2_g1.png","hero_crops/w2_pm_2_g2.png"],"3":["hero_crops/w3_pm_2_g1.png","hero_crops/w3_pm_2_g2.png","hero_crops/w3_pm_2_g3.png"],"4":["hero_crops/w4_pm_2_g1.png","hero_crops/w4_pm_2_g2.png"],"5":["hero_crops/w5_pm_2_g1.png","hero_crops/w5_pm_2_g2.png","hero_crops/w5_pm_2_g3.png"]},"pm_3":{"1":["hero_crops/w1_pm_3_g1.png","hero_crops/w1_pm_3_g2.png"],"2":["hero_crops/w2_pm_3_g1.png","hero_crops/w2_pm_3_g2.png"],"3":["hero_crops/w3_pm_3_g1.png","hero_crops/w3_pm_3_g2.png","hero_crops/w3_pm_3_g3.png"],"4":["hero_crops/w4_pm_3_g1.png","hero_crops/w4_pm_3_g2.png"],"5":["hero_crops/w5_pm_3_g1.png","hero_crops/w5_pm_3_g2.png","hero_crops/w5_pm_3_g3.png"]},"pm_4":{"1":["hero_crops/w1_pm_4_g1.png","hero_crops/w1_pm_4_g2.png"],"2":["hero_crops/w2_pm_4_g1.png","hero_crops/w2_pm_4_g2.png"],"3":["hero_crops/w3_pm_4_g1.png","hero_crops/w3_pm_4_g2.png","hero_crops/w3_pm_4_g3.png"],"4":["hero_crops/w4_pm_4_g1.png","hero_crops/w4_pm_4_g2.png"],"5":["hero_crops/w5_pm_4_g1.png","hero_crops/w5_pm_4_g2.png","hero_crops/w5_pm_4_g3.png"]},"pm_5":{"1":["hero_crops/w1_pm_5_g1.png","hero_crops/w1_pm_5_g2.png"],"2":["hero_crops/w2_pm_5_g1.png","hero_crops/w2_pm_5_g2.png"],"3":["hero_crops/w3_pm_5_g1.png","hero_crops/w3_pm_5_g2.png","hero_crops/w3_pm_5_g3.png"],"4":["hero_crops/w4_pm_5_g1.png","hero_crops/w4_pm_5_g2.png"],"5":["hero_crops/w5_pm_5_g1.png","hero_crops/w5_pm_5_g2.png","hero_crops/w5_pm_5_g3.png"]},"lv_1":{"1":["hero_crops/w1_lv_1_g1.png","hero_crops/w1_lv_1_g2.png","hero_crops/w1_lv_1_g3.png"],"2":["hero_crops/w2_lv_1_g1.png","hero_crops/w2_lv_1_g2.png"],"3":["hero_crops/w3_lv_1_g1.png","hero_crops/w3_lv_1_g2.png"],"4":["hero_crops/w4_lv_1_g1.png","hero_crops/w4_lv_1_g2.png"],"5":["hero_crops/w5_lv_1_g1.png","hero_crops/w5_lv_1_g2.png","hero_crops/w5_lv_1_g3.png"]},"lv_2":{"1":["hero_crops/w1_lv_2_g1.png","hero_crops/w1_lv_2_g2.png","hero_crops/w1_lv_2_g3.png"],"2":["hero_crops/w2_lv_2_g1.png","hero_crops/w2_lv_2_g2.png"],"3":["hero_crops/w3_lv_2_g1.png","hero_crops/w3_lv_2_g2.png"],"4":["hero_crops/w4_lv_2_g1.png","hero_crops/w4_lv_2_g2.png"],"5":["hero_crops/w5_lv_2_g1.png","hero_crops/w5_lv_2_g2.png","hero_crops/w5_lv_2_g3.png"]},"lv_3":{"1":["hero_crops/w1_lv_3_g1.png","hero_crops/w1_lv_3_g2.png","hero_crops/w1_lv_3_g3.png"],"2":["hero_crops/w2_lv_3_g1.png","hero_crops/w2_lv_3_g2.png"],"3":["hero_crops/w3_lv_3_g1.png","hero_crops/w3_lv_3_g2.png"],"4":["hero_crops/w4_lv_3_g1.png","hero_crops/w4_lv_3_g2.png"],"5":["hero_crops/w5_lv_3_g1.png","hero_crops/w5_lv_3_g2.png","hero_crops/w5_lv_3_g3.png"]},"lv_4":{"1":["hero_crops/w1_lv_4_g1.png","hero_crops/w1_lv_4_g2.png","hero_crops/w1_lv_4_g3.png"],"2":["hero_crops/w2_lv_4_g1.png","hero_crops/w2_lv_4_g2.png"],"3":["hero_crops/w3_lv_4_g1.png","hero_crops/w3_lv_4_g2.png"],"4":["hero_crops/w4_lv_4_g1.png","hero_crops/w4_lv_4_g2.png"],"5":["hero_crops/w5_lv_4_g1.png","hero_crops/w5_lv_4_g2.png","hero_crops/w5_lv_4_g3.png"]},"lv_5":{"1":["hero_crops/w1_lv_5_g1.png","hero_crops/w1_lv_5_g2.png","hero_crops/w1_lv_5_g3.png"],"2":["hero_crops/w2_lv_5_g1.png","hero_crops/w2_lv_5_g2.png"],"3":["hero_crops/w3_lv_5_g1.png","hero_crops/w3_lv_5_g2.png"],"4":["hero_crops/w4_lv_5_g1.png","hero_crops/w4_lv_5_g2.png"],"5":["hero_crops/w5_lv_5_g1.png","hero_crops/w5_lv_5_g2.png","hero_crops/w5_lv_5_g3.png"]},"ns_1":{"1":["hero_crops/w1_ns_1_g1.png","hero_crops/w1_ns_1_g2.png"],"2":["hero_crops/w2_ns_1_g1.png","hero_crops/w2_ns_1_g2.png","hero_crops/w2_ns_1_g3.png"],"3":["hero_crops/w3_ns_1_g1.png","hero_crops/w3_ns_1_g2.png"],"4":["hero_crops/w4_ns_1_g1.png","hero_crops/w4_ns_1_g2.png","hero_crops/w4_ns_1_g3.png"],"5":["hero_crops/w5_ns_1_g1.png","hero_crops/w5_ns_1_g2.png"]},"ns_2":{"1":[],"2":[],"3":[],"4":[],"5":[]},"ns_3":{"1":["hero_crops/w1_ns_3_g1.png","hero_crops/w1_ns_3_g2.png"],"2":["hero_crops/w2_ns_3_g1.png","hero_crops/w2_ns_3_g2.png","hero_crops/w2_ns_3_g3.png"],"3":["hero_crops/w3_ns_3_g1.png","hero_crops/w3_ns_3_g2.png"],"4":["hero_crops/w4_ns_3_g1.png","hero_crops/w4_ns_3_g2.png","hero_crops/w4_ns_3_g3.png"],"5":["hero_crops/w5_ns_3_g1.png","hero_crops/w5_ns_3_g2.png"]},"ns_4":{"1":["hero_crops/w1_ns_4_g1.png","hero_crops/w1_ns_4_g2.png"],"2":["hero_crops/w2_ns_4_g1.png","hero_crops/w2_ns_4_g2.png","hero_crops/w2_ns_4_g3.png"],"3":["hero_crops/w3_ns_4_g1.png","hero_crops/w3_ns_4_g2.png"],"4":["hero_crops/w4_ns_4_g1.png","hero_crops/w4_ns_4_g2.png","hero_crops/w4_ns_4_g3.png"],"5":["hero_crops/w5_ns_4_g1.png","hero_crops/w5_ns_4_g2.png"]},"ns_5":{"1":["hero_crops/w1_ns_5_g1.png","hero_crops/w1_ns_5_g2.png"],"2":["hero_crops/w2_ns_5_g1.png","hero_crops/w2_ns_5_g2.png","hero_crops/w2_ns_5_g3.png"],"3":["hero_crops/w3_ns_5_g1.png","hero_crops/w3_ns_5_g2.png"],"4":["hero_crops/w4_ns_5_g1.png","hero_crops/w4_ns_5_g2.png","hero_crops/w4_ns_5_g3.png"],"5":["hero_crops/w5_ns_5_g1.png","hero_crops/w5_ns_5_g2.png"]},"un_1":{"1":["hero_crops/w1_un_1_g1.png","hero_crops/w1_un_1_g2.png"],"2":["hero_crops/w2_un_1_g1.png","hero_crops/w2_un_1_g2.png"],"3":[],"4":[],"5":["hero_crops/w5_un_1_g1.png","hero_crops/w5_un_1_g2.png","hero_crops/w5_un_1_g3.png"]},"un_2":{"1":["hero_crops/w1_un_2_g1.png","hero_crops/w1_un_2_g2.png"],"2":["hero_crops/w2_un_2_g1.png","hero_crops/w2_un_2_g2.png"],"3":[],"4":[],"5":["hero_crops/w5_un_2_g1.png","hero_crops/w5_un_2_g2.png","hero_crops/w5_un_2_g3.png"]},"un_3":{"1":["hero_crops/w1_un_3_g1.png","hero_crops/w1_un_3_g2.png"],"2":["hero_crops/w2_un_3_g1.png","hero_crops/w2_un_3_g2.png"],"3":[],"4":[],"5":["hero_crops/w5_un_3_g1.png","hero_crops/w5_un_3_g2.png","hero_crops/w5_un_3_g3.png"]},"un_4":{"1":["hero_crops/w1_un_4_g1.png","hero_crops/w1_un_4_g2.png"],"2":["hero_crops/w2_un_4_g1.png","hero_crops/w2_un_4_g2.png"],"3":[],"4":[],"5":["hero_crops/w5_un_4_g1.png","hero_crops/w5_un_4_g2.png","hero_crops/w5_un_4_g3.png"]},"un_5":{"1":["hero_crops/w1_un_5_g1.png","hero_crops/w1_un_5_g2.png"],"2":["hero_crops/w2_un_5_g1.png","hero_crops/w2_un_5_g2.png"],"3":[],"4":[],"5":["hero_crops/w5_un_5_g1.png","hero_crops/w5_un_5_g2.png","hero_crops/w5_un_5_g3.png"]}};
+
+      let activeHeroWeekFilter = "all";
+      let activeHeroTeamFilter = "all";
+      let activeHeroSearchQuery = "";
+
+      function setupHeroesPage() {
+        // Week filters
+        document.querySelectorAll("[data-week-filter]").forEach(btn => {
+          btn.addEventListener("click", () => {
+            document.querySelectorAll("[data-week-filter]").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            activeHeroWeekFilter = btn.dataset.weekFilter;
+            renderHeroesPage();
+          });
+        });
+
+        // Team filters
+        document.querySelectorAll("[data-team-filter]").forEach(btn => {
+          btn.addEventListener("click", () => {
+            document.querySelectorAll("[data-team-filter]").forEach(b => b.classList.remove("active"));
+            btn.classList.add("active");
+            activeHeroTeamFilter = btn.dataset.teamFilter;
+            renderHeroesPage();
+          });
+        });
+
+        // Search input
+        const searchInput = document.getElementById("heroSearchInput");
+        if (searchInput) {
+          searchInput.addEventListener("input", (e) => {
+            activeHeroSearchQuery = e.target.value.trim().toLowerCase();
+            renderHeroesPage();
+          });
+        }
+      }
+
+      function renderHeroesPage() {
+        renderHeroCards();
+        updateHeroPageStats();
+      }
+
+      function getPlayersData() {
+        return (players && players.length > 0) ? players : (typeof getDefaultPlayers === "function" ? getDefaultPlayers() : DEFAULT_PLAYERS);
+      }
+
+      function getFilteredHeroCropsForPlayer(playerId, weekFilter) {
+        const pCrops = PLAYER_HERO_CROPS[playerId];
+        if (!pCrops) return weekFilter === "all" ? {} : [];
+        if (weekFilter !== "all") {
+          return pCrops[weekFilter] || [];
+        }
+        return pCrops;
+      }
+
+      function renderHeroCards() {
+        const container = document.getElementById("heroViewCards");
+        if (!container) return;
+
+        const players = getPlayersData();
+        const filtered = players.filter(p => {
+          // Team filter
+          if (activeHeroTeamFilter !== "all" && p.team !== activeHeroTeamFilter) return false;
+
+          // Search filter (player name, ign, team)
+          if (activeHeroSearchQuery) {
+            const q = activeHeroSearchQuery;
+            const matchName = (p.name || "").toLowerCase().includes(q);
+            const matchIgn = (p.ign || "").toLowerCase().includes(q);
+            const matchTeam = (p.team || "").toLowerCase().includes(q);
+            if (!matchName && !matchIgn && !matchTeam) return false;
+          }
+
+          return true;
+        });
+
+        if (filtered.length === 0) {
+          container.innerHTML = '<div class="hero-empty-state">Tidak ada pemain yang sesuai dengan filter yang dipilih.</div>';
+          return;
+        }
+
+        let html = "";
+        filtered.forEach(p => {
+          const logo = getTeamLogoUrl(p.team);
+          const cropsData = getFilteredHeroCropsForPlayer(p.id, activeHeroWeekFilter);
+
+          let heroChipsHtml = "";
+          let gamesCountText = "";
+
+          if (activeHeroWeekFilter !== "all") {
+            // Specific week (array of image paths)
+            const list = Array.isArray(cropsData) ? cropsData : [];
+            gamesCountText = list.length + " Game Dimainkan";
+
+            if (list.length === 0) {
+              heroChipsHtml = '<span class="hero-no-match">Tidak ada pertandingan di pekan ini (WO / Belum Bermain)</span>';
+            } else {
+              list.forEach((cropPath, idx) => {
+                const gNum = idx + 1;
+                heroChipsHtml += `
+                  <div class="hero-face-chip" title="Pekan ${activeHeroWeekFilter} - Game ${gNum}">
+                    <div class="hero-avatar-ring">
+                      <img class="hero-face-avatar" src="${escapeHtml(cropPath)}?v=3" alt="Pekan ${activeHeroWeekFilter} Game ${gNum}" />
+                    </div>
+                    <span class="hero-game-tag">Game ${gNum}</span>
+                  </div>
+                `;
+              });
+            }
+          } else {
+            // All weeks (Week 1 - 5)
+            let totalAllGames = 0;
+            let rowsHtml = "";
+
+            for (let w = 1; w <= 5; w++) {
+              const wCrops = (cropsData && cropsData[w]) ? cropsData[w] : [];
+              totalAllGames += wCrops.length;
+
+              rowsHtml += `
+                <div class="hero-week-row">
+                  <span class="hero-week-badge-title">Week ${w}</span>
+                  <div class="hero-week-faces-row">
+                    ${wCrops.length === 0 
+                      ? '<span class="hero-wo-tag">WO / Tidak Ada Pertandingan</span>' 
+                      : wCrops.map((cropPath, idx) => `
+                          <div class="hero-face-mini-chip" title="Pekan ${w} - Game ${idx + 1}">
+                            <img class="hero-face-mini-avatar" src="${escapeHtml(cropPath)}?v=3" alt="Pekan ${w} Game ${idx + 1}" />
+                            <span class="hero-face-mini-tag">G${idx + 1}</span>
+                          </div>
+                        `).join("")}
+                  </div>
+                </div>
+              `;
+            }
+
+            gamesCountText = totalAllGames + " Total Game (W1-W5)";
+            heroChipsHtml = '<div class="hero-all-weeks-grid">' + rowsHtml + '</div>';
+          }
+
+          const weekLabel = activeHeroWeekFilter === "all" ? "Pekan 1 - 5" : "Pekan " + activeHeroWeekFilter;
+
+          html += `
+            <div class="hero-player-card">
+              <div class="hero-player-header">
+                <img class="hero-player-team-logo" src="${escapeHtml(logo)}" alt="${escapeHtml(p.team)}" onerror="this.src='piala.png'" />
+                <div class="hero-player-title-box">
+                  <div class="hero-player-name-row">
+                    <span class="hero-player-ign">${escapeHtml(p.ign)}</span>
+                  </div>
+                  <div class="hero-player-realname">${escapeHtml(p.name)} &bull; <b style="color:var(--neon-cyan)">${escapeHtml(p.team)}</b></div>
+                </div>
+              </div>
+
+              <div class="hero-chips-container">
+                <div class="hero-chips-label">
+                  <span>Wajah Hero (${weekLabel})</span>
+                  <span style="color:var(--text-dim);">${gamesCountText}</span>
+                </div>
+                <div class="hero-chips-list">
+                  ${heroChipsHtml}
+                </div>
+              </div>
+            </div>
+          `;
+        });
+
+        container.innerHTML = html;
+      }
+
+      function updateHeroPageStats() {
+        const players = getPlayersData();
+        let totalPicks = 0;
+
+        players.forEach(p => {
+          const crops = getFilteredHeroCropsForPlayer(p.id, activeHeroWeekFilter);
+          if (activeHeroWeekFilter !== "all") {
+            totalPicks += (Array.isArray(crops) ? crops.length : 0);
+          } else {
+            for (let w = 1; w <= 5; w++) {
+              totalPicks += ((crops && crops[w]) ? crops[w].length : 0);
+            }
+          }
+        });
+
+        const elTotalPlayers = document.getElementById("hStatTotalPlayers");
+        const elTotalPicks = document.getElementById("hStatTotalPicks");
+        const elTopHero = document.getElementById("hStatTopHero");
+
+        if (elTotalPlayers) elTotalPlayers.textContent = players.length;
+        if (elTotalPicks) elTotalPicks.textContent = totalPicks;
+        if (elTopHero) {
+          elTopHero.textContent = activeHeroWeekFilter === "all" ? "Semua Pekan (W1-5)" : "Pekan " + activeHeroWeekFilter;
+        }
+      }
+
+
+async function init() {
         populateTeamSelects();
         setupResultSubModeTabs();
         setupStatistikSubnav();
+        setupHeroesPage();
         setupKillsInputActions();
         await loadResults();
         renderAdminStatus();
         renderAll();
-        showPage("standings");
+        const initialPage = (window.location.hash || "").replace("#", "");
+        showPage(initialPage || "standings");
+        window.addEventListener("hashchange", () => {
+          const pg = (window.location.hash || "").replace("#", "");
+          if (pg) showPage(pg);
+        });
         initRealtimeSync();
       }
 
