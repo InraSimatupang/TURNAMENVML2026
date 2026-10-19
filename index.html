@@ -6500,7 +6500,7 @@
          serta akumulasi hasil pertandingan Week 1 s/d Week 5 (42 Game BO3 dimainkan).
       ========================================================= */
       const PLAYERS_STORAGE_KEY = "vml2026:players";
-      const DEFAULT_PLAYERS = [
+            const DEFAULT_PLAYERS = [
         // 1. Forge Wolf
         { id: "fw_1", name: "Ferzi Pradana", ign: "P$KF||ERZIツ", team: "Forge Wolf", role: "Mid Lane", kills: 52, assists: 81, deaths: 11, weekKills: { 1: 13, 2: 21, 3: 0, 4: 11, 5: 7, 6: 0, 7: 0, 8: 0, 9: 0 } },
         { id: "fw_2", name: "Muhammad Fatiy", ign: "WRG Kruk_as.geser", team: "Forge Wolf", role: "Roamer", kills: 17, assists: 117, deaths: 36, weekKills: { 1: 4, 2: 2, 3: 0, 4: 8, 5: 3, 6: 0, 7: 0, 8: 0, 9: 0 } },
@@ -6509,39 +6509,39 @@
         { id: "fw_5", name: "Abdul Khodir Zailani", ign: "o★ bko_zєє", team: "Forge Wolf", role: "Jungler", kills: 50, assists: 67, deaths: 26, weekKills: { 1: 10, 2: 18, 3: 0, 4: 13, 5: 9, 6: 0, 7: 0, 8: 0, 9: 0 } },
 
         // 2. Black Owl
-        { id: "bo_1", name: "Abi Nubillah", ign: "S'FL K4NG_RECAL\"", team: "Black Owl", role: "Roamer", kills: 15, assists: 54, deaths: 20, weekKills: { 1: 3, 2: 4, 3: 0, 4: 2, 5: 6, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "bo_2", name: "Hendrian Perdana", ign: "PRIA ROHIT_", team: "Black Owl", role: "Gold Lane", kills: 51, assists: 49, deaths: 17, weekKills: { 1: 15, 2: 14, 3: 0, 4: 10, 5: 12, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "bo_3", name: "Inra H Simatupang", ign: "ÂK Oxygennn_", team: "Black Owl", role: "Mid Lane", kills: 10, assists: 96, deaths: 26, weekKills: { 1: 3, 2: 2, 3: 0, 4: 2, 5: 3, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "bo_4", name: "M. Habibillah", ign: "nafas kuda", team: "Black Owl", role: "Jungler", kills: 27, assists: 50, deaths: 31, weekKills: { 1: 10, 2: 7, 3: 0, 4: 3, 5: 7, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "bo_5", name: "Ahmad Ikhwal", ign: "NED japero", team: "Black Owl", role: "EXP Lane", kills: 56, assists: 49, deaths: 16, weekKills: { 1: 19, 2: 14, 3: 0, 4: 8, 5: 15, 6: 0, 7: 0, 8: 0, 9: 0 } },
+        { id: "bo_1", name: "Abi Nubillah", ign: "S'FL K4NG_RECAL\"", team: "Black Owl", role: "Roamer", kills: 41, assists: 62, deaths: 26, weekKills: { 1: 3, 2: 4, 3: 0, 4: 2, 5: 6, 6: 26, 7: 0, 8: 0, 9: 0 } },
+        { id: "bo_2", name: "Hendrian Perdana", ign: "PRIA ROHIT_", team: "Black Owl", role: "Gold Lane", kills: 58, assists: 82, deaths: 21, weekKills: { 1: 15, 2: 14, 3: 0, 4: 10, 5: 12, 6: 7, 7: 0, 8: 0, 9: 0 } },
+        { id: "bo_3", name: "Inra H Simatupang", ign: "ÂK Oxygennn_", team: "Black Owl", role: "Mid Lane", kills: 12, assists: 133, deaths: 33, weekKills: { 1: 3, 2: 2, 3: 0, 4: 2, 5: 3, 6: 2, 7: 0, 8: 0, 9: 0 } },
+        { id: "bo_4", name: "M. Habibillah", ign: "nafas kuda", team: "Black Owl", role: "Jungler", kills: 37, assists: 62, deaths: 39, weekKills: { 1: 10, 2: 7, 3: 0, 4: 3, 5: 7, 6: 10, 7: 0, 8: 0, 9: 0 } },
+        { id: "bo_5", name: "Ahmad Ikhwal", ign: "NED japero", team: "Black Owl", role: "EXP Lane", kills: 61, assists: 73, deaths: 22, weekKills: { 1: 19, 2: 14, 3: 0, 4: 8, 5: 15, 6: 5, 7: 0, 8: 0, 9: 0 } },
 
         // 3. Bahaya & Jahil ( BAHLIL )
-        { id: "bj_1", name: "Erdiyanto", ign: "(#ojo dumeh lur#)", team: "Bahaya & Jahil ( BAHLIL )", role: "Roamer", kills: 14, assists: 49, deaths: 54, weekKills: { 1: 1, 2: 5, 3: 5, 4: 0, 5: 3, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "bj_2", name: "Rudi", ign: "rm96", team: "Bahaya & Jahil ( BAHLIL )", role: "EXP Lane", kills: 9, assists: 64, deaths: 64, weekKills: { 1: 5, 2: 2, 3: 0, 4: 0, 5: 2, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "bj_3", name: "M. Rifai", ign: "Tatsuya.", team: "Bahaya & Jahil ( BAHLIL )", role: "Jungler", kills: 61, assists: 53, deaths: 47, weekKills: { 1: 31, 2: 17, 3: 10, 4: 0, 5: 3, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "bj_4", name: "Elvin Ar Ridho Saragih", ign: "PANJANG.19", team: "Bahaya & Jahil ( BAHLIL )", role: "Gold Lane", kills: 16, assists: 55, deaths: 64, weekKills: { 1: 3, 2: 6, 3: 5, 4: 0, 5: 2, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "bj_5", name: "Andre Rahdianto", ign: "Kurayamii^•", team: "Bahaya & Jahil ( BAHLIL )", role: "Mid Lane", kills: 44, assists: 37, deaths: 56, weekKills: { 1: 12, 2: 26, 3: 2, 4: 0, 5: 4, 6: 0, 7: 0, 8: 0, 9: 0 } },
+        { id: "bj_1", name: "Erdiyanto", ign: "(#ojo dumeh lur#)", team: "Bahaya & Jahil ( BAHLIL )", role: "Roamer", kills: 18, assists: 63, deaths: 65, weekKills: { 1: 1, 2: 5, 3: 5, 4: 0, 5: 3, 6: 4, 7: 0, 8: 0, 9: 0 } },
+        { id: "bj_2", name: "Rudi", ign: "rm96", team: "Bahaya & Jahil ( BAHLIL )", role: "EXP Lane", kills: 11, assists: 79, deaths: 86, weekKills: { 1: 5, 2: 2, 3: 0, 4: 0, 5: 2, 6: 2, 7: 0, 8: 0, 9: 0 } },
+        { id: "bj_3", name: "M. Rifai", ign: "Tatsuya.", team: "Bahaya & Jahil ( BAHLIL )", role: "Jungler", kills: 69, assists: 67, deaths: 54, weekKills: { 1: 31, 2: 17, 3: 10, 4: 0, 5: 3, 6: 8, 7: 0, 8: 0, 9: 0 } },
+        { id: "bj_4", name: "Elvin Ar Ridho Saragih", ign: "PANJANG.19", team: "Bahaya & Jahil ( BAHLIL )", role: "Gold Lane", kills: 23, assists: 68, deaths: 73, weekKills: { 1: 3, 2: 6, 3: 5, 4: 0, 5: 2, 6: 7, 7: 0, 8: 0, 9: 0 } },
+        { id: "bj_5", name: "Andre Rahdianto", ign: "Kurayamii^•", team: "Bahaya & Jahil ( BAHLIL )", role: "Mid Lane", kills: 52, assists: 45, deaths: 64, weekKills: { 1: 12, 2: 26, 3: 2, 4: 0, 5: 4, 6: 8, 7: 0, 8: 0, 9: 0 } },
 
         // 4. Kaum Begadang
-        { id: "kb_1", name: "Alvin", ign: "V I N 0³", team: "Kaum Begadang", role: "Jungler", kills: 54, assists: 32, deaths: 42, weekKills: { 1: 3, 2: 5, 3: 0, 4: 6, 5: 40, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "kb_2", name: "Dimas Ardiansyah", ign: "°Dimas°", team: "Kaum Begadang", role: "Gold Lane", kills: 30, assists: 44, deaths: 49, weekKills: { 1: 4, 2: 1, 3: 0, 4: 11, 5: 14, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "kb_3", name: "Aidil Akbar", ign: "BABASiong", team: "Kaum Begadang", role: "EXP Lane", kills: 14, assists: 53, deaths: 50, weekKills: { 1: 3, 2: 2, 3: 0, 4: 4, 5: 5, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "kb_4", name: "Abil", ign: "WHYJISCEEE", team: "Kaum Begadang", role: "Roamer", kills: 24, assists: 73, deaths: 48, weekKills: { 1: 1, 2: 5, 3: 0, 4: 5, 5: 13, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "kb_5", name: "M.Fadhlan Fauza", ign: "Faura13", team: "Kaum Begadang", role: "Mid Lane", kills: 11, assists: 60, deaths: 61, weekKills: { 1: 2, 2: 1, 3: 0, 4: 4, 5: 4, 6: 0, 7: 0, 8: 0, 9: 0 } },
+        { id: "kb_1", name: "Alvin", ign: "V I N 0³", team: "Kaum Begadang", role: "Jungler", kills: 69, assists: 46, deaths: 48, weekKills: { 1: 3, 2: 5, 3: 0, 4: 6, 5: 40, 6: 15, 7: 0, 8: 0, 9: 0 } },
+        { id: "kb_2", name: "Dimas Ardiansyah", ign: "°Dimas°", team: "Kaum Begadang", role: "Gold Lane", kills: 56, assists: 51, deaths: 54, weekKills: { 1: 4, 2: 1, 3: 0, 4: 11, 5: 14, 6: 26, 7: 0, 8: 0, 9: 0 } },
+        { id: "kb_3", name: "Aidil Akbar", ign: "BABASiong", team: "Kaum Begadang", role: "EXP Lane", kills: 20, assists: 74, deaths: 56, weekKills: { 1: 3, 2: 2, 3: 0, 4: 4, 5: 5, 6: 6, 7: 0, 8: 0, 9: 0 } },
+        { id: "kb_4", name: "Abil", ign: "WHYJISCEEE", team: "Kaum Begadang", role: "Roamer", kills: 30, assists: 103, deaths: 51, weekKills: { 1: 1, 2: 5, 3: 0, 4: 5, 5: 13, 6: 6, 7: 0, 8: 0, 9: 0 } },
+        { id: "kb_5", name: "M.Fadhlan Fauza", ign: "Faura13", team: "Kaum Begadang", role: "Mid Lane", kills: 15, assists: 84, deaths: 71, weekKills: { 1: 2, 2: 1, 3: 0, 4: 4, 5: 4, 6: 4, 7: 0, 8: 0, 9: 0 } },
 
         // 5. Vortex
-        { id: "vx_1", name: "Thomas Cuaca", ign: "Kavinesh*7419", team: "Vortex", role: "Mid Lane", kills: 32, assists: 125, deaths: 49, weekKills: { 1: 10, 2: 4, 3: 5, 4: 12, 5: 1, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "vx_2", name: "Vency Anggela", ign: "Sipenkocik", team: "Vortex", role: "Roamer", kills: 29, assists: 168, deaths: 52, weekKills: { 1: 7, 2: 4, 3: 6, 4: 9, 5: 3, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "vx_3", name: "Muhammad Apriansyah", ign: "Apriii_x", team: "Vortex", role: "Gold Lane", kills: 30, assists: 119, deaths: 46, weekKills: { 1: 10, 2: 2, 3: 4, 4: 8, 5: 6, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "vx_4", name: "Ubay Dollah", ign: "MUTIA 017", team: "Vortex", role: "Jungler", kills: 68, assists: 97, deaths: 48, weekKills: { 1: 16, 2: 11, 3: 20, 4: 17, 5: 4, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "vx_5", name: "Zihad", ign: "nonok timbul", team: "Vortex", role: "EXP Lane", kills: 100, assists: 92, deaths: 43, weekKills: { 1: 25, 2: 8, 3: 37, 4: 22, 5: 8, 6: 0, 7: 0, 8: 0, 9: 0 } },
+        { id: "vx_1", name: "Thomas Cuaca", ign: "Kavinesh*7419", team: "Vortex", role: "Mid Lane", kills: 35, assists: 139, deaths: 59, weekKills: { 1: 10, 2: 4, 3: 5, 4: 12, 5: 1, 6: 3, 7: 0, 8: 0, 9: 0 } },
+        { id: "vx_2", name: "Vency Anggela", ign: "Sipenkocik", team: "Vortex", role: "Roamer", kills: 35, assists: 187, deaths: 65, weekKills: { 1: 7, 2: 4, 3: 6, 4: 9, 5: 3, 6: 6, 7: 0, 8: 0, 9: 0 } },
+        { id: "vx_3", name: "Muhammad Apriansyah", ign: "Apriii_x", team: "Vortex", role: "Gold Lane", kills: 38, assists: 128, deaths: 54, weekKills: { 1: 10, 2: 2, 3: 4, 4: 8, 5: 6, 6: 8, 7: 0, 8: 0, 9: 0 } },
+        { id: "vx_4", name: "Ubay Dollah", ign: "MUTIA 017", team: "Vortex", role: "Jungler", kills: 72, assists: 107, deaths: 58, weekKills: { 1: 16, 2: 11, 3: 20, 4: 17, 5: 4, 6: 4, 7: 0, 8: 0, 9: 0 } },
+        { id: "vx_5", name: "Zihad", ign: "nonok timbul", team: "Vortex", role: "EXP Lane", kills: 110, assists: 103, deaths: 52, weekKills: { 1: 25, 2: 8, 3: 37, 4: 22, 5: 8, 6: 10, 7: 0, 8: 0, 9: 0 } },
 
         // 6. Manis Manja
-        { id: "mm_1", name: "Zepri Ramadhan", ign: "TRS zepri r", team: "Manis Manja", role: "Roamer", kills: 46, assists: 130, deaths: 46, weekKills: { 1: 8, 2: 23, 3: 6, 4: 7, 5: 2, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "mm_2", name: "Bagus Utomo", ign: "TTK ElsaPutri♡", team: "Manis Manja", role: "Mid Lane", kills: 30, assists: 256, deaths: 58, weekKills: { 1: 6, 2: 8, 3: 7, 4: 1, 5: 8, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "mm_3", name: "Muhammad Ihsan", ign: "Blank Space", team: "Manis Manja", role: "Jungler", kills: 144, assists: 128, deaths: 55, weekKills: { 1: 32, 2: 36, 3: 17, 4: 43, 5: 16, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "mm_4", name: "N. Gita Eka Saputri", ign: "VG ★Hakuna Matata★", team: "Manis Manja", role: "Gold Lane", kills: 35, assists: 176, deaths: 40, weekKills: { 1: 3, 2: 12, 3: 13, 4: 2, 5: 5, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "mm_5", name: "Khairul Dhava", ign: "WhyYourDaff", team: "Manis Manja", role: "EXP Lane", kills: 116, assists: 107, deaths: 65, weekKills: { 1: 18, 2: 28, 3: 21, 4: 19, 5: 30, 6: 0, 7: 0, 8: 0, 9: 0 } },
+        { id: "mm_1", name: "Zepri Ramadhan", ign: "TRS zepri r", team: "Manis Manja", role: "Roamer", kills: 52, assists: 139, deaths: 58, weekKills: { 1: 8, 2: 23, 3: 6, 4: 7, 5: 2, 6: 6, 7: 0, 8: 0, 9: 0 } },
+        { id: "mm_2", name: "Bagus Utomo", ign: "TTK ElsaPutri♡", team: "Manis Manja", role: "Mid Lane", kills: 35, assists: 270, deaths: 70, weekKills: { 1: 6, 2: 8, 3: 7, 4: 1, 5: 8, 6: 5, 7: 0, 8: 0, 9: 0 } },
+        { id: "mm_3", name: "Muhammad Ihsan", ign: "Blank Space", team: "Manis Manja", role: "Jungler", kills: 158, assists: 132, deaths: 65, weekKills: { 1: 32, 2: 36, 3: 17, 4: 43, 5: 16, 6: 14, 7: 0, 8: 0, 9: 0 } },
+        { id: "mm_4", name: "N. Gita Eka Saputri", ign: "VG ★Hakuna Matata★", team: "Manis Manja", role: "Gold Lane", kills: 35, assists: 191, deaths: 46, weekKills: { 1: 3, 2: 12, 3: 13, 4: 2, 5: 5, 6: 0, 7: 0, 8: 0, 9: 0 } },
+        { id: "mm_5", name: "Khairul Dhava", ign: "WhyYourDaff", team: "Manis Manja", role: "EXP Lane", kills: 120, assists: 111, deaths: 78, weekKills: { 1: 18, 2: 28, 3: 21, 4: 19, 5: 30, 6: 4, 7: 0, 8: 0, 9: 0 } },
 
         // 7. Pantang Mundur
         { id: "pm_1", name: "Abdul Gani", ign: "TTK LAE_Tokai", team: "Pantang Mundur", role: "Roamer", kills: 75, assists: 98, deaths: 51, weekKills: { 1: 15, 2: 11, 3: 24, 4: 7, 5: 18, 6: 0, 7: 0, 8: 0, 9: 0 } },
@@ -6551,25 +6551,26 @@
         { id: "pm_5", name: "Muhammad Fahri", ign: "RAWR PREDO", team: "Pantang Mundur", role: "Gold Lane", kills: 85, assists: 88, deaths: 34, weekKills: { 1: 17, 2: 6, 3: 20, 4: 22, 5: 20, 6: 0, 7: 0, 8: 0, 9: 0 } },
 
         // 8. Leviathan
-        { id: "lv_1", name: "Bona Valti", ign: "F5S Voizuiinemidoren", team: "Leviathan", role: "EXP Lane", kills: 51, assists: 82, deaths: 63, weekKills: { 1: 12, 2: 3, 3: 10, 4: 9, 5: 17, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "lv_2", name: "Benny Lim", ign: "MW B3ntzy", team: "Leviathan", role: "Roamer", kills: 42, assists: 96, deaths: 78, weekKills: { 1: 7, 2: 6, 3: 7, 4: 6, 5: 16, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "lv_3", name: "Saputra Hutagaol", ign: "SkillKeajaiban", team: "Leviathan", role: "Jungler", kills: 54, assists: 103, deaths: 48, weekKills: { 1: 16, 2: 4, 3: 7, 4: 11, 5: 16, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "lv_4", name: "Doli Hasibuan", ign: "^ Heisenberg", team: "Leviathan", role: "Gold Lane", kills: 61, assists: 86, deaths: 52, weekKills: { 1: 23, 2: 3, 3: 13, 4: 5, 5: 17, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "lv_5", name: "Suhendry", ign: "MW zєρhуru$", team: "Leviathan", role: "Mid Lane", kills: 39, assists: 125, deaths: 66, weekKills: { 1: 16, 2: 7, 3: 3, 4: 6, 5: 7, 6: 0, 7: 0, 8: 0, 9: 0 } },
+        { id: "lv_1", name: "Bona Valti", ign: "F5S Voizuiinemidoren", team: "Leviathan", role: "EXP Lane", kills: 61, assists: 87, deaths: 79, weekKills: { 1: 12, 2: 3, 3: 10, 4: 9, 5: 17, 6: 10, 7: 0, 8: 0, 9: 0 } },
+        { id: "lv_2", name: "Benny Lim", ign: "MW B3ntzy", team: "Leviathan", role: "Roamer", kills: 47, assists: 107, deaths: 98, weekKills: { 1: 7, 2: 6, 3: 7, 4: 6, 5: 16, 6: 5, 7: 0, 8: 0, 9: 0 } },
+        { id: "lv_3", name: "Saputra Hutagaol", ign: "SkillKeajaiban", team: "Leviathan", role: "Jungler", kills: 60, assists: 119, deaths: 64, weekKills: { 1: 16, 2: 4, 3: 7, 4: 11, 5: 16, 6: 6, 7: 0, 8: 0, 9: 0 } },
+        { id: "lv_4", name: "Doli Hasibuan", ign: "^ Heisenberg", team: "Leviathan", role: "Gold Lane", kills: 66, assists: 109, deaths: 66, weekKills: { 1: 23, 2: 3, 3: 13, 4: 5, 5: 17, 6: 5, 7: 0, 8: 0, 9: 0 } },
+        { id: "lv_5", name: "Suhendry", ign: "MW zєρhуru$", team: "Leviathan", role: "Mid Lane", kills: 46, assists: 143, deaths: 75, weekKills: { 1: 16, 2: 7, 3: 3, 4: 6, 5: 7, 6: 7, 7: 0, 8: 0, 9: 0 } },
 
         // 9. Nightfall Syndicate
-        { id: "ns_1", name: "Sahabat", ign: "{*._Sahabat_Tal_.*}", team: "Nightfall Syndicate", role: "Jungler", kills: 38, assists: 86, deaths: 66, weekKills: { 1: 8, 2: 13, 3: 6, 4: 5, 5: 6, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "ns_2", name: "Tio Simatupang", ign: "Swords", team: "Nightfall Syndicate", role: "EXP Lane", kills: 0, assists: 0, deaths: 0, weekKills: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "ns_3", name: "Adrian Dwi", ign: "nafas kambing", team: "Nightfall Syndicate", role: "Mid Lane", kills: 45, assists: 104, deaths: 37, weekKills: { 1: 6, 2: 13, 3: 6, 4: 16, 5: 4, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "ns_4", name: "Putri Nur Isha", ign: "E¢sσтιc", team: "Nightfall Syndicate", role: "Roamer", kills: 12, assists: 151, deaths: 50, weekKills: { 1: 1, 2: 3, 3: 4, 4: 2, 5: 2, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "ns_5", name: "Fiqri", ign: "Dnanz", team: "Nightfall Syndicate", role: "Gold Lane", kills: 59, assists: 77, deaths: 52, weekKills: { 1: 4, 2: 23, 3: 18, 4: 12, 5: 2, 6: 0, 7: 0, 8: 0, 9: 0 } },
+        { id: "ns_1", name: "Sahabat", ign: "{*._Sahabat_Tal_.*}", team: "Nightfall Syndicate", role: "Jungler", kills: 44, assists: 117, deaths: 72, weekKills: { 1: 8, 2: 13, 3: 6, 4: 5, 5: 6, 6: 6, 7: 0, 8: 0, 9: 0 } },
+        { id: "ns_2", name: "Tio Simatupang", ign: "Swords", team: "Nightfall Syndicate", role: "EXP Lane", kills: 25, assists: 19, deaths: 7, weekKills: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 25, 7: 0, 8: 0, 9: 0 } },
+        { id: "ns_3", name: "Adrian Dwi", ign: "nafas kambing", team: "Nightfall Syndicate", role: "Mid Lane", kills: 70, assists: 120, deaths: 44, weekKills: { 1: 6, 2: 13, 3: 6, 4: 16, 5: 4, 6: 25, 7: 0, 8: 0, 9: 0 } },
+        { id: "ns_4", name: "Putri Nur Isha", ign: "E¢sσтιc", team: "Nightfall Syndicate", role: "Roamer", kills: 14, assists: 200, deaths: 59, weekKills: { 1: 1, 2: 3, 3: 4, 4: 2, 5: 2, 6: 2, 7: 0, 8: 0, 9: 0 } },
+        { id: "ns_5", name: "Fiqri", ign: "Dnanz", team: "Nightfall Syndicate", role: "Gold Lane", kills: 75, assists: 107, deaths: 56, weekKills: { 1: 4, 2: 23, 3: 18, 4: 12, 5: 2, 6: 16, 7: 0, 8: 0, 9: 0 } },
 
         // 10. Ulat Nangka
-        { id: "un_1", name: "Imam Sandi", ign: "Nurievira FSix", team: "Ulat Nangka", role: "Roamer", kills: 15, assists: 32, deaths: 27, weekKills: { 1: 4, 2: 1, 3: 0, 4: 0, 5: 10, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "un_2", name: "M. Arifin", ign: "TKI F6", team: "Ulat Nangka", role: "Gold Lane", kills: 45, assists: 44, deaths: 14, weekKills: { 1: 8, 2: 10, 3: 0, 4: 0, 5: 27, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "un_3", name: "M. Zidan", ign: "NJOZÌ", team: "Ulat Nangka", role: "Jungler", kills: 51, assists: 49, deaths: 24, weekKills: { 1: 3, 2: 23, 3: 0, 4: 0, 5: 25, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "un_4", name: "M. Chaidir Azwar", ign: "MAMEK PROTEIN VG", team: "Ulat Nangka", role: "EXP Lane", kills: 7, assists: 89, deaths: 32, weekKills: { 1: 0, 2: 1, 3: 0, 4: 0, 5: 6, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "un_5", name: "Fauzi Abdillah", ign: "Babaneonking VG", team: "Ulat Nangka", role: "Mid Lane", kills: 27, assists: 64, deaths: 25, weekKills: { 1: 1, 2: 12, 3: 0, 4: 0, 5: 14, 6: 0, 7: 0, 8: 0, 9: 0 } }
+        { id: "un_1", name: "Imam Sandi", ign: "Nurievira FSix", team: "Ulat Nangka", role: "Roamer", kills: 20, assists: 50, deaths: 33, weekKills: { 1: 4, 2: 1, 3: 0, 4: 0, 5: 10, 6: 5, 7: 0, 8: 0, 9: 0 } },
+        { id: "un_2", name: "M. Arifin", ign: "TKI F6", team: "Ulat Nangka", role: "Gold Lane", kills: 82, assists: 47, deaths: 19, weekKills: { 1: 8, 2: 10, 3: 0, 4: 0, 5: 27, 6: 37, 7: 0, 8: 0, 9: 0 } },
+        { id: "un_3", name: "M. Zidan", ign: "NJOZÌ", team: "Ulat Nangka", role: "Jungler", kills: 55, assists: 70, deaths: 30, weekKills: { 1: 3, 2: 23, 3: 0, 4: 0, 5: 25, 6: 4, 7: 0, 8: 0, 9: 0 } },
+        { id: "un_4", name: "M. Chaidir Azwar", ign: "MAMEK PROTEIN VG", team: "Ulat Nangka", role: "EXP Lane", kills: 10, assists: 124, deaths: 39, weekKills: { 1: 0, 2: 1, 3: 0, 4: 0, 5: 6, 6: 3, 7: 0, 8: 0, 9: 0 } },
+        { id: "un_5", name: "Fauzi Abdillah", ign: "Babaneonking VG", team: "Ulat Nangka", role: "Mid Lane", kills: 31, assists: 95, deaths: 31, weekKills: { 1: 1, 2: 12, 3: 0, 4: 0, 5: 14, 6: 4, 7: 0, 8: 0, 9: 0 } }
+
       ];
 
       function getDefaultPlayers() {
