@@ -5551,10 +5551,307 @@
       background: #000;
     }
 
+  
+    
+    /* =========================================================
+       GLOBAL FULL-PAGE CINEMATIC TROPHY LIFT ANIMATED BACKGROUND
+       (Active Across All Pages: Standings, Schedule, Dashboard, Stats, Heroes, etc.)
+    ========================================================= */
+    .global-trophy-lift-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      z-index: -1;
+      pointer-events: none;
+      overflow: hidden;
+      background: #01060e;
+    }
+    .global-trophy-img-layer {
+      position: absolute;
+      inset: -5%;
+      width: 110%;
+      height: 110%;
+      background-image: url('MLBB_M1WorldChampionship_EVOSLegends.webp');
+      background-size: cover;
+      background-position: center center;
+      animation: kenBurnsGlobal 24s ease-in-out infinite alternate;
+      will-change: transform;
+      transition: filter 0.4s ease, opacity 0.4s ease;
+    }
+    .trophy-anim-paused .global-trophy-img-layer {
+      animation-play-state: paused;
+    }
+    @keyframes kenBurnsGlobal {
+      0% {
+        transform: scale(1) translate(0%, 0%);
+      }
+      50% {
+        transform: scale(1.08) translate(-1.5%, -1%);
+      }
+      100% {
+        transform: scale(1.04) translate(1.5%, 0.5%);
+      }
+    }
+    .global-trophy-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .global-trophy-light-sweep {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      background: radial-gradient(circle at 50% 25%, rgba(255, 215, 0, 0.32) 0%, rgba(41, 178, 225, 0.16) 35%, transparent 70%);
+      animation: pulseStageLightGlobal 5s ease-in-out infinite alternate;
+      mix-blend-mode: screen;
+      pointer-events: none;
+    }
+    @keyframes pulseStageLightGlobal {
+      0% {
+        opacity: 0.55;
+        transform: scale(0.96) translate(-1%, -1%);
+      }
+      100% {
+        opacity: 0.95;
+        transform: scale(1.06) translate(1%, 1%);
+      }
+    }
+    .global-trophy-vignette {
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+      background: radial-gradient(circle at 50% 30%, rgba(2, 11, 24, 0.45) 0%, rgba(2, 11, 24, 0.78) 55%, rgba(1, 6, 14, 0.93) 100%),
+                  linear-gradient(180deg, rgba(2, 11, 24, 0.35) 0%, rgba(1, 6, 14, 0.88) 100%);
+      pointer-events: none;
+    }
+
+    /* Glassmorphism adjustments for panels across all pages */
+    .mpl-season-hero {
+      position: relative;
+      overflow: hidden;
+      min-height: 200px;
+      background: rgba(4, 15, 34, 0.65) !important;
+      backdrop-filter: blur(12px) !important;
+      -webkit-backdrop-filter: blur(12px) !important;
+      border: 1px solid rgba(41, 178, 225, 0.45) !important;
+      border-left: 6px solid var(--color-blue) !important;
+      border-radius: 12px;
+      padding: 24px 30px;
+      margin-bottom: 24px;
+      box-shadow: 0 12px 36px rgba(0, 0, 0, 0.6), inset 0 0 30px rgba(41, 178, 225, 0.15);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      flex-wrap: wrap;
+    }
+
+    .stat-card, .table-card, .dashboard-card, .hero-player-card, .bracket-round, .history-card {
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+
+    /* Topbar control for Trophy Animation */
+    .topbar-trophy-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 6px;
+      background: rgba(2, 86, 185, 0.35);
+      border: 1px solid rgba(41, 178, 225, 0.6);
+      color: #29B2E1;
+      padding: 5px 10px;
+      border-radius: 6px;
+      font-size: 11px;
+      font-weight: 700;
+      cursor: pointer;
+      backdrop-filter: blur(6px);
+      transition: all 0.2s ease;
+      letter-spacing: 0.3px;
+    }
+    .topbar-trophy-btn:hover {
+      background: rgba(41, 178, 225, 0.25);
+      border-color: #2BC3B3;
+      color: #fff;
+      box-shadow: 0 0 10px rgba(41, 178, 225, 0.4);
+    }
+  
+
+  
+    /* Trophy Celebration Fullscreen Modal */
+    .trophy-modal-overlay {
+      position: fixed;
+      inset: 0;
+      z-index: 99999;
+      background: rgba(1, 6, 14, 0.92);
+      backdrop-filter: blur(14px);
+      -webkit-backdrop-filter: blur(14px);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      opacity: 1;
+      visibility: visible;
+      transition: opacity 0.3s ease, visibility 0.3s ease;
+    }
+    .trophy-modal-overlay.hidden {
+      opacity: 0;
+      visibility: hidden;
+      pointer-events: none;
+    }
+    .trophy-modal-content {
+      position: relative;
+      width: 100%;
+      max-width: 1000px;
+      background: #020b18;
+      border: 1px solid rgba(41, 178, 225, 0.5);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.85), 0 0 30px rgba(41, 178, 225, 0.3);
+    }
+    .trophy-modal-close {
+      position: absolute;
+      top: 14px;
+      right: 14px;
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: rgba(2, 11, 24, 0.85);
+      border: 1px solid rgba(255, 255, 255, 0.2);
+      color: #fff;
+      font-size: 16px;
+      font-weight: 700;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 10;
+      transition: all 0.2s ease;
+    }
+    .trophy-modal-close:hover {
+      background: #ef4444;
+      border-color: #ef4444;
+      transform: rotate(90deg);
+    }
+    .trophy-modal-scene {
+      position: relative;
+      width: 100%;
+      height: 520px;
+      max-height: 72vh;
+      overflow: hidden;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      background: #000;
+    }
+    .trophy-modal-img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center center;
+      animation: kenBurnsModal 22s ease-in-out infinite alternate;
+    }
+    @keyframes kenBurnsModal {
+      0% { transform: scale(1) translate(0, 0); }
+      50% { transform: scale(1.06) translate(-1%, -0.5%); }
+      100% { transform: scale(1.03) translate(1%, 0.5%); }
+    }
+    .trophy-modal-canvas {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      pointer-events: none;
+    }
+    .trophy-modal-spotlight {
+      position: absolute;
+      inset: 0;
+      z-index: 3;
+      background: radial-gradient(circle at 50% 35%, rgba(255, 215, 0, 0.35) 0%, rgba(41, 178, 225, 0.18) 40%, transparent 75%);
+      mix-blend-mode: screen;
+      animation: pulseStageLightGlobal 4s ease-in-out infinite alternate;
+      pointer-events: none;
+    }
+    .trophy-modal-vignette {
+      position: absolute;
+      inset: 0;
+      z-index: 4;
+      background: linear-gradient(180deg, transparent 40%, rgba(2, 11, 24, 0.95) 95%),
+                  radial-gradient(circle at center, transparent 55%, rgba(1, 6, 14, 0.65) 100%);
+      pointer-events: none;
+    }
+    .trophy-modal-caption {
+      position: relative;
+      z-index: 5;
+      padding: 24px 30px;
+      width: 100%;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .trophy-modal-tag {
+      display: inline-block;
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      color: #fef08a;
+      background: rgba(245, 158, 11, 0.25);
+      border: 1px solid rgba(245, 158, 11, 0.4);
+      padding: 3px 10px;
+      border-radius: 4px;
+      margin-bottom: 8px;
+    }
+    .trophy-modal-title {
+      font-family: var(--font-bebas);
+      font-size: 32px;
+      color: #fff;
+      letter-spacing: 1px;
+      margin: 0 0 6px 0;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85);
+    }
+    .trophy-modal-desc {
+      font-size: 13.5px;
+      color: #cbd5e1;
+      margin: 0 auto;
+      max-width: 640px;
+      line-height: 1.5;
+      text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85);
+    }
+
+    @media (max-width: 768px) {
+      .trophy-modal-scene {
+        height: 380px;
+      }
+      .trophy-modal-title {
+        font-size: 22px;
+      }
+      .trophy-modal-desc {
+        font-size: 12px;
+      }
+      .trophy-modal-caption {
+        padding: 16px;
+      }
+    }
+
   </style>
 </head>
 
 <body>
+  <!-- GLOBAL CINEMATIC TROPHY LIFT ANIMATED BACKGROUND (ALL PAGES) -->
+  <div class="global-trophy-lift-bg" id="globalTrophyLiftBg">
+    <div class="global-trophy-img-layer" id="globalTrophyImg"></div>
+    <canvas id="globalTrophyCanvas" class="global-trophy-canvas"></canvas>
+    <div class="global-trophy-light-sweep"></div>
+    <div class="global-trophy-vignette"></div>
+  </div>
+
 
   <!-- MPL TOPBAR -->
   <header class="mpl-header">
@@ -5899,13 +6196,24 @@
 
       <!-- STANDINGS -->
       <section class="page active" id="page-standings">
-        <!-- MPL ID S2026 Hero Banner -->
-        <div class="mpl-season-hero">
-          <div>
+        <!-- MPL ID S2026 Hero Banner with Cinematic Trophy Lift Animation -->
+        <div class="mpl-season-hero" id="mplSeasonHero">
+
+
+          <div class="mpl-hero-content-layer">
             <div class="mpl-season-badge">🏆 VML 2026 (VICTORINDO MOBILE LEGENDS) · OFFICIAL TOURNAMENT</div>
             <h1 class="mpl-hero-title">VML 2026 <span>(VICTORINDO MOBILE LEGENDS)</span></h1>
             <p class="mpl-hero-desc">Klasemen resmi turnamen VML 2026 (Victorindo Mobile Legends). <b>💡 Klik pada nama
                 atau logo tim</b> untuk melihat seluruh riwayat pertandingan &amp; head-to-head tim.</p>
+            <div class="trophy-anim-controls">
+              <button type="button" class="btn-trophy-anim-toggle" id="btnToggleTrophyAnim" title="Nyalakan / Jeda Animasi Latar">
+                <span class="anim-pulse-dot" id="animPulseDot"></span>
+                <span id="trophyAnimToggleText">🎬 Animasi Juara: LIVE</span>
+              </button>
+              <button type="button" class="btn-trophy-modal-open" id="btnOpenTrophyModal" title="Tonton Animasi Pengangkatan Piala Layar Penuh">
+                ✨ Momen Juara (Full View)
+              </button>
+            </div>
           </div>
           <div class="header-trophy-badge" title="Piala Resmi VML 2026 (Victorindo Mobile Legends)">
             <img src="piala.png" alt="Piala VML 2026" class="trophy-badge-img">
@@ -6290,6 +6598,24 @@
         <div style="display:flex;gap:10px;justify-content:flex-end;">
           <button class="btn btn-ghost" id="btnCancelAdminModal">Batal</button>
           <button class="btn btn-cyber" id="btnSubmitAdminLogin">MASUK SEBAGAI ADMIN</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Trophy Celebration Fullscreen Modal -->
+  <div class="trophy-modal-overlay hidden" id="trophyCelebrationModal">
+    <div class="trophy-modal-content">
+      <button class="trophy-modal-close" id="btnCloseTrophyModal" title="Tutup">✕</button>
+      <div class="trophy-modal-scene">
+        <img src="MLBB_M1WorldChampionship_EVOSLegends.webp" class="trophy-modal-img" alt="MLBB World Championship Champions">
+        <canvas id="trophyModalCanvas" class="trophy-modal-canvas"></canvas>
+        <div class="trophy-modal-spotlight"></div>
+        <div class="trophy-modal-vignette"></div>
+        <div class="trophy-modal-caption">
+          <div class="trophy-modal-tag">🏆 VICTORINDO MOBILE LEGENDS 2026</div>
+          <h2 class="trophy-modal-title">MOMEN PENGANGKATAN PIALA JUARA VML 2026</h2>
+          <p class="trophy-modal-desc">Simbol kehormatan tertinggi turnamen VML 2026 yang diangkat oleh para juara di panggung kemenangan Grand Final.</p>
         </div>
       </div>
     </div>
@@ -10206,7 +10532,186 @@
       }
 
 
-async function init() {
+
+            /* =========================================================
+         GLOBAL CINEMATIC TROPHY LIFT ANIMATION ENGINE (ALL PAGES)
+      ========================================================= */
+      function setupTrophyLiftAnimation() {
+        const globalBg = document.getElementById("globalTrophyLiftBg");
+        const canvas = document.getElementById("globalTrophyCanvas");
+        const modalCanvas = document.getElementById("trophyModalCanvas");
+        const modalOverlay = document.getElementById("trophyCelebrationModal");
+        const btnToggle = document.getElementById("btnToggleTrophyAnim");
+        const btnOpenModal = document.getElementById("btnOpenTrophyModal");
+        const btnCloseModal = document.getElementById("btnCloseTrophyModal");
+        const toggleText = document.getElementById("trophyAnimToggleText");
+        const pulseDot = document.getElementById("animPulseDot");
+
+        let isAnimActive = localStorage.getItem("vml_trophy_anim") !== "off";
+
+        function createParticleSystem(cvs) {
+          if (!cvs) return null;
+          const ctx = cvs.getContext("2d");
+          let width = 0, height = 0;
+          let particles = [];
+          const numParticles = cvs.id === "globalTrophyCanvas" ? 56 : 40;
+
+          function resize() {
+            const dpr = Math.min(window.devicePixelRatio || 1, 2);
+            width = window.innerWidth || document.documentElement.clientWidth;
+            height = window.innerHeight || document.documentElement.clientHeight;
+            if (cvs.id === "trophyModalCanvas") {
+              const rect = cvs.getBoundingClientRect();
+              width = rect.width || width;
+              height = rect.height || height;
+            }
+            cvs.width = Math.floor(width * dpr);
+            cvs.height = Math.floor(height * dpr);
+            ctx.setTransform(1, 0, 0, 1, 0, 0);
+            ctx.scale(dpr, dpr);
+          }
+
+          function resetParticle(p, initY) {
+            p.x = Math.random() * (width || window.innerWidth || 1000);
+            p.y = initY !== undefined ? initY : (height || window.innerHeight || 800) + Math.random() * 20;
+            p.size = Math.random() * 2.8 + 1.2;
+            p.speedY = -(Math.random() * 1.1 + 0.5);
+            p.speedX = (Math.random() - 0.5) * 0.7;
+            p.opacity = Math.random() * 0.55 + 0.2;
+            p.type = Math.random() > 0.4 ? "sparkle" : (Math.random() > 0.5 ? "confetti" : "ember");
+            p.rot = Math.random() * Math.PI * 2;
+            p.rotSpeed = (Math.random() - 0.5) * 0.06;
+            const colors = [
+              "rgba(255, 215, 0, ",
+              "rgba(251, 191, 36, ",
+              "rgba(41, 178, 225, ",
+              "rgba(43, 195, 179, ",
+              "rgba(255, 255, 255, "
+            ];
+            p.color = colors[Math.floor(Math.random() * colors.length)];
+          }
+
+          for (let i = 0; i < numParticles; i++) {
+            const p = {};
+            resetParticle(p, Math.random() * (window.innerHeight || 800));
+            particles.push(p);
+          }
+
+          resize();
+          window.addEventListener("resize", resize);
+
+          function updateAndDraw() {
+            ctx.clearRect(0, 0, width, height);
+
+            for (let i = 0; i < particles.length; i++) {
+              const p = particles[i];
+              p.y += p.speedY;
+              p.x += p.speedX + Math.sin(p.y * 0.015) * 0.3;
+              p.rot += p.rotSpeed;
+
+              if (p.y < -15 || p.x < -20 || p.x > width + 20) {
+                resetParticle(p);
+              }
+
+              ctx.save();
+              ctx.translate(p.x, p.y);
+              ctx.rotate(p.rot);
+
+              if (p.type === "confetti") {
+                ctx.fillStyle = p.color + p.opacity + ")";
+                ctx.fillRect(-p.size * 1.5, -p.size * 0.8, p.size * 3, p.size * 1.6);
+              } else if (p.type === "sparkle") {
+                ctx.fillStyle = p.color + p.opacity + ")";
+                ctx.beginPath();
+                ctx.arc(0, 0, p.size, 0, Math.PI * 2);
+                ctx.fill();
+                if (p.size > 2.2) {
+                  ctx.strokeStyle = "rgba(255,255,255," + (p.opacity * 0.75) + ")";
+                  ctx.lineWidth = 0.8;
+                  ctx.beginPath();
+                  ctx.moveTo(-p.size * 2, 0); ctx.lineTo(p.size * 2, 0);
+                  ctx.moveTo(0, -p.size * 2); ctx.lineTo(0, p.size * 2);
+                  ctx.stroke();
+                }
+              } else {
+                ctx.fillStyle = p.color + (p.opacity * 0.75) + ")";
+                ctx.beginPath();
+                ctx.arc(0, 0, p.size * 0.8, 0, Math.PI * 2);
+                ctx.fill();
+              }
+              ctx.restore();
+            }
+          }
+
+          return { updateAndDraw, resize };
+        }
+
+        const globalParticles = createParticleSystem(canvas);
+        const modalParticles = createParticleSystem(modalCanvas);
+
+        let rafId = null;
+        function loop() {
+          if (isAnimActive) {
+            if (globalParticles) globalParticles.updateAndDraw();
+            if (modalOverlay && !modalOverlay.classList.contains("hidden") && modalParticles) {
+              modalParticles.updateAndDraw();
+            }
+          }
+          rafId = requestAnimationFrame(loop);
+        }
+        loop();
+
+        function updateToggleUI() {
+          if (isAnimActive) {
+            if (globalBg) globalBg.classList.remove("trophy-anim-paused");
+            if (pulseDot) pulseDot.classList.remove("paused");
+            if (toggleText) toggleText.textContent = "🎬 Animasi Latar: LIVE";
+          } else {
+            if (globalBg) globalBg.classList.add("trophy-anim-paused");
+            if (pulseDot) pulseDot.classList.add("paused");
+            if (toggleText) toggleText.textContent = "⏸️ Animasi: JEDA";
+          }
+        }
+        updateToggleUI();
+
+        if (btnToggle) {
+          btnToggle.addEventListener("click", () => {
+            isAnimActive = !isAnimActive;
+            localStorage.setItem("vml_trophy_anim", isAnimActive ? "on" : "off");
+            updateToggleUI();
+          });
+        }
+
+        if (btnOpenModal && modalOverlay) {
+          btnOpenModal.addEventListener("click", () => {
+            modalOverlay.classList.remove("hidden");
+            if (modalParticles) modalParticles.resize();
+          });
+        }
+
+        if (btnCloseModal && modalOverlay) {
+          btnCloseModal.addEventListener("click", () => {
+            modalOverlay.classList.add("hidden");
+          });
+        }
+
+        if (modalOverlay) {
+          modalOverlay.addEventListener("click", (e) => {
+            if (e.target === modalOverlay) {
+              modalOverlay.classList.add("hidden");
+            }
+          });
+        }
+
+        document.addEventListener("keydown", (e) => {
+          if (e.key === "Escape" && modalOverlay && !modalOverlay.classList.contains("hidden")) {
+            modalOverlay.classList.add("hidden");
+          }
+        });
+      }
+
+      async function init() {
+        setupTrophyLiftAnimation();
         populateTeamSelects();
         setupResultSubModeTabs();
         setupStatistikSubnav();
