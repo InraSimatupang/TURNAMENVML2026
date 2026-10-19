@@ -5723,7 +5723,7 @@
           <div class="top5-section-block" id="blockTop5Kda">
             <div class="stat-section-heading" style="color: #fbbf24;">
               <span>⚡ TOP 5 KDA — RATIO (KILL + ASSIST) ÷ DEATH</span>
-              <span class="stat-formula-badge" id="badgeFormulaKda" style="border-color:rgba(245,158,11,0.3);background:rgba(245,158,11,0.1);color:#fbbf24;">⚖️ Rumus: (Total Kill + Total Assist) ÷ Total Death (Standar Resmi MPL) · Tim Aktif Week 5</span>
+              <span class="stat-formula-badge" id="badgeFormulaKda" style="border-color:rgba(245,158,11,0.3);background:rgba(245,158,11,0.1);color:#fbbf24;">⚖️ Standar Resmi MPL · Syarat Kualifikasi: Min. 50% Game Tim</span>
             </div>
             <div class="top5-kills-grid" id="top5KdaGrid">
               <!-- Populated dynamically -->
@@ -5734,7 +5734,7 @@
           <div class="top5-section-block" id="blockTop5Kills" style="margin-top: 36px;">
             <div class="stat-section-heading">
               <span>⚔️ TOP 5 KILLS (KPG) — RATA-RATA KILL PER GAME</span>
-              <span class="stat-formula-badge" id="badgeFormulaKills">⚖️ Rumus: Total Kill ÷ Total Game (Standar Resmi MPL) · Tim Aktif Week 5</span>
+              <span class="stat-formula-badge" id="badgeFormulaKills">⚖️ Standar Resmi MPL: Total Kill ÷ Total Game · Min. 50% Game Tim</span>
             </div>
             <div class="top5-kills-grid" id="top5KillsGrid">
               <!-- Populated dynamically -->
@@ -5745,7 +5745,7 @@
           <div class="top5-section-block" id="blockTop5Assists" style="margin-top: 36px;">
             <div class="stat-section-heading" style="color: var(--color-teal);">
               <span>🤝 TOP 5 ASSISTS (APG) — RATA-RATA ASSIST PER GAME</span>
-              <span class="stat-formula-badge" id="badgeFormulaAssists" style="border-color:rgba(43,195,179,0.3);background:rgba(43,195,179,0.1);color:#2BC3B3;">⚖️ Rumus: Total Assist ÷ Total Game (Standar Resmi MPL) · Tim Aktif Week 5</span>
+              <span class="stat-formula-badge" id="badgeFormulaAssists" style="border-color:rgba(43,195,179,0.3);background:rgba(43,195,179,0.1);color:#2BC3B3;">⚖️ Standar Resmi MPL: Total Assist ÷ Total Game · Min. 50% Game Tim</span>
             </div>
             <div class="top5-kills-grid" id="top5AssistsGrid">
               <!-- Populated dynamically -->
@@ -6559,7 +6559,7 @@
 
         // 9. Nightfall Syndicate
         { id: "ns_1", name: "Sahabat", ign: "{*._Sahabat_Tal_.*}", team: "Nightfall Syndicate", role: "Jungler", kills: 44, assists: 117, deaths: 72, weekKills: { 1: 8, 2: 13, 3: 6, 4: 5, 5: 6, 6: 6, 7: 0, 8: 0, 9: 0 } },
-        { id: "ns_2", name: "Tio Simatupang", ign: "Swords", team: "Nightfall Syndicate", role: "EXP Lane", kills: 25, assists: 19, deaths: 7, weekKills: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 25, 7: 0, 8: 0, 9: 0 } },
+        { id: "ns_2", name: "Tio Simatupang", ign: "Swords", team: "Nightfall Syndicate", role: "EXP Lane", kills: 25, assists: 19, deaths: 7, gamesPlayed: 3, weekKills: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 25, 7: 0, 8: 0, 9: 0 } },
         { id: "ns_3", name: "Adrian Dwi", ign: "nafas kambing", team: "Nightfall Syndicate", role: "Mid Lane", kills: 70, assists: 120, deaths: 44, weekKills: { 1: 6, 2: 13, 3: 6, 4: 16, 5: 4, 6: 25, 7: 0, 8: 0, 9: 0 } },
         { id: "ns_4", name: "Putri Nur Isha", ign: "E¢sσтιc", team: "Nightfall Syndicate", role: "Roamer", kills: 14, assists: 200, deaths: 59, weekKills: { 1: 1, 2: 3, 3: 4, 4: 2, 5: 2, 6: 2, 7: 0, 8: 0, 9: 0 } },
         { id: "ns_5", name: "Fiqri", ign: "Dnanz", team: "Nightfall Syndicate", role: "Gold Lane", kills: 75, assists: 107, deaths: 56, weekKills: { 1: 4, 2: 23, 3: 18, 4: 12, 5: 2, 6: 16, 7: 0, 8: 0, 9: 0 } },
@@ -9010,8 +9010,40 @@
         return gp;
       }
 
+      function getTeamTotalGames(teamName) {
+        let gp = 0;
+        if (matches && Array.isArray(matches)) {
+          matches.forEach(m => {
+            if (m && m.status === "COMPLETED" && (m.teamA === teamName || m.teamB === teamName)) {
+              if (m.isWO || m.wo) return;
+              gp += (Number(m.scoreA) || 0) + (Number(m.scoreB) || 0);
+            }
+          });
+        }
+        return gp;
+      }
+
+      function getMinGamesQualifier(player) {
+        if (!player) return 1;
+        const teamGames = getTeamTotalGames(player.team);
+        return Math.max(1, Math.ceil(teamGames * 0.5));
+      }
+
+      function isPlayerQualified(player) {
+        if (!player) return false;
+        const gp = getPlayerGamesPlayed(player);
+        return gp >= getMinGamesQualifier(player);
+      }
+
       function getSortedPlayers(sortBy = "kpg") {
         return [...players].sort((a, b) => {
+          // Khusus sorting metrik rata-rata (KPG, APG, KDA), utamakan pemain yang memenuhi syarat kualifikasi min. 50% game tim
+          if (sortBy === "kpg" || sortBy === "apg" || sortBy === "kda" || sortBy === "default") {
+            const isQualA = isPlayerQualified(a);
+            const isQualB = isPlayerQualified(b);
+            if (isQualA !== isQualB) return isQualA ? -1 : 1;
+          }
+
           const gpA = getPlayerGamesPlayed(a);
           const gpB = getPlayerGamesPlayed(b);
           const ka = Number(a.kills) || 0;
@@ -9179,8 +9211,8 @@
         if (!grid) return;
         grid.innerHTML = "";
 
-        // Pemain yang telah memainkan pertandingan
-        const eligibleKills = sortedKills.filter(p => getPlayerGamesPlayed(p) > 0);
+        // Hanya pemain yang memenuhi syarat kualifikasi minimum 50% game tim (Standar resmi MPL)
+        const eligibleKills = sortedKills.filter(p => isPlayerQualified(p));
         const top5 = eligibleKills.slice(0, 5);
         top5.forEach((player, idx) => {
           const logo = getTeamLogoUrl(player.team);
@@ -9220,8 +9252,8 @@
         if (!grid) return;
         grid.innerHTML = "";
 
-        // Pemain yang telah memainkan pertandingan
-        const eligibleAssists = sortedAssists.filter(p => getPlayerGamesPlayed(p) > 0);
+        // Hanya pemain yang memenuhi syarat kualifikasi minimum 50% game tim (Standar resmi MPL)
+        const eligibleAssists = sortedAssists.filter(p => isPlayerQualified(p));
         const top5 = eligibleAssists.slice(0, 5);
         top5.forEach((player, idx) => {
           const logo = getTeamLogoUrl(player.team);
@@ -9261,8 +9293,8 @@
         if (!grid) return;
         grid.innerHTML = "";
 
-        // Pemain yang telah memainkan pertandingan
-        const eligibleKda = sortedKda.filter(p => getPlayerGamesPlayed(p) > 0);
+        // Hanya pemain yang memenuhi syarat kualifikasi minimum 50% game tim (Standar resmi MPL)
+        const eligibleKda = sortedKda.filter(p => isPlayerQualified(p));
         const top5 = eligibleKda.slice(0, 5);
         top5.forEach((player, idx) => {
           const logo = getTeamLogoUrl(player.team);
@@ -9375,13 +9407,19 @@
           const barWidth = Math.min(100, Math.max(5, Math.round((activeMetricVal / maxMetric) * 100)));
           const logo = getTeamLogoUrl(player.team);
 
+          const isQual = isPlayerQualified(player);
+          const minReq = getMinGamesQualifier(player);
+
           let rankTagLabel = "";
-          if (overallRank === 1 && activeMetricVal > 0) {
+          if (overallRank === 1 && activeMetricVal > 0 && isQual) {
             if (sortCriterion === "kpg") rankTagLabel = '<span class="tag tag-completed" style="font-size:9px;padding:2px 5px;margin-left:4px;">#1 KPG</span>';
             else if (sortCriterion === "apg") rankTagLabel = '<span class="tag tag-completed" style="font-size:9px;padding:2px 5px;margin-left:4px;">#1 APG</span>';
             else if (sortCriterion === "kills") rankTagLabel = '<span class="tag tag-completed" style="font-size:9px;padding:2px 5px;margin-left:4px;">#1 KILL</span>';
             else if (sortCriterion === "assists") rankTagLabel = '<span class="tag tag-completed" style="font-size:9px;padding:2px 5px;margin-left:4px;">#1 ASSIST</span>';
             else if (sortCriterion === "kda") rankTagLabel = '<span class="tag tag-completed" style="font-size:9px;padding:2px 5px;margin-left:4px;">#1 KDA</span>';
+          }
+          if (!isQual) {
+            rankTagLabel += ' <span title="Pemain belum memenuhi syarat minimum 50% game tim (' + gp + '/' + minReq + ' Game)" style="font-size:8.5px;padding:1px 4px;border-radius:3px;background:rgba(239,68,68,0.15);color:#fca5a5;border:1px solid rgba(239,68,68,0.3);margin-left:4px;">(Min. ' + minReq + 'G)</span>';
           }
 
           const tr = document.createElement("tr");
@@ -9409,7 +9447,9 @@
             '</div>' +
             '</td>' +
             '<td style="text-align: center;">' +
-            '<span class="gp-tag" title="' + gp + ' Game Dimainkan">' + gp + 'G</span>' +
+            (isQual 
+              ? '<span class="gp-tag" title="' + gp + ' Game Dimainkan">' + gp + 'G</span>' 
+              : '<span class="gp-tag" style="border-color:rgba(239,68,68,0.5);color:#fca5a5;background:rgba(239,68,68,0.12);" title="Belum memenuhi syarat kualifikasi rate resmi (Baru ' + gp + ' dari min. ' + minReq + ' Game)">' + gp + 'G*</span>') +
             '</td>' +
             '<td style="text-align: center;">' +
             '<span class="kpg-badge-total ' + (sortCriterion === 'kpg' && overallRank === 1 && kpg > 0 ? 'top-one' : '') + '">' + kpg.toFixed(2) + '</span>' +
