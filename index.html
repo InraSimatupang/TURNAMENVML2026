@@ -6118,9 +6118,9 @@
           <div class="hero-pool-title-row">
             <div>
               <div class="hero-pool-title">
-                <span>🦸 WAJAH HERO PEMAIN <span class="accent">(WEEK 1 - 5)</span></span>
+                <span>🦸 WAJAH HERO PEMAIN <span class="accent">(WEEK 1 - 7)</span></span>
               </div>
-              <p class="hero-pool-sub">Wajah hero yang digunakan oleh setiap pemain VML 2026, diambil langsung dari screenshot bukti pertandingan Pekan 1 hingga 5.</p>
+              <p class="hero-pool-sub">Wajah hero yang digunakan oleh setiap pemain VML 2026, diambil langsung dari screenshot bukti pertandingan Pekan 1 hingga 7.</p>
             </div>
             <div style="display: flex; gap: 8px;">
               <a href="Daftar Hero Mobile Legends dan Iconnya.pdf" download="Daftar Hero Mobile Legends dan Iconnya.pdf" target="_blank" class="btn btn-ghost btn-sm" style="color:var(--neon-cyan); border-color:var(--line-glow);">
@@ -6136,11 +6136,11 @@
             </div>
             <div class="hero-meta-stat-card">
               <span class="hero-meta-stat-label">Total Pertandingan</span>
-              <span class="hero-meta-stat-val">52 Game</span>
+              <span class="hero-meta-stat-val">63 Game</span>
             </div>
             <div class="hero-meta-stat-card">
               <span class="hero-meta-stat-label">Total Wajah Hero</span>
-              <span class="hero-meta-stat-val" id="hStatTotalPicks">520</span>
+              <span class="hero-meta-stat-val" id="hStatTotalPicks">630</span>
             </div>
             <div class="hero-meta-stat-card">
               <span class="hero-meta-stat-label">Filter Pekan</span>
@@ -6154,13 +6154,14 @@
           <!-- Week Filter -->
           <div class="hero-filter-group">
             <span class="hero-filter-label">Pekan:</span>
-            <button type="button" class="hero-pill-btn active" data-week-filter="all">Semua Pekan (Week 1-6)</button>
+            <button type="button" class="hero-pill-btn active" data-week-filter="all">Semua Pekan (Week 1-7)</button>
             <button type="button" class="hero-pill-btn" data-week-filter="1">Week 1</button>
             <button type="button" class="hero-pill-btn" data-week-filter="2">Week 2</button>
             <button type="button" class="hero-pill-btn" data-week-filter="3">Week 3</button>
             <button type="button" class="hero-pill-btn" data-week-filter="4">Week 4</button>
             <button type="button" class="hero-pill-btn" data-week-filter="5">Week 5</button>
             <button type="button" class="hero-pill-btn" data-week-filter="6">Week 6</button>
+            <button type="button" class="hero-pill-btn" data-week-filter="7">Week 7</button>
           </div>
 
           <!-- Team Filter -->
@@ -6849,77 +6850,1108 @@
       ========================================================= */
       const PLAYERS_STORAGE_KEY = "vml2026:players";
             const DEFAULT_PLAYERS = [
-        // 1. Forge Wolf
-        { id: "fw_1", name: "Ferzi Pradana", ign: "P$KF||ERZIツ", team: "Forge Wolf", role: "Mid Lane", kills: 52, assists: 81, deaths: 11, weekKills: { 1: 13, 2: 21, 3: 0, 4: 11, 5: 7, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "fw_2", name: "Muhammad Fatiy", ign: "WRG Kruk_as.geser", team: "Forge Wolf", role: "Roamer", kills: 17, assists: 117, deaths: 36, weekKills: { 1: 4, 2: 2, 3: 0, 4: 8, 5: 3, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "fw_3", name: "Andika", ign: "ACT 김지수", team: "Forge Wolf", role: "Gold Lane", kills: 47, assists: 61, deaths: 27, weekKills: { 1: 11, 2: 11, 3: 0, 4: 9, 5: 16, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "fw_4", name: "Reza Haikal", ign: "TT3 RxD™_969", team: "Forge Wolf", role: "EXP Lane", kills: 25, assists: 69, deaths: 36, weekKills: { 1: 3, 2: 9, 3: 0, 4: 7, 5: 6, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "fw_5", name: "Abdul Khodir Zailani", ign: "o★ bko_zєє", team: "Forge Wolf", role: "Jungler", kills: 50, assists: 67, deaths: 26, weekKills: { 1: 10, 2: 18, 3: 0, 4: 13, 5: 9, 6: 0, 7: 0, 8: 0, 9: 0 } },
-
-        // 3. Bahaya & Jahil ( BAHLIL )
-        { id: "bj_1", name: "Erdiyanto", ign: "(#ojo dumeh lur#)", team: "Bahaya & Jahil ( BAHLIL )", role: "Roamer", kills: 18, assists: 63, deaths: 65, weekKills: { 1: 1, 2: 5, 3: 5, 4: 0, 5: 3, 6: 4, 7: 0, 8: 0, 9: 0 } },
-        { id: "bj_2", name: "Rudi", ign: "rm96", team: "Bahaya & Jahil ( BAHLIL )", role: "EXP Lane", kills: 11, assists: 79, deaths: 86, weekKills: { 1: 5, 2: 2, 3: 0, 4: 0, 5: 2, 6: 2, 7: 0, 8: 0, 9: 0 } },
-        { id: "bj_3", name: "M. Rifai", ign: "Tatsuya.", team: "Bahaya & Jahil ( BAHLIL )", role: "Jungler", kills: 69, assists: 67, deaths: 54, weekKills: { 1: 31, 2: 17, 3: 10, 4: 0, 5: 3, 6: 8, 7: 0, 8: 0, 9: 0 } },
-        { id: "bj_4", name: "Elvin Ar Ridho Saragih", ign: "PANJANG.19", team: "Bahaya & Jahil ( BAHLIL )", role: "Gold Lane", kills: 23, assists: 68, deaths: 73, weekKills: { 1: 3, 2: 6, 3: 5, 4: 0, 5: 2, 6: 7, 7: 0, 8: 0, 9: 0 } },
-        { id: "bj_5", name: "Andre Rahdianto", ign: "Kurayamii^•", team: "Bahaya & Jahil ( BAHLIL )", role: "Mid Lane", kills: 52, assists: 45, deaths: 64, weekKills: { 1: 12, 2: 26, 3: 2, 4: 0, 5: 4, 6: 8, 7: 0, 8: 0, 9: 0 } },
-
-        // 4. Kaum Begadang
-        { id: "kb_1", name: "Alvin", ign: "V I N 0³", team: "Kaum Begadang", role: "Jungler", kills: 69, assists: 46, deaths: 48, weekKills: { 1: 3, 2: 5, 3: 0, 4: 6, 5: 40, 6: 15, 7: 0, 8: 0, 9: 0 } },
-        { id: "kb_2", name: "Dimas Ardiansyah", ign: "°Dimas°", team: "Kaum Begadang", role: "Gold Lane", kills: 56, assists: 51, deaths: 54, weekKills: { 1: 4, 2: 1, 3: 0, 4: 11, 5: 14, 6: 26, 7: 0, 8: 0, 9: 0 } },
-        { id: "kb_3", name: "Aidil Akbar", ign: "BABASiong", team: "Kaum Begadang", role: "EXP Lane", kills: 20, assists: 74, deaths: 56, weekKills: { 1: 3, 2: 2, 3: 0, 4: 4, 5: 5, 6: 6, 7: 0, 8: 0, 9: 0 } },
-        { id: "kb_4", name: "Abil", ign: "WHYJISCEEE", team: "Kaum Begadang", role: "Roamer", kills: 30, assists: 103, deaths: 51, weekKills: { 1: 1, 2: 5, 3: 0, 4: 5, 5: 13, 6: 6, 7: 0, 8: 0, 9: 0 } },
-        { id: "kb_5", name: "M.Fadhlan Fauza", ign: "Faura13", team: "Kaum Begadang", role: "Mid Lane", kills: 15, assists: 84, deaths: 71, weekKills: { 1: 2, 2: 1, 3: 0, 4: 4, 5: 4, 6: 4, 7: 0, 8: 0, 9: 0 } },
-
-        // 5. Vortex
-        { id: "vx_1", name: "Thomas Cuaca", ign: "Winthz", team: "Vortex", role: "Mid Lane", kills: 35, assists: 139, deaths: 59, weekKills: { 1: 10, 2: 4, 3: 5, 4: 12, 5: 1, 6: 3, 7: 0, 8: 0, 9: 0 } },
-        { id: "vx_2", name: "Vency Anggela", ign: "Sipenkocik", team: "Vortex", role: "Roamer", kills: 35, assists: 187, deaths: 65, weekKills: { 1: 7, 2: 4, 3: 6, 4: 9, 5: 3, 6: 6, 7: 0, 8: 0, 9: 0 } },
-        { id: "vx_3", name: "Muhammad Apriansyah", ign: "Apriii_x", team: "Vortex", role: "Gold Lane", kills: 38, assists: 128, deaths: 54, weekKills: { 1: 10, 2: 2, 3: 4, 4: 8, 5: 6, 6: 8, 7: 0, 8: 0, 9: 0 } },
-        { id: "vx_4", name: "Ubay Dollah", ign: "KBR SKY", team: "Vortex", role: "Jungler", kills: 72, assists: 107, deaths: 58, weekKills: { 1: 16, 2: 11, 3: 20, 4: 17, 5: 4, 6: 4, 7: 0, 8: 0, 9: 0 } },
-        { id: "vx_5", name: "Zihad", ign: "nonok timbul", team: "Vortex", role: "EXP Lane", kills: 110, assists: 103, deaths: 52, weekKills: { 1: 25, 2: 8, 3: 37, 4: 22, 5: 8, 6: 10, 7: 0, 8: 0, 9: 0 } },
-
-        // 5. Black Owl
-        { id: "bo_1", name: "Abi Nubillah", ign: "S'FL K4NG_RECAL\"", team: "Black Owl", role: "Roamer", kills: 41, assists: 62, deaths: 26, weekKills: { 1: 3, 2: 4, 3: 0, 4: 2, 5: 6, 6: 26, 7: 0, 8: 0, 9: 0 } },
-        { id: "bo_2", name: "Hendrian Perdana", ign: "PRIA ROHIT_", team: "Black Owl", role: "Gold Lane", kills: 58, assists: 82, deaths: 21, weekKills: { 1: 15, 2: 14, 3: 0, 4: 10, 5: 12, 6: 7, 7: 0, 8: 0, 9: 0 } },
-        { id: "bo_3", name: "Inra H Simatupang", ign: "i’m fine, thanks.", team: "Black Owl", role: "Mid Lane", kills: 12, assists: 133, deaths: 33, weekKills: { 1: 3, 2: 2, 3: 0, 4: 2, 5: 3, 6: 2, 7: 0, 8: 0, 9: 0 } },
-        { id: "bo_4", name: "M. Habibillah", ign: "nafas kuda", team: "Black Owl", role: "Jungler", kills: 37, assists: 62, deaths: 39, weekKills: { 1: 10, 2: 7, 3: 0, 4: 3, 5: 7, 6: 10, 7: 0, 8: 0, 9: 0 } },
-        { id: "bo_5", name: "Ahmad Ikhwal", ign: "NED japero", team: "Black Owl", role: "EXP Lane", kills: 61, assists: 73, deaths: 22, weekKills: { 1: 19, 2: 14, 3: 0, 4: 8, 5: 15, 6: 5, 7: 0, 8: 0, 9: 0 } },
-
-        // 6. Manis Manja
-        { id: "mm_1", name: "Zepri Ramadhan", ign: "TRS zepri r", team: "Manis Manja", role: "Roamer", kills: 52, assists: 139, deaths: 58, weekKills: { 1: 8, 2: 23, 3: 6, 4: 7, 5: 2, 6: 6, 7: 0, 8: 0, 9: 0 } },
-        { id: "mm_2", name: "Bagus Utomo", ign: "TTK ElsaPutri♡", team: "Manis Manja", role: "Mid Lane", kills: 35, assists: 270, deaths: 70, weekKills: { 1: 6, 2: 8, 3: 7, 4: 1, 5: 8, 6: 5, 7: 0, 8: 0, 9: 0 } },
-        { id: "mm_3", name: "Muhammad Ihsan", ign: "Blank Space", team: "Manis Manja", role: "Jungler", kills: 158, assists: 132, deaths: 65, weekKills: { 1: 32, 2: 36, 3: 17, 4: 43, 5: 16, 6: 14, 7: 0, 8: 0, 9: 0 } },
-        { id: "mm_4", name: "N. Gita Eka Saputri", ign: "VG ★Hakuna Matata★", team: "Manis Manja", role: "Gold Lane", kills: 35, assists: 191, deaths: 46, weekKills: { 1: 3, 2: 12, 3: 13, 4: 2, 5: 5, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "mm_5", name: "Khairul Dhava", ign: "WhyYourDaff", team: "Manis Manja", role: "EXP Lane", kills: 120, assists: 111, deaths: 78, weekKills: { 1: 18, 2: 28, 3: 21, 4: 19, 5: 30, 6: 4, 7: 0, 8: 0, 9: 0 } },
-
-        // 7. Pantang Mundur
-        { id: "pm_1", name: "Abdul Gani", ign: "TTK LAE_Tokai", team: "Pantang Mundur", role: "Roamer", kills: 75, assists: 98, deaths: 51, weekKills: { 1: 15, 2: 11, 3: 24, 4: 7, 5: 18, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "pm_2", name: "Farid Zahran", ign: "PRX7 HOSEKI", team: "Pantang Mundur", role: "Mid Lane", kills: 111, assists: 94, deaths: 46, weekKills: { 1: 16, 2: 16, 3: 37, 4: 24, 5: 18, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "pm_3", name: "Hariangga Purba", ign: "CNC *PELAKOR*", team: "Pantang Mundur", role: "EXP Lane", kills: 13, assists: 154, deaths: 55, weekKills: { 1: 4, 2: 0, 3: 0, 4: 7, 5: 2, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "pm_4", name: "Khairul Rezki", ign: "WRG dαяkJєsтєя", team: "Pantang Mundur", role: "Jungler", kills: 29, assists: 122, deaths: 40, weekKills: { 1: 6, 2: 2, 3: 6, 4: 6, 5: 9, 6: 0, 7: 0, 8: 0, 9: 0 } },
-        { id: "pm_5", name: "Muhammad Fahri", ign: "RAWR PREDO", team: "Pantang Mundur", role: "Gold Lane", kills: 85, assists: 88, deaths: 34, weekKills: { 1: 17, 2: 6, 3: 20, 4: 22, 5: 20, 6: 0, 7: 0, 8: 0, 9: 0 } },
-
-        // 8. Leviathan
-        { id: "lv_1", name: "Bona Valti", ign: "F5S Voizuiinemidoren", team: "Leviathan", role: "EXP Lane", kills: 61, assists: 87, deaths: 79, weekKills: { 1: 12, 2: 3, 3: 10, 4: 9, 5: 17, 6: 10, 7: 0, 8: 0, 9: 0 } },
-        { id: "lv_2", name: "Benny Lim", ign: "MW B3ntzy", team: "Leviathan", role: "Roamer", kills: 47, assists: 107, deaths: 98, weekKills: { 1: 7, 2: 6, 3: 7, 4: 6, 5: 16, 6: 5, 7: 0, 8: 0, 9: 0 } },
-        { id: "lv_3", name: "Saputra Hutagaol", ign: "AutoAimn't", team: "Leviathan", role: "Jungler", kills: 60, assists: 119, deaths: 64, weekKills: { 1: 16, 2: 4, 3: 7, 4: 11, 5: 16, 6: 6, 7: 0, 8: 0, 9: 0 } },
-        { id: "lv_4", name: "Doli Hasibuan", ign: "^ Heisenberg", team: "Leviathan", role: "Gold Lane", kills: 66, assists: 109, deaths: 66, weekKills: { 1: 23, 2: 3, 3: 13, 4: 5, 5: 17, 6: 5, 7: 0, 8: 0, 9: 0 } },
-        { id: "lv_5", name: "Suhendry", ign: "MW zєρhуru$", team: "Leviathan", role: "Mid Lane", kills: 46, assists: 143, deaths: 75, weekKills: { 1: 16, 2: 7, 3: 3, 4: 6, 5: 7, 6: 7, 7: 0, 8: 0, 9: 0 } },
-
-        // 9. Nightfall Syndicate
-        { id: "ns_1", name: "Sahabat", ign: "{*._Sahabat_Tal_.*}", team: "Nightfall Syndicate", role: "Jungler", kills: 44, assists: 117, deaths: 72, weekKills: { 1: 8, 2: 13, 3: 6, 4: 5, 5: 6, 6: 6, 7: 0, 8: 0, 9: 0 } },
-        { id: "ns_2", name: "Tio Simatupang", ign: "Swords", team: "Nightfall Syndicate", role: "EXP Lane", kills: 25, assists: 19, deaths: 7, gamesPlayed: 3, weekKills: { 1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 25, 7: 0, 8: 0, 9: 0 } },
-        { id: "ns_3", name: "Adrian Dwi", ign: "nafas kambing", team: "Nightfall Syndicate", role: "Mid Lane", kills: 70, assists: 120, deaths: 44, weekKills: { 1: 6, 2: 13, 3: 6, 4: 16, 5: 4, 6: 25, 7: 0, 8: 0, 9: 0 } },
-        { id: "ns_4", name: "Putri Nur Isha", ign: "YoshinoNyx. ツ", team: "Nightfall Syndicate", role: "Roamer", kills: 14, assists: 200, deaths: 59, weekKills: { 1: 1, 2: 3, 3: 4, 4: 2, 5: 2, 6: 2, 7: 0, 8: 0, 9: 0 } },
-        { id: "ns_5", name: "Fiqri", ign: "Dnanz", team: "Nightfall Syndicate", role: "Gold Lane", kills: 75, assists: 107, deaths: 56, weekKills: { 1: 4, 2: 23, 3: 18, 4: 12, 5: 2, 6: 16, 7: 0, 8: 0, 9: 0 } },
-
-        // 10. Ulat Nangka
-        { id: "un_1", name: "Imam Sandi", ign: "Nurievira FSix", team: "Ulat Nangka", role: "Roamer", kills: 20, assists: 50, deaths: 33, weekKills: { 1: 4, 2: 1, 3: 0, 4: 0, 5: 10, 6: 5, 7: 0, 8: 0, 9: 0 } },
-        { id: "un_2", name: "M. Arifin", ign: "TKI F6", team: "Ulat Nangka", role: "Gold Lane", kills: 82, assists: 47, deaths: 19, weekKills: { 1: 8, 2: 10, 3: 0, 4: 0, 5: 27, 6: 37, 7: 0, 8: 0, 9: 0 } },
-        { id: "un_3", name: "M. Zidan", ign: "NJOZÌ", team: "Ulat Nangka", role: "Jungler", kills: 55, assists: 70, deaths: 30, weekKills: { 1: 3, 2: 23, 3: 0, 4: 0, 5: 25, 6: 4, 7: 0, 8: 0, 9: 0 } },
-        { id: "un_4", name: "M. Chaidir Azwar", ign: "AYAH NYA MENINGGAL", team: "Ulat Nangka", role: "EXP Lane", kills: 10, assists: 124, deaths: 39, weekKills: { 1: 0, 2: 1, 3: 0, 4: 0, 5: 6, 6: 3, 7: 0, 8: 0, 9: 0 } },
-        { id: "un_5", name: "Fauzi Abdillah", ign: "Babaneonking VG", team: "Ulat Nangka", role: "Mid Lane", kills: 31, assists: 95, deaths: 31, weekKills: { 1: 1, 2: 12, 3: 0, 4: 0, 5: 14, 6: 4, 7: 0, 8: 0, 9: 0 } }
-
-      ];
+  {
+    "assists": 100,
+    "deaths": 14,
+    "id": "fw_1",
+    "ign": "P$KF||ERZIツ",
+    "kills": 66,
+    "name": "Ferzi Pradana",
+    "role": "Mid Lane",
+    "team": "Forge Wolf",
+    "weekKills": [
+      null,
+      13,
+      21,
+      0,
+      11,
+      7,
+      0,
+      14,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 153,
+    "deaths": 41,
+    "id": "fw_2",
+    "ign": "WRG Kruk_as.geser",
+    "kills": 20,
+    "name": "Muhammad Fatiy",
+    "role": "Roamer",
+    "team": "Forge Wolf",
+    "weekKills": [
+      null,
+      4,
+      2,
+      0,
+      8,
+      3,
+      0,
+      3,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 78,
+    "deaths": 32,
+    "id": "fw_3",
+    "ign": "ACT 김지수",
+    "kills": 58,
+    "name": "Andika",
+    "role": "Gold Lane",
+    "team": "Forge Wolf",
+    "weekKills": [
+      null,
+      11,
+      11,
+      0,
+      9,
+      16,
+      0,
+      11,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 82,
+    "deaths": 40,
+    "id": "fw_4",
+    "ign": "TT3 RxD™_969",
+    "kills": 43,
+    "name": "Reza Haikal",
+    "role": "EXP Lane",
+    "team": "Forge Wolf",
+    "weekKills": [
+      null,
+      3,
+      9,
+      0,
+      7,
+      6,
+      0,
+      18,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 75,
+    "deaths": 28,
+    "id": "fw_5",
+    "ign": "o★ bko_zєє",
+    "kills": 58,
+    "name": "Abdul Khodir Zailani",
+    "role": "Jungler",
+    "team": "Forge Wolf",
+    "weekKills": [
+      null,
+      10,
+      18,
+      0,
+      13,
+      9,
+      0,
+      8,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 80,
+    "deaths": 30,
+    "id": "bo_1",
+    "ign": "S'FL K4NG_RECAL\"",
+    "kills": 66,
+    "name": "Abi Nubillah",
+    "role": "Roamer",
+    "team": "Black Owl",
+    "weekKills": [
+      null,
+      3,
+      4,
+      0,
+      2,
+      6,
+      26,
+      25,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 104,
+    "deaths": 25,
+    "id": "bo_2",
+    "ign": "PRIA ROHIT_",
+    "kills": 73,
+    "name": "Hendrian Perdana",
+    "role": "Gold Lane",
+    "team": "Black Owl",
+    "weekKills": [
+      null,
+      15,
+      14,
+      0,
+      10,
+      12,
+      7,
+      15,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 172,
+    "deaths": 35,
+    "id": "bo_3",
+    "ign": "i’m fine, thanks.",
+    "kills": 18,
+    "name": "Inra H Simatupang",
+    "role": "Mid Lane",
+    "team": "Black Owl",
+    "weekKills": [
+      null,
+      3,
+      2,
+      0,
+      2,
+      3,
+      2,
+      6,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 78,
+    "deaths": 41,
+    "id": "bo_4",
+    "ign": "nafas kuda",
+    "kills": 41,
+    "name": "M. Habibillah",
+    "role": "Jungler",
+    "team": "Black Owl",
+    "weekKills": [
+      null,
+      10,
+      7,
+      0,
+      3,
+      7,
+      10,
+      4,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 96,
+    "deaths": 22,
+    "id": "bo_5",
+    "ign": "NED japero",
+    "kills": 72,
+    "name": "Ahmad Ikhwal",
+    "role": "EXP Lane",
+    "team": "Black Owl",
+    "weekKills": [
+      null,
+      19,
+      14,
+      0,
+      8,
+      15,
+      5,
+      11,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 67,
+    "deaths": 71,
+    "id": "bj_1",
+    "ign": "(#ojo dumeh lur#)",
+    "kills": 20,
+    "name": "Erdiyanto",
+    "role": "Roamer",
+    "team": "Bahaya & Jahil ( BAHLIL )",
+    "weekKills": [
+      null,
+      1,
+      5,
+      5,
+      0,
+      3,
+      4,
+      2,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 83,
+    "deaths": 105,
+    "id": "bj_2",
+    "ign": "rm96",
+    "kills": 14,
+    "name": "Rudi",
+    "role": "EXP Lane",
+    "team": "Bahaya & Jahil ( BAHLIL )",
+    "weekKills": [
+      null,
+      5,
+      2,
+      0,
+      0,
+      2,
+      2,
+      3,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 70,
+    "deaths": 66,
+    "id": "bj_3",
+    "ign": "Tatsuya.",
+    "kills": 79,
+    "name": "M. Rifai",
+    "role": "Jungler",
+    "team": "Bahaya & Jahil ( BAHLIL )",
+    "weekKills": [
+      null,
+      31,
+      17,
+      10,
+      0,
+      3,
+      8,
+      10,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 69,
+    "deaths": 81,
+    "id": "bj_4",
+    "ign": "PANJANG.19",
+    "kills": 25,
+    "name": "Elvin Ar Ridho Saragih",
+    "role": "Gold Lane",
+    "team": "Bahaya & Jahil ( BAHLIL )",
+    "weekKills": [
+      null,
+      3,
+      6,
+      5,
+      0,
+      2,
+      7,
+      2,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 53,
+    "deaths": 73,
+    "id": "bj_5",
+    "ign": "Kurayamii^•",
+    "kills": 54,
+    "name": "Andre Rahdianto",
+    "role": "Mid Lane",
+    "team": "Bahaya & Jahil ( BAHLIL )",
+    "weekKills": [
+      null,
+      12,
+      26,
+      2,
+      0,
+      4,
+      8,
+      2,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 52,
+    "deaths": 60,
+    "id": "kb_1",
+    "ign": "V I N 0³",
+    "kills": 72,
+    "name": "Alvin",
+    "role": "Jungler",
+    "team": "Kaum Begadang",
+    "weekKills": [
+      null,
+      3,
+      5,
+      0,
+      6,
+      40,
+      15,
+      3,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 52,
+    "deaths": 64,
+    "id": "kb_2",
+    "ign": "°Dimas°",
+    "kills": 59,
+    "name": "Dimas Ardiansyah",
+    "role": "Gold Lane",
+    "team": "Kaum Begadang",
+    "weekKills": [
+      null,
+      4,
+      1,
+      0,
+      11,
+      14,
+      26,
+      3,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 77,
+    "deaths": 66,
+    "id": "kb_3",
+    "ign": "BABASiong",
+    "kills": 22,
+    "name": "Aidil Akbar",
+    "role": "EXP Lane",
+    "team": "Kaum Begadang",
+    "weekKills": [
+      null,
+      3,
+      2,
+      0,
+      4,
+      5,
+      6,
+      2,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 106,
+    "deaths": 63,
+    "id": "kb_4",
+    "ign": "WHYJISCEEE",
+    "kills": 33,
+    "name": "Abil",
+    "role": "Roamer",
+    "team": "Kaum Begadang",
+    "weekKills": [
+      null,
+      1,
+      5,
+      0,
+      5,
+      13,
+      6,
+      3,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 88,
+    "deaths": 88,
+    "id": "kb_5",
+    "ign": "Faura13",
+    "kills": 16,
+    "name": "M.Fadhlan Fauza",
+    "role": "Mid Lane",
+    "team": "Kaum Begadang",
+    "weekKills": [
+      null,
+      2,
+      1,
+      0,
+      4,
+      4,
+      4,
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 144,
+    "deaths": 68,
+    "id": "vx_1",
+    "ign": "Winthz",
+    "kills": 36,
+    "name": "Thomas Cuaca",
+    "role": "Mid Lane",
+    "team": "Vortex",
+    "weekKills": [
+      null,
+      10,
+      4,
+      5,
+      12,
+      1,
+      3,
+      1,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 196,
+    "deaths": 77,
+    "id": "vx_2",
+    "ign": "Sipenkocik",
+    "kills": 38,
+    "name": "Vency Anggela",
+    "role": "Roamer",
+    "team": "Vortex",
+    "weekKills": [
+      null,
+      7,
+      4,
+      6,
+      9,
+      3,
+      6,
+      3,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 135,
+    "deaths": 65,
+    "id": "vx_3",
+    "ign": "Apriii_x",
+    "kills": 40,
+    "name": "Muhammad Apriansyah",
+    "role": "Gold Lane",
+    "team": "Vortex",
+    "weekKills": [
+      null,
+      10,
+      2,
+      4,
+      8,
+      6,
+      8,
+      2,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 111,
+    "deaths": 75,
+    "id": "vx_4",
+    "ign": "KBR SKY",
+    "kills": 75,
+    "name": "Ubay Dollah",
+    "role": "Jungler",
+    "team": "Vortex",
+    "weekKills": [
+      null,
+      16,
+      11,
+      20,
+      17,
+      4,
+      4,
+      3,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 107,
+    "deaths": 63,
+    "id": "vx_5",
+    "ign": "nonok timbul",
+    "kills": 117,
+    "name": "Zihad",
+    "role": "EXP Lane",
+    "team": "Vortex",
+    "weekKills": [
+      null,
+      25,
+      8,
+      37,
+      22,
+      8,
+      10,
+      7,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 178,
+    "deaths": 68,
+    "id": "mm_1",
+    "ign": "TRS zepri r",
+    "kills": 57,
+    "name": "Zepri Ramadhan",
+    "role": "Roamer",
+    "team": "Manis Manja",
+    "weekKills": [
+      null,
+      8,
+      23,
+      6,
+      7,
+      2,
+      6,
+      5,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 304,
+    "deaths": 84,
+    "id": "mm_2",
+    "ign": "TTK ElsaPutri♡",
+    "kills": 55,
+    "name": "Bagus Utomo",
+    "role": "Mid Lane",
+    "team": "Manis Manja",
+    "weekKills": [
+      null,
+      6,
+      8,
+      7,
+      1,
+      8,
+      5,
+      20,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 150,
+    "deaths": 83,
+    "id": "mm_3",
+    "ign": "Blank Space",
+    "kills": 187,
+    "name": "Muhammad Ihsan",
+    "role": "Jungler",
+    "team": "Manis Manja",
+    "weekKills": [
+      null,
+      32,
+      36,
+      17,
+      43,
+      16,
+      14,
+      29,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 243,
+    "deaths": 54,
+    "id": "mm_4",
+    "ign": "VG ★Hakuna Matata★",
+    "kills": 44,
+    "name": "N. Gita Eka Saputri",
+    "role": "Gold Lane",
+    "team": "Manis Manja",
+    "weekKills": [
+      null,
+      3,
+      12,
+      13,
+      2,
+      5,
+      0,
+      9,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 137,
+    "deaths": 89,
+    "id": "mm_5",
+    "ign": "WhyYourDaff",
+    "kills": 130,
+    "name": "Khairul Dhava",
+    "role": "EXP Lane",
+    "team": "Manis Manja",
+    "weekKills": [
+      null,
+      18,
+      28,
+      21,
+      19,
+      30,
+      4,
+      10,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 117,
+    "deaths": 59,
+    "id": "pm_1",
+    "ign": "TTK LAE_Tokai",
+    "kills": 85,
+    "name": "Abdul Gani",
+    "role": "Roamer",
+    "team": "Pantang Mundur",
+    "weekKills": [
+      null,
+      15,
+      11,
+      24,
+      7,
+      18,
+      0,
+      10,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 120,
+    "deaths": 54,
+    "id": "pm_2",
+    "ign": "PRX7 HOSEKI",
+    "kills": 132,
+    "name": "Farid Zahran",
+    "role": "Mid Lane",
+    "team": "Pantang Mundur",
+    "weekKills": [
+      null,
+      16,
+      16,
+      37,
+      24,
+      18,
+      0,
+      21,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 185,
+    "deaths": 64,
+    "id": "pm_3",
+    "ign": "CNC *PELAKOR*",
+    "kills": 17,
+    "name": "Hariangga Purba",
+    "role": "EXP Lane",
+    "team": "Pantang Mundur",
+    "weekKills": [
+      null,
+      4,
+      0,
+      0,
+      7,
+      2,
+      0,
+      4,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 145,
+    "deaths": 50,
+    "id": "pm_4",
+    "ign": "WRG dαяkJєsтєя",
+    "kills": 35,
+    "name": "Khairul Rezki",
+    "role": "Jungler",
+    "team": "Pantang Mundur",
+    "weekKills": [
+      null,
+      6,
+      2,
+      6,
+      6,
+      9,
+      0,
+      6,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 108,
+    "deaths": 41,
+    "id": "pm_5",
+    "ign": "RAWR PREDO",
+    "kills": 113,
+    "name": "Muhammad Fahri",
+    "role": "Gold Lane",
+    "team": "Pantang Mundur",
+    "weekKills": [
+      null,
+      17,
+      6,
+      20,
+      22,
+      20,
+      0,
+      28,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 118,
+    "deaths": 93,
+    "id": "lv_1",
+    "ign": "F5S Voizuiinemidoren",
+    "kills": 77,
+    "name": "Bona Valti",
+    "role": "EXP Lane",
+    "team": "Leviathan",
+    "weekKills": [
+      null,
+      12,
+      3,
+      10,
+      9,
+      17,
+      10,
+      16,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 146,
+    "deaths": 113,
+    "id": "lv_2",
+    "ign": "MW B3ntzy",
+    "kills": 52,
+    "name": "Benny Lim",
+    "role": "Roamer",
+    "team": "Leviathan",
+    "weekKills": [
+      null,
+      7,
+      6,
+      7,
+      6,
+      16,
+      5,
+      5,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 136,
+    "deaths": 76,
+    "id": "lv_3",
+    "ign": "AutoAimn't",
+    "kills": 73,
+    "name": "Saputra Hutagaol",
+    "role": "Jungler",
+    "team": "Leviathan",
+    "weekKills": [
+      null,
+      16,
+      4,
+      7,
+      11,
+      16,
+      6,
+      13,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 130,
+    "deaths": 78,
+    "id": "lv_4",
+    "ign": "^ Heisenberg",
+    "kills": 79,
+    "name": "Doli Hasibuan",
+    "role": "Gold Lane",
+    "team": "Leviathan",
+    "weekKills": [
+      null,
+      23,
+      3,
+      13,
+      5,
+      17,
+      5,
+      13,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 174,
+    "deaths": 95,
+    "id": "lv_5",
+    "ign": "MW zєρhуru$",
+    "kills": 60,
+    "name": "Suhendry",
+    "role": "Mid Lane",
+    "team": "Leviathan",
+    "weekKills": [
+      null,
+      16,
+      7,
+      3,
+      6,
+      7,
+      7,
+      14,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 132,
+    "deaths": 84,
+    "id": "ns_1",
+    "ign": "{*._Sahabat_Tal_.*}",
+    "kills": 51,
+    "name": "Sahabat",
+    "role": "Jungler",
+    "team": "Nightfall Syndicate",
+    "weekKills": [
+      null,
+      8,
+      13,
+      6,
+      5,
+      6,
+      6,
+      7,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 35,
+    "deaths": 24,
+    "gamesPlayed": 3,
+    "id": "ns_2",
+    "ign": "Swords",
+    "kills": 36,
+    "name": "Tio Simatupang",
+    "role": "EXP Lane",
+    "team": "Nightfall Syndicate",
+    "weekKills": [
+      null,
+      0,
+      0,
+      0,
+      0,
+      0,
+      25,
+      11,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 138,
+    "deaths": 54,
+    "id": "ns_3",
+    "ign": "nafas kambing",
+    "kills": 83,
+    "name": "Adrian Dwi",
+    "role": "Mid Lane",
+    "team": "Nightfall Syndicate",
+    "weekKills": [
+      null,
+      6,
+      13,
+      6,
+      16,
+      4,
+      25,
+      13,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 228,
+    "deaths": 79,
+    "id": "ns_4",
+    "ign": "YoshinoNyx. ツ",
+    "kills": 16,
+    "name": "Putri Nur Isha",
+    "role": "Roamer",
+    "team": "Nightfall Syndicate",
+    "weekKills": [
+      null,
+      1,
+      3,
+      4,
+      2,
+      2,
+      2,
+      2,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 131,
+    "deaths": 66,
+    "id": "ns_5",
+    "ign": "Dnanz",
+    "kills": 84,
+    "name": "Fiqri",
+    "role": "Gold Lane",
+    "team": "Nightfall Syndicate",
+    "weekKills": [
+      null,
+      4,
+      23,
+      18,
+      12,
+      2,
+      16,
+      9,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 68,
+    "deaths": 38,
+    "id": "un_1",
+    "ign": "Nurievira FSix",
+    "kills": 23,
+    "name": "Imam Sandi",
+    "role": "Roamer",
+    "team": "Ulat Nangka",
+    "weekKills": [
+      null,
+      4,
+      1,
+      0,
+      0,
+      10,
+      5,
+      3,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 65,
+    "deaths": 21,
+    "id": "un_2",
+    "ign": "TKI F6",
+    "kills": 91,
+    "name": "M. Arifin",
+    "role": "Gold Lane",
+    "team": "Ulat Nangka",
+    "weekKills": [
+      null,
+      8,
+      10,
+      0,
+      0,
+      27,
+      37,
+      9,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 86,
+    "deaths": 35,
+    "id": "un_3",
+    "ign": "NJOZÌ",
+    "kills": 80,
+    "name": "M. Zidan",
+    "role": "Jungler",
+    "team": "Ulat Nangka",
+    "weekKills": [
+      null,
+      3,
+      23,
+      0,
+      0,
+      25,
+      4,
+      25,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 169,
+    "deaths": 41,
+    "id": "un_4",
+    "ign": "AYAH NYA MENINGGAL",
+    "kills": 10,
+    "name": "M. Chaidir Azwar",
+    "role": "EXP Lane",
+    "team": "Ulat Nangka",
+    "weekKills": [
+      null,
+      0,
+      1,
+      0,
+      0,
+      6,
+      3,
+      0,
+      0,
+      0
+    ]
+  },
+  {
+    "assists": 115,
+    "deaths": 33,
+    "id": "un_5",
+    "ign": "Babaneonking VG",
+    "kills": 54,
+    "name": "Fauzi Abdillah",
+    "role": "Mid Lane",
+    "team": "Ulat Nangka",
+    "weekKills": [
+      null,
+      1,
+      12,
+      0,
+      0,
+      14,
+      4,
+      23,
+      0,
+      0
+    ]
+  }
+];
 
       function getDefaultPlayers() {
         return JSON.parse(JSON.stringify(DEFAULT_PLAYERS));
@@ -10371,7 +11403,7 @@
             /* =========================================================
          OFFICIAL HERO CROPS DATABASE (WEEK 1 - 5)
       ========================================================= */
-      const PLAYER_HERO_CROPS = {"fw_1":{"1":["hero_crops/w1_fw_1_g1.png","hero_crops/w1_fw_1_g2.png"],"2":["hero_crops/w2_fw_1_g1.png","hero_crops/w2_fw_1_g2.png","hero_crops/w2_fw_1_g3.png"],"3":[],"4":["hero_crops/w4_fw_1_g1.png","hero_crops/w4_fw_1_g2.png"],"5":["hero_crops/w5_fw_1_g1.png","hero_crops/w5_fw_1_g2.png"],"6":[]},"fw_2":{"1":["hero_crops/w1_fw_2_g1.png","hero_crops/w1_fw_2_g2.png"],"2":["hero_crops/w2_fw_2_g1.png","hero_crops/w2_fw_2_g2.png","hero_crops/w2_fw_2_g3.png"],"3":[],"4":["hero_crops/w4_fw_2_g1.png","hero_crops/w4_fw_2_g2.png"],"5":["hero_crops/w5_fw_2_g1.png","hero_crops/w5_fw_2_g2.png"],"6":[]},"fw_3":{"1":["hero_crops/w1_fw_3_g1.png","hero_crops/w1_fw_3_g2.png"],"2":["hero_crops/w2_fw_3_g1.png","hero_crops/w2_fw_3_g2.png","hero_crops/w2_fw_3_g3.png"],"3":[],"4":["hero_crops/w4_fw_3_g1.png","hero_crops/w4_fw_3_g2.png"],"5":["hero_crops/w5_fw_3_g1.png","hero_crops/w5_fw_3_g2.png"],"6":[]},"fw_4":{"1":["hero_crops/w1_fw_4_g1.png","hero_crops/w1_fw_4_g2.png"],"2":["hero_crops/w2_fw_4_g1.png","hero_crops/w2_fw_4_g2.png","hero_crops/w2_fw_4_g3.png"],"3":[],"4":["hero_crops/w4_fw_4_g1.png","hero_crops/w4_fw_4_g2.png"],"5":["hero_crops/w5_fw_4_g1.png","hero_crops/w5_fw_4_g2.png"],"6":[]},"fw_5":{"1":["hero_crops/w1_fw_5_g1.png","hero_crops/w1_fw_5_g2.png"],"2":["hero_crops/w2_fw_5_g1.png","hero_crops/w2_fw_5_g2.png","hero_crops/w2_fw_5_g3.png"],"3":[],"4":["hero_crops/w4_fw_5_g1.png","hero_crops/w4_fw_5_g2.png"],"5":["hero_crops/w5_fw_5_g1.png","hero_crops/w5_fw_5_g2.png"],"6":[]},"bo_1":{"1":["hero_crops/w1_bo_1_g1.png","hero_crops/w1_bo_1_g2.png"],"2":["hero_crops/w2_bo_1_g1.png","hero_crops/w2_bo_1_g2.png"],"3":[],"4":["hero_crops/w4_bo_1_g1.png","hero_crops/w4_bo_1_g2.png"],"5":["hero_crops/w5_bo_1_g1.png","hero_crops/w5_bo_1_g2.png"],"6":["hero_crops/w6_bo_1_g1.png","hero_crops/w6_bo_1_g2.png"]},"bo_2":{"1":["hero_crops/w1_bo_2_g1.png","hero_crops/w1_bo_2_g2.png"],"2":["hero_crops/w2_bo_2_g1.png","hero_crops/w2_bo_2_g2.png"],"3":[],"4":["hero_crops/w4_bo_2_g1.png","hero_crops/w4_bo_2_g2.png"],"5":["hero_crops/w5_bo_2_g1.png","hero_crops/w5_bo_2_g2.png"],"6":["hero_crops/w6_bo_2_g1.png","hero_crops/w6_bo_2_g2.png"]},"bo_3":{"1":["hero_crops/w1_bo_3_g1.png","hero_crops/w1_bo_3_g2.png"],"2":["hero_crops/w2_bo_3_g1.png","hero_crops/w2_bo_3_g2.png"],"3":[],"4":["hero_crops/w4_bo_3_g1.png","hero_crops/w4_bo_3_g2.png"],"5":["hero_crops/w5_bo_3_g1.png","hero_crops/w5_bo_3_g2.png"],"6":["hero_crops/w6_bo_3_g1.png","hero_crops/w6_bo_3_g2.png"]},"bo_4":{"1":["hero_crops/w1_bo_4_g1.png","hero_crops/w1_bo_4_g2.png"],"2":["hero_crops/w2_bo_4_g1.png","hero_crops/w2_bo_4_g2.png"],"3":[],"4":["hero_crops/w4_bo_4_g1.png","hero_crops/w4_bo_4_g2.png"],"5":["hero_crops/w5_bo_4_g1.png","hero_crops/w5_bo_4_g2.png"],"6":["hero_crops/w6_bo_4_g1.png","hero_crops/w6_bo_4_g2.png"]},"bo_5":{"1":["hero_crops/w1_bo_5_g1.png","hero_crops/w1_bo_5_g2.png"],"2":["hero_crops/w2_bo_5_g1.png","hero_crops/w2_bo_5_g2.png"],"3":[],"4":["hero_crops/w4_bo_5_g1.png","hero_crops/w4_bo_5_g2.png"],"5":["hero_crops/w5_bo_5_g1.png","hero_crops/w5_bo_5_g2.png"],"6":["hero_crops/w6_bo_5_g1.png","hero_crops/w6_bo_5_g2.png"]},"bj_1":{"1":["hero_crops/w1_bj_1_g1.png","hero_crops/w1_bj_1_g2.png","hero_crops/w1_bj_1_g3.png"],"2":["hero_crops/w2_bj_1_g1.png","hero_crops/w2_bj_1_g2.png","hero_crops/w2_bj_1_g3.png"],"3":["hero_crops/w3_bj_1_g1.png","hero_crops/w3_bj_1_g2.png"],"4":[],"5":["hero_crops/w5_bj_1_g1.png","hero_crops/w5_bj_1_g2.png"],"6":["hero_crops/w6_bj_1_g1.png","hero_crops/w6_bj_1_g2.png"]},"bj_2":{"1":["hero_crops/w1_bj_2_g1.png","hero_crops/w1_bj_2_g2.png","hero_crops/w1_bj_2_g3.png"],"2":["hero_crops/w2_bj_2_g1.png","hero_crops/w2_bj_2_g2.png","hero_crops/w2_bj_2_g3.png"],"3":["hero_crops/w3_bj_2_g1.png","hero_crops/w3_bj_2_g2.png"],"4":[],"5":["hero_crops/w5_bj_2_g1.png","hero_crops/w5_bj_2_g2.png"],"6":["hero_crops/w6_bj_2_g1.png","hero_crops/w6_bj_2_g2.png"]},"bj_3":{"1":["hero_crops/w1_bj_3_g1.png","hero_crops/w1_bj_3_g2.png","hero_crops/w1_bj_3_g3.png"],"2":["hero_crops/w2_bj_3_g1.png","hero_crops/w2_bj_3_g2.png","hero_crops/w2_bj_3_g3.png"],"3":["hero_crops/w3_bj_3_g1.png","hero_crops/w3_bj_3_g2.png"],"4":[],"5":["hero_crops/w5_bj_3_g1.png","hero_crops/w5_bj_3_g2.png"],"6":["hero_crops/w6_bj_3_g1.png","hero_crops/w6_bj_3_g2.png"]},"bj_4":{"1":["hero_crops/w1_bj_4_g1.png","hero_crops/w1_bj_4_g2.png","hero_crops/w1_bj_4_g3.png"],"2":["hero_crops/w2_bj_4_g1.png","hero_crops/w2_bj_4_g2.png","hero_crops/w2_bj_4_g3.png"],"3":["hero_crops/w3_bj_4_g1.png","hero_crops/w3_bj_4_g2.png"],"4":[],"5":["hero_crops/w5_bj_4_g1.png","hero_crops/w5_bj_4_g2.png"],"6":["hero_crops/w6_bj_4_g1.png","hero_crops/w6_bj_4_g2.png"]},"bj_5":{"1":["hero_crops/w1_bj_5_g1.png","hero_crops/w1_bj_5_g2.png","hero_crops/w1_bj_5_g3.png"],"2":["hero_crops/w2_bj_5_g1.png","hero_crops/w2_bj_5_g2.png","hero_crops/w2_bj_5_g3.png"],"3":["hero_crops/w3_bj_5_g1.png","hero_crops/w3_bj_5_g2.png"],"4":[],"5":["hero_crops/w5_bj_5_g1.png","hero_crops/w5_bj_5_g2.png"],"6":["hero_crops/w6_bj_5_g1.png","hero_crops/w6_bj_5_g2.png"]},"kb_1":{"1":[],"2":[],"3":[],"4":["hero_crops/w4_kb_1_g1.png","hero_crops/w4_kb_1_g2.png"],"5":["hero_crops/w5_kb_1_g1.png","hero_crops/w5_kb_1_g2.png","hero_crops/w5_kb_1_g3.png"],"6":["hero_crops/w6_kb_1_g1.png","hero_crops/w6_kb_1_g2.png"]},"kb_2":{"1":["hero_crops/w1_kb_2_g1.png","hero_crops/w1_kb_2_g2.png"],"2":["hero_crops/w2_kb_2_g1.png","hero_crops/w2_kb_2_g2.png"],"3":[],"4":["hero_crops/w4_kb_2_g1.png","hero_crops/w4_kb_2_g2.png"],"5":["hero_crops/w5_kb_2_g1.png","hero_crops/w5_kb_2_g2.png","hero_crops/w5_kb_2_g3.png"],"6":["hero_crops/w6_kb_2_g1.png","hero_crops/w6_kb_2_g2.png"]},"kb_3":{"1":["hero_crops/w1_kb_3_g1.png","hero_crops/w1_kb_3_g2.png"],"2":["hero_crops/w2_kb_3_g1.png","hero_crops/w2_kb_3_g2.png"],"3":[],"4":["hero_crops/w4_kb_3_g1.png","hero_crops/w4_kb_3_g2.png"],"5":["hero_crops/w5_kb_3_g1.png","hero_crops/w5_kb_3_g2.png","hero_crops/w5_kb_3_g3.png"],"6":["hero_crops/w6_kb_3_g1.png","hero_crops/w6_kb_3_g2.png"]},"kb_4":{"1":["hero_crops/w1_kb_4_g1.png","hero_crops/w1_kb_4_g2.png"],"2":["hero_crops/w2_kb_4_g1.png","hero_crops/w2_kb_4_g2.png"],"3":[],"4":["hero_crops/w4_kb_4_g1.png","hero_crops/w4_kb_4_g2.png"],"5":["hero_crops/w5_kb_4_g1.png","hero_crops/w5_kb_4_g2.png","hero_crops/w5_kb_4_g3.png"],"6":["hero_crops/w6_kb_4_g1.png","hero_crops/w6_kb_4_g2.png"]},"kb_5":{"1":["hero_crops/w1_kb_5_g1.png","hero_crops/w1_kb_5_g2.png"],"2":["hero_crops/w2_kb_5_g1.png","hero_crops/w2_kb_5_g2.png"],"3":[],"4":["hero_crops/w4_kb_5_g1.png","hero_crops/w4_kb_5_g2.png"],"5":["hero_crops/w5_kb_5_g1.png","hero_crops/w5_kb_5_g2.png","hero_crops/w5_kb_5_g3.png"],"6":["hero_crops/w6_kb_5_g1.png","hero_crops/w6_kb_5_g2.png"]},"vx_1":{"1":["hero_crops/w1_vx_1_g1.png","hero_crops/w1_vx_1_g2.png","hero_crops/w1_vx_1_g3.png"],"2":["hero_crops/w2_vx_1_g1.png","hero_crops/w2_vx_1_g2.png"],"3":["hero_crops/w3_vx_1_g1.png","hero_crops/w3_vx_1_g2.png"],"4":["hero_crops/w4_vx_1_g1.png","hero_crops/w4_vx_1_g2.png","hero_crops/w4_vx_1_g3.png"],"5":["hero_crops/w5_vx_1_g1.png","hero_crops/w5_vx_1_g2.png"],"6":["hero_crops/w6_vx_1_g1.png","hero_crops/w6_vx_1_g2.png"]},"vx_2":{"1":["hero_crops/w1_vx_2_g1.png","hero_crops/w1_vx_2_g2.png","hero_crops/w1_vx_2_g3.png"],"2":["hero_crops/w2_vx_2_g1.png","hero_crops/w2_vx_2_g2.png"],"3":["hero_crops/w3_vx_2_g1.png","hero_crops/w3_vx_2_g2.png"],"4":["hero_crops/w4_vx_2_g1.png","hero_crops/w4_vx_2_g2.png","hero_crops/w4_vx_2_g3.png"],"5":["hero_crops/w5_vx_2_g1.png","hero_crops/w5_vx_2_g2.png"],"6":["hero_crops/w6_vx_2_g1.png","hero_crops/w6_vx_2_g2.png"]},"vx_3":{"1":["hero_crops/w1_vx_3_g1.png","hero_crops/w1_vx_3_g2.png","hero_crops/w1_vx_3_g3.png"],"2":["hero_crops/w2_vx_3_g1.png","hero_crops/w2_vx_3_g2.png"],"3":["hero_crops/w3_vx_3_g1.png","hero_crops/w3_vx_3_g2.png"],"4":["hero_crops/w4_vx_3_g1.png","hero_crops/w4_vx_3_g2.png","hero_crops/w4_vx_3_g3.png"],"5":["hero_crops/w5_vx_3_g1.png","hero_crops/w5_vx_3_g2.png"],"6":["hero_crops/w6_vx_3_g1.png","hero_crops/w6_vx_3_g2.png"]},"vx_4":{"1":["hero_crops/w1_vx_4_g1.png","hero_crops/w1_vx_4_g2.png","hero_crops/w1_vx_4_g3.png"],"2":["hero_crops/w2_vx_4_g1.png","hero_crops/w2_vx_4_g2.png"],"3":["hero_crops/w3_vx_4_g1.png","hero_crops/w3_vx_4_g2.png"],"4":["hero_crops/w4_vx_4_g1.png","hero_crops/w4_vx_4_g2.png","hero_crops/w4_vx_4_g3.png"],"5":["hero_crops/w5_vx_4_g1.png","hero_crops/w5_vx_4_g2.png"],"6":["hero_crops/w6_vx_4_g1.png","hero_crops/w6_vx_4_g2.png"]},"vx_5":{"1":["hero_crops/w1_vx_5_g1.png","hero_crops/w1_vx_5_g2.png","hero_crops/w1_vx_5_g3.png"],"2":["hero_crops/w2_vx_5_g1.png","hero_crops/w2_vx_5_g2.png"],"3":["hero_crops/w3_vx_5_g1.png","hero_crops/w3_vx_5_g2.png"],"4":["hero_crops/w4_vx_5_g1.png","hero_crops/w4_vx_5_g2.png","hero_crops/w4_vx_5_g3.png"],"5":["hero_crops/w5_vx_5_g1.png","hero_crops/w5_vx_5_g2.png"],"6":["hero_crops/w6_vx_5_g1.png","hero_crops/w6_vx_5_g2.png"]},"mm_1":{"1":["hero_crops/w1_mm_1_g1.png","hero_crops/w1_mm_1_g2.png","hero_crops/w1_mm_1_g3.png"],"2":["hero_crops/w2_mm_1_g1.png","hero_crops/w2_mm_1_g2.png","hero_crops/w2_mm_1_g3.png"],"3":["hero_crops/w3_mm_1_g1.png","hero_crops/w3_mm_1_g2.png","hero_crops/w3_mm_1_g3.png"],"4":["hero_crops/w4_mm_1_g1.png","hero_crops/w4_mm_1_g2.png"],"5":["hero_crops/w5_mm_1_g1.png","hero_crops/w5_mm_1_g2.png"],"6":["hero_crops/w6_mm_1_g1.png","hero_crops/w6_mm_1_g2.png"]},"mm_2":{"1":["hero_crops/w1_mm_2_g1.png","hero_crops/w1_mm_2_g2.png","hero_crops/w1_mm_2_g3.png"],"2":["hero_crops/w2_mm_2_g1.png","hero_crops/w2_mm_2_g2.png","hero_crops/w2_mm_2_g3.png"],"3":["hero_crops/w3_mm_2_g1.png","hero_crops/w3_mm_2_g2.png","hero_crops/w3_mm_2_g3.png"],"4":["hero_crops/w4_mm_2_g1.png","hero_crops/w4_mm_2_g2.png"],"5":["hero_crops/w5_mm_2_g1.png","hero_crops/w5_mm_2_g2.png"],"6":["hero_crops/w6_mm_2_g1.png","hero_crops/w6_mm_2_g2.png"]},"mm_3":{"1":["hero_crops/w1_mm_3_g1.png","hero_crops/w1_mm_3_g2.png","hero_crops/w1_mm_3_g3.png"],"2":["hero_crops/w2_mm_3_g1.png","hero_crops/w2_mm_3_g2.png","hero_crops/w2_mm_3_g3.png"],"3":["hero_crops/w3_mm_3_g1.png","hero_crops/w3_mm_3_g2.png","hero_crops/w3_mm_3_g3.png"],"4":["hero_crops/w4_mm_3_g1.png","hero_crops/w4_mm_3_g2.png"],"5":["hero_crops/w5_mm_3_g1.png","hero_crops/w5_mm_3_g2.png"],"6":["hero_crops/w6_mm_3_g1.png","hero_crops/w6_mm_3_g2.png"]},"mm_4":{"1":["hero_crops/w1_mm_4_g1.png","hero_crops/w1_mm_4_g2.png","hero_crops/w1_mm_4_g3.png"],"2":["hero_crops/w2_mm_4_g1.png","hero_crops/w2_mm_4_g2.png","hero_crops/w2_mm_4_g3.png"],"3":["hero_crops/w3_mm_4_g1.png","hero_crops/w3_mm_4_g2.png","hero_crops/w3_mm_4_g3.png"],"4":["hero_crops/w4_mm_4_g1.png","hero_crops/w4_mm_4_g2.png"],"5":["hero_crops/w5_mm_4_g1.png","hero_crops/w5_mm_4_g2.png"],"6":["hero_crops/w6_mm_4_g1.png","hero_crops/w6_mm_4_g2.png"]},"mm_5":{"1":["hero_crops/w1_mm_5_g1.png","hero_crops/w1_mm_5_g2.png","hero_crops/w1_mm_5_g3.png"],"2":["hero_crops/w2_mm_5_g1.png","hero_crops/w2_mm_5_g2.png","hero_crops/w2_mm_5_g3.png"],"3":["hero_crops/w3_mm_5_g1.png","hero_crops/w3_mm_5_g2.png","hero_crops/w3_mm_5_g3.png"],"4":["hero_crops/w4_mm_5_g1.png","hero_crops/w4_mm_5_g2.png"],"5":["hero_crops/w5_mm_5_g1.png","hero_crops/w5_mm_5_g2.png"],"6":["hero_crops/w6_mm_5_g1.png","hero_crops/w6_mm_5_g2.png"]},"pm_1":{"1":["hero_crops/w1_pm_1_g1.png","hero_crops/w1_pm_1_g2.png"],"2":["hero_crops/w2_pm_1_g1.png","hero_crops/w2_pm_1_g2.png"],"3":["hero_crops/w3_pm_1_g1.png","hero_crops/w3_pm_1_g2.png","hero_crops/w3_pm_1_g3.png"],"4":["hero_crops/w4_pm_1_g1.png","hero_crops/w4_pm_1_g2.png"],"5":["hero_crops/w5_pm_1_g1.png","hero_crops/w5_pm_1_g2.png","hero_crops/w5_pm_1_g3.png"],"6":[]},"pm_2":{"1":["hero_crops/w1_pm_2_g1.png","hero_crops/w1_pm_2_g2.png"],"2":["hero_crops/w2_pm_2_g1.png","hero_crops/w2_pm_2_g2.png"],"3":["hero_crops/w3_pm_2_g1.png","hero_crops/w3_pm_2_g2.png","hero_crops/w3_pm_2_g3.png"],"4":["hero_crops/w4_pm_2_g1.png","hero_crops/w4_pm_2_g2.png"],"5":["hero_crops/w5_pm_2_g1.png","hero_crops/w5_pm_2_g2.png","hero_crops/w5_pm_2_g3.png"],"6":[]},"pm_3":{"1":["hero_crops/w1_pm_3_g1.png","hero_crops/w1_pm_3_g2.png"],"2":["hero_crops/w2_pm_3_g1.png","hero_crops/w2_pm_3_g2.png"],"3":["hero_crops/w3_pm_3_g1.png","hero_crops/w3_pm_3_g2.png","hero_crops/w3_pm_3_g3.png"],"4":["hero_crops/w4_pm_3_g1.png","hero_crops/w4_pm_3_g2.png"],"5":["hero_crops/w5_pm_3_g1.png","hero_crops/w5_pm_3_g2.png","hero_crops/w5_pm_3_g3.png"],"6":[]},"pm_4":{"1":["hero_crops/w1_pm_4_g1.png","hero_crops/w1_pm_4_g2.png"],"2":["hero_crops/w2_pm_4_g1.png","hero_crops/w2_pm_4_g2.png"],"3":["hero_crops/w3_pm_4_g1.png","hero_crops/w3_pm_4_g2.png","hero_crops/w3_pm_4_g3.png"],"4":["hero_crops/w4_pm_4_g1.png","hero_crops/w4_pm_4_g2.png"],"5":["hero_crops/w5_pm_4_g1.png","hero_crops/w5_pm_4_g2.png","hero_crops/w5_pm_4_g3.png"],"6":[]},"pm_5":{"1":["hero_crops/w1_pm_5_g1.png","hero_crops/w1_pm_5_g2.png"],"2":["hero_crops/w2_pm_5_g1.png","hero_crops/w2_pm_5_g2.png"],"3":["hero_crops/w3_pm_5_g1.png","hero_crops/w3_pm_5_g2.png","hero_crops/w3_pm_5_g3.png"],"4":["hero_crops/w4_pm_5_g1.png","hero_crops/w4_pm_5_g2.png"],"5":["hero_crops/w5_pm_5_g1.png","hero_crops/w5_pm_5_g2.png","hero_crops/w5_pm_5_g3.png"],"6":[]},"lv_1":{"1":["hero_crops/w1_lv_1_g1.png","hero_crops/w1_lv_1_g2.png","hero_crops/w1_lv_1_g3.png"],"2":["hero_crops/w2_lv_1_g1.png","hero_crops/w2_lv_1_g2.png"],"3":["hero_crops/w3_lv_1_g1.png","hero_crops/w3_lv_1_g2.png"],"4":["hero_crops/w4_lv_1_g1.png","hero_crops/w4_lv_1_g2.png"],"5":["hero_crops/w5_lv_1_g1.png","hero_crops/w5_lv_1_g2.png","hero_crops/w5_lv_1_g3.png"],"6":["hero_crops/w6_lv_1_g1.png","hero_crops/w6_lv_1_g2.png","hero_crops/w6_lv_1_g3.png"]},"lv_2":{"1":["hero_crops/w1_lv_2_g1.png","hero_crops/w1_lv_2_g2.png","hero_crops/w1_lv_2_g3.png"],"2":["hero_crops/w2_lv_2_g1.png","hero_crops/w2_lv_2_g2.png"],"3":["hero_crops/w3_lv_2_g1.png","hero_crops/w3_lv_2_g2.png"],"4":["hero_crops/w4_lv_2_g1.png","hero_crops/w4_lv_2_g2.png"],"5":["hero_crops/w5_lv_2_g1.png","hero_crops/w5_lv_2_g2.png","hero_crops/w5_lv_2_g3.png"],"6":["hero_crops/w6_lv_2_g1.png","hero_crops/w6_lv_2_g2.png","hero_crops/w6_lv_2_g3.png"]},"lv_3":{"1":["hero_crops/w1_lv_3_g1.png","hero_crops/w1_lv_3_g2.png","hero_crops/w1_lv_3_g3.png"],"2":["hero_crops/w2_lv_3_g1.png","hero_crops/w2_lv_3_g2.png"],"3":["hero_crops/w3_lv_3_g1.png","hero_crops/w3_lv_3_g2.png"],"4":["hero_crops/w4_lv_3_g1.png","hero_crops/w4_lv_3_g2.png"],"5":["hero_crops/w5_lv_3_g1.png","hero_crops/w5_lv_3_g2.png","hero_crops/w5_lv_3_g3.png"],"6":["hero_crops/w6_lv_3_g1.png","hero_crops/w6_lv_3_g2.png","hero_crops/w6_lv_3_g3.png"]},"lv_4":{"1":["hero_crops/w1_lv_4_g1.png","hero_crops/w1_lv_4_g2.png","hero_crops/w1_lv_4_g3.png"],"2":["hero_crops/w2_lv_4_g1.png","hero_crops/w2_lv_4_g2.png"],"3":["hero_crops/w3_lv_4_g1.png","hero_crops/w3_lv_4_g2.png"],"4":["hero_crops/w4_lv_4_g1.png","hero_crops/w4_lv_4_g2.png"],"5":["hero_crops/w5_lv_4_g1.png","hero_crops/w5_lv_4_g2.png","hero_crops/w5_lv_4_g3.png"],"6":["hero_crops/w6_lv_4_g1.png","hero_crops/w6_lv_4_g2.png","hero_crops/w6_lv_4_g3.png"]},"lv_5":{"1":["hero_crops/w1_lv_5_g1.png","hero_crops/w1_lv_5_g2.png","hero_crops/w1_lv_5_g3.png"],"2":["hero_crops/w2_lv_5_g1.png","hero_crops/w2_lv_5_g2.png"],"3":["hero_crops/w3_lv_5_g1.png","hero_crops/w3_lv_5_g2.png"],"4":["hero_crops/w4_lv_5_g1.png","hero_crops/w4_lv_5_g2.png"],"5":["hero_crops/w5_lv_5_g1.png","hero_crops/w5_lv_5_g2.png","hero_crops/w5_lv_5_g3.png"],"6":["hero_crops/w6_lv_5_g1.png","hero_crops/w6_lv_5_g2.png","hero_crops/w6_lv_5_g3.png"]},"ns_1":{"1":["hero_crops/w1_ns_1_g1.png","hero_crops/w1_ns_1_g2.png"],"2":["hero_crops/w2_ns_1_g1.png","hero_crops/w2_ns_1_g2.png","hero_crops/w2_ns_1_g3.png"],"3":["hero_crops/w3_ns_1_g1.png","hero_crops/w3_ns_1_g2.png"],"4":["hero_crops/w4_ns_1_g1.png","hero_crops/w4_ns_1_g2.png","hero_crops/w4_ns_1_g3.png"],"5":["hero_crops/w5_ns_1_g1.png","hero_crops/w5_ns_1_g2.png"],"6":["hero_crops/w6_ns_1_g1.png","hero_crops/w6_ns_1_g2.png","hero_crops/w6_ns_1_g3.png"]},"ns_2":{"1":[],"2":[],"3":[],"4":[],"5":[],"6":["hero_crops/w6_ns_2_g1.png","hero_crops/w6_ns_2_g2.png","hero_crops/w6_ns_2_g3.png"]},"ns_3":{"1":["hero_crops/w1_ns_3_g1.png","hero_crops/w1_ns_3_g2.png"],"2":["hero_crops/w2_ns_3_g1.png","hero_crops/w2_ns_3_g2.png","hero_crops/w2_ns_3_g3.png"],"3":["hero_crops/w3_ns_3_g1.png","hero_crops/w3_ns_3_g2.png"],"4":["hero_crops/w4_ns_3_g1.png","hero_crops/w4_ns_3_g2.png","hero_crops/w4_ns_3_g3.png"],"5":["hero_crops/w5_ns_3_g1.png","hero_crops/w5_ns_3_g2.png"],"6":["hero_crops/w6_ns_3_g1.png","hero_crops/w6_ns_3_g2.png","hero_crops/w6_ns_3_g3.png"]},"ns_4":{"1":["hero_crops/w1_ns_4_g1.png","hero_crops/w1_ns_4_g2.png"],"2":["hero_crops/w2_ns_4_g1.png","hero_crops/w2_ns_4_g2.png","hero_crops/w2_ns_4_g3.png"],"3":["hero_crops/w3_ns_4_g1.png","hero_crops/w3_ns_4_g2.png"],"4":["hero_crops/w4_ns_4_g1.png","hero_crops/w4_ns_4_g2.png","hero_crops/w4_ns_4_g3.png"],"5":["hero_crops/w5_ns_4_g1.png","hero_crops/w5_ns_4_g2.png"],"6":["hero_crops/w6_ns_4_g1.png","hero_crops/w6_ns_4_g2.png","hero_crops/w6_ns_4_g3.png"]},"ns_5":{"1":["hero_crops/w1_ns_5_g1.png","hero_crops/w1_ns_5_g2.png"],"2":["hero_crops/w2_ns_5_g1.png","hero_crops/w2_ns_5_g2.png","hero_crops/w2_ns_5_g3.png"],"3":["hero_crops/w3_ns_5_g1.png","hero_crops/w3_ns_5_g2.png"],"4":["hero_crops/w4_ns_5_g1.png","hero_crops/w4_ns_5_g2.png","hero_crops/w4_ns_5_g3.png"],"5":["hero_crops/w5_ns_5_g1.png","hero_crops/w5_ns_5_g2.png"],"6":["hero_crops/w6_ns_5_g1.png","hero_crops/w6_ns_5_g2.png","hero_crops/w6_ns_5_g3.png"]},"un_1":{"1":["hero_crops/w1_un_1_g1.png","hero_crops/w1_un_1_g2.png"],"2":["hero_crops/w2_un_1_g1.png","hero_crops/w2_un_1_g2.png"],"3":[],"4":[],"5":["hero_crops/w5_un_1_g1.png","hero_crops/w5_un_1_g2.png","hero_crops/w5_un_1_g3.png"],"6":["hero_crops/w6_un_1_g1.png","hero_crops/w6_un_1_g2.png"]},"un_2":{"1":["hero_crops/w1_un_2_g1.png","hero_crops/w1_un_2_g2.png"],"2":["hero_crops/w2_un_2_g1.png","hero_crops/w2_un_2_g2.png"],"3":[],"4":[],"5":["hero_crops/w5_un_2_g1.png","hero_crops/w5_un_2_g2.png","hero_crops/w5_un_2_g3.png"],"6":["hero_crops/w6_un_2_g1.png","hero_crops/w6_un_2_g2.png"]},"un_3":{"1":["hero_crops/w1_un_3_g1.png","hero_crops/w1_un_3_g2.png"],"2":["hero_crops/w2_un_3_g1.png","hero_crops/w2_un_3_g2.png"],"3":[],"4":[],"5":["hero_crops/w5_un_3_g1.png","hero_crops/w5_un_3_g2.png","hero_crops/w5_un_3_g3.png"],"6":["hero_crops/w6_un_3_g1.png","hero_crops/w6_un_3_g2.png"]},"un_4":{"1":["hero_crops/w1_un_4_g1.png","hero_crops/w1_un_4_g2.png"],"2":["hero_crops/w2_un_4_g1.png","hero_crops/w2_un_4_g2.png"],"3":[],"4":[],"5":["hero_crops/w5_un_4_g1.png","hero_crops/w5_un_4_g2.png","hero_crops/w5_un_4_g3.png"],"6":["hero_crops/w6_un_4_g1.png","hero_crops/w6_un_4_g2.png"]},"un_5":{"1":["hero_crops/w1_un_5_g1.png","hero_crops/w1_un_5_g2.png"],"2":["hero_crops/w2_un_5_g1.png","hero_crops/w2_un_5_g2.png"],"3":[],"4":[],"5":["hero_crops/w5_un_5_g1.png","hero_crops/w5_un_5_g2.png","hero_crops/w5_un_5_g3.png"],"6":["hero_crops/w6_un_5_g1.png","hero_crops/w6_un_5_g2.png"]}};
+      const PLAYER_HERO_CROPS = {"fw_1":{"1":["hero_crops/w1_fw_1_g1.png","hero_crops/w1_fw_1_g2.png"],"2":["hero_crops/w2_fw_1_g1.png","hero_crops/w2_fw_1_g2.png","hero_crops/w2_fw_1_g3.png"],"3":[],"4":["hero_crops/w4_fw_1_g1.png","hero_crops/w4_fw_1_g2.png"],"5":["hero_crops/w5_fw_1_g1.png","hero_crops/w5_fw_1_g2.png"],"6":[],"7":["hero_crops/w7_fw_1_g1.png","hero_crops/w7_fw_1_g2.png"]},"fw_2":{"1":["hero_crops/w1_fw_2_g1.png","hero_crops/w1_fw_2_g2.png"],"2":["hero_crops/w2_fw_2_g1.png","hero_crops/w2_fw_2_g2.png","hero_crops/w2_fw_2_g3.png"],"3":[],"4":["hero_crops/w4_fw_2_g1.png","hero_crops/w4_fw_2_g2.png"],"5":["hero_crops/w5_fw_2_g1.png","hero_crops/w5_fw_2_g2.png"],"6":[],"7":["hero_crops/w7_fw_2_g1.png","hero_crops/w7_fw_2_g2.png"]},"fw_3":{"1":["hero_crops/w1_fw_3_g1.png","hero_crops/w1_fw_3_g2.png"],"2":["hero_crops/w2_fw_3_g1.png","hero_crops/w2_fw_3_g2.png","hero_crops/w2_fw_3_g3.png"],"3":[],"4":["hero_crops/w4_fw_3_g1.png","hero_crops/w4_fw_3_g2.png"],"5":["hero_crops/w5_fw_3_g1.png","hero_crops/w5_fw_3_g2.png"],"6":[],"7":["hero_crops/w7_fw_3_g1.png","hero_crops/w7_fw_3_g2.png"]},"fw_4":{"1":["hero_crops/w1_fw_4_g1.png","hero_crops/w1_fw_4_g2.png"],"2":["hero_crops/w2_fw_4_g1.png","hero_crops/w2_fw_4_g2.png","hero_crops/w2_fw_4_g3.png"],"3":[],"4":["hero_crops/w4_fw_4_g1.png","hero_crops/w4_fw_4_g2.png"],"5":["hero_crops/w5_fw_4_g1.png","hero_crops/w5_fw_4_g2.png"],"6":[],"7":["hero_crops/w7_fw_4_g1.png","hero_crops/w7_fw_4_g2.png"]},"fw_5":{"1":["hero_crops/w1_fw_5_g1.png","hero_crops/w1_fw_5_g2.png"],"2":["hero_crops/w2_fw_5_g1.png","hero_crops/w2_fw_5_g2.png","hero_crops/w2_fw_5_g3.png"],"3":[],"4":["hero_crops/w4_fw_5_g1.png","hero_crops/w4_fw_5_g2.png"],"5":["hero_crops/w5_fw_5_g1.png","hero_crops/w5_fw_5_g2.png"],"6":[],"7":["hero_crops/w7_fw_5_g1.png","hero_crops/w7_fw_5_g2.png"]},"bo_1":{"1":["hero_crops/w1_bo_1_g1.png","hero_crops/w1_bo_1_g2.png"],"2":["hero_crops/w2_bo_1_g1.png","hero_crops/w2_bo_1_g2.png"],"3":[],"4":["hero_crops/w4_bo_1_g1.png","hero_crops/w4_bo_1_g2.png"],"5":["hero_crops/w5_bo_1_g1.png","hero_crops/w5_bo_1_g2.png"],"6":["hero_crops/w6_bo_1_g1.png","hero_crops/w6_bo_1_g2.png"],"7":["hero_crops/w7_bo_1_g1.png","hero_crops/w7_bo_1_g2.png"]},"bo_2":{"1":["hero_crops/w1_bo_2_g1.png","hero_crops/w1_bo_2_g2.png"],"2":["hero_crops/w2_bo_2_g1.png","hero_crops/w2_bo_2_g2.png"],"3":[],"4":["hero_crops/w4_bo_2_g1.png","hero_crops/w4_bo_2_g2.png"],"5":["hero_crops/w5_bo_2_g1.png","hero_crops/w5_bo_2_g2.png"],"6":["hero_crops/w6_bo_2_g1.png","hero_crops/w6_bo_2_g2.png"],"7":["hero_crops/w7_bo_2_g1.png","hero_crops/w7_bo_2_g2.png"]},"bo_3":{"1":["hero_crops/w1_bo_3_g1.png","hero_crops/w1_bo_3_g2.png"],"2":["hero_crops/w2_bo_3_g1.png","hero_crops/w2_bo_3_g2.png"],"3":[],"4":["hero_crops/w4_bo_3_g1.png","hero_crops/w4_bo_3_g2.png"],"5":["hero_crops/w5_bo_3_g1.png","hero_crops/w5_bo_3_g2.png"],"6":["hero_crops/w6_bo_3_g1.png","hero_crops/w6_bo_3_g2.png"],"7":["hero_crops/w7_bo_3_g1.png","hero_crops/w7_bo_3_g2.png"]},"bo_4":{"1":["hero_crops/w1_bo_4_g1.png","hero_crops/w1_bo_4_g2.png"],"2":["hero_crops/w2_bo_4_g1.png","hero_crops/w2_bo_4_g2.png"],"3":[],"4":["hero_crops/w4_bo_4_g1.png","hero_crops/w4_bo_4_g2.png"],"5":["hero_crops/w5_bo_4_g1.png","hero_crops/w5_bo_4_g2.png"],"6":["hero_crops/w6_bo_4_g1.png","hero_crops/w6_bo_4_g2.png"],"7":["hero_crops/w7_bo_4_g1.png","hero_crops/w7_bo_4_g2.png"]},"bo_5":{"1":["hero_crops/w1_bo_5_g1.png","hero_crops/w1_bo_5_g2.png"],"2":["hero_crops/w2_bo_5_g1.png","hero_crops/w2_bo_5_g2.png"],"3":[],"4":["hero_crops/w4_bo_5_g1.png","hero_crops/w4_bo_5_g2.png"],"5":["hero_crops/w5_bo_5_g1.png","hero_crops/w5_bo_5_g2.png"],"6":["hero_crops/w6_bo_5_g1.png","hero_crops/w6_bo_5_g2.png"],"7":["hero_crops/w7_bo_5_g1.png","hero_crops/w7_bo_5_g2.png"]},"bj_1":{"1":["hero_crops/w1_bj_1_g1.png","hero_crops/w1_bj_1_g2.png","hero_crops/w1_bj_1_g3.png"],"2":["hero_crops/w2_bj_1_g1.png","hero_crops/w2_bj_1_g2.png","hero_crops/w2_bj_1_g3.png"],"3":["hero_crops/w3_bj_1_g1.png","hero_crops/w3_bj_1_g2.png"],"4":[],"5":["hero_crops/w5_bj_1_g1.png","hero_crops/w5_bj_1_g2.png"],"6":["hero_crops/w6_bj_1_g1.png","hero_crops/w6_bj_1_g2.png"],"7":["hero_crops/w7_bj_1_g1.png","hero_crops/w7_bj_1_g2.png"]},"bj_2":{"1":["hero_crops/w1_bj_2_g1.png","hero_crops/w1_bj_2_g2.png","hero_crops/w1_bj_2_g3.png"],"2":["hero_crops/w2_bj_2_g1.png","hero_crops/w2_bj_2_g2.png","hero_crops/w2_bj_2_g3.png"],"3":["hero_crops/w3_bj_2_g1.png","hero_crops/w3_bj_2_g2.png"],"4":[],"5":["hero_crops/w5_bj_2_g1.png","hero_crops/w5_bj_2_g2.png"],"6":["hero_crops/w6_bj_2_g1.png","hero_crops/w6_bj_2_g2.png"],"7":["hero_crops/w7_bj_2_g1.png","hero_crops/w7_bj_2_g2.png"]},"bj_3":{"1":["hero_crops/w1_bj_3_g1.png","hero_crops/w1_bj_3_g2.png","hero_crops/w1_bj_3_g3.png"],"2":["hero_crops/w2_bj_3_g1.png","hero_crops/w2_bj_3_g2.png","hero_crops/w2_bj_3_g3.png"],"3":["hero_crops/w3_bj_3_g1.png","hero_crops/w3_bj_3_g2.png"],"4":[],"5":["hero_crops/w5_bj_3_g1.png","hero_crops/w5_bj_3_g2.png"],"6":["hero_crops/w6_bj_3_g1.png","hero_crops/w6_bj_3_g2.png"],"7":["hero_crops/w7_bj_3_g1.png","hero_crops/w7_bj_3_g2.png"]},"bj_4":{"1":["hero_crops/w1_bj_4_g1.png","hero_crops/w1_bj_4_g2.png","hero_crops/w1_bj_4_g3.png"],"2":["hero_crops/w2_bj_4_g1.png","hero_crops/w2_bj_4_g2.png","hero_crops/w2_bj_4_g3.png"],"3":["hero_crops/w3_bj_4_g1.png","hero_crops/w3_bj_4_g2.png"],"4":[],"5":["hero_crops/w5_bj_4_g1.png","hero_crops/w5_bj_4_g2.png"],"6":["hero_crops/w6_bj_4_g1.png","hero_crops/w6_bj_4_g2.png"],"7":["hero_crops/w7_bj_4_g1.png","hero_crops/w7_bj_4_g2.png"]},"bj_5":{"1":["hero_crops/w1_bj_5_g1.png","hero_crops/w1_bj_5_g2.png","hero_crops/w1_bj_5_g3.png"],"2":["hero_crops/w2_bj_5_g1.png","hero_crops/w2_bj_5_g2.png","hero_crops/w2_bj_5_g3.png"],"3":["hero_crops/w3_bj_5_g1.png","hero_crops/w3_bj_5_g2.png"],"4":[],"5":["hero_crops/w5_bj_5_g1.png","hero_crops/w5_bj_5_g2.png"],"6":["hero_crops/w6_bj_5_g1.png","hero_crops/w6_bj_5_g2.png"],"7":["hero_crops/w7_bj_5_g1.png","hero_crops/w7_bj_5_g2.png"]},"kb_1":{"1":[],"2":[],"3":[],"4":["hero_crops/w4_kb_1_g1.png","hero_crops/w4_kb_1_g2.png"],"5":["hero_crops/w5_kb_1_g1.png","hero_crops/w5_kb_1_g2.png","hero_crops/w5_kb_1_g3.png"],"6":["hero_crops/w6_kb_1_g1.png","hero_crops/w6_kb_1_g2.png"],"7":["hero_crops/w7_kb_1_g1.png","hero_crops/w7_kb_1_g2.png"]},"kb_2":{"1":["hero_crops/w1_kb_2_g1.png","hero_crops/w1_kb_2_g2.png"],"2":["hero_crops/w2_kb_2_g1.png","hero_crops/w2_kb_2_g2.png"],"3":[],"4":["hero_crops/w4_kb_2_g1.png","hero_crops/w4_kb_2_g2.png"],"5":["hero_crops/w5_kb_2_g1.png","hero_crops/w5_kb_2_g2.png","hero_crops/w5_kb_2_g3.png"],"6":["hero_crops/w6_kb_2_g1.png","hero_crops/w6_kb_2_g2.png"],"7":["hero_crops/w7_kb_2_g1.png","hero_crops/w7_kb_2_g2.png"]},"kb_3":{"1":["hero_crops/w1_kb_3_g1.png","hero_crops/w1_kb_3_g2.png"],"2":["hero_crops/w2_kb_3_g1.png","hero_crops/w2_kb_3_g2.png"],"3":[],"4":["hero_crops/w4_kb_3_g1.png","hero_crops/w4_kb_3_g2.png"],"5":["hero_crops/w5_kb_3_g1.png","hero_crops/w5_kb_3_g2.png","hero_crops/w5_kb_3_g3.png"],"6":["hero_crops/w6_kb_3_g1.png","hero_crops/w6_kb_3_g2.png"],"7":["hero_crops/w7_kb_3_g1.png","hero_crops/w7_kb_3_g2.png"]},"kb_4":{"1":["hero_crops/w1_kb_4_g1.png","hero_crops/w1_kb_4_g2.png"],"2":["hero_crops/w2_kb_4_g1.png","hero_crops/w2_kb_4_g2.png"],"3":[],"4":["hero_crops/w4_kb_4_g1.png","hero_crops/w4_kb_4_g2.png"],"5":["hero_crops/w5_kb_4_g1.png","hero_crops/w5_kb_4_g2.png","hero_crops/w5_kb_4_g3.png"],"6":["hero_crops/w6_kb_4_g1.png","hero_crops/w6_kb_4_g2.png"],"7":["hero_crops/w7_kb_4_g1.png","hero_crops/w7_kb_4_g2.png"]},"kb_5":{"1":["hero_crops/w1_kb_5_g1.png","hero_crops/w1_kb_5_g2.png"],"2":["hero_crops/w2_kb_5_g1.png","hero_crops/w2_kb_5_g2.png"],"3":[],"4":["hero_crops/w4_kb_5_g1.png","hero_crops/w4_kb_5_g2.png"],"5":["hero_crops/w5_kb_5_g1.png","hero_crops/w5_kb_5_g2.png","hero_crops/w5_kb_5_g3.png"],"6":["hero_crops/w6_kb_5_g1.png","hero_crops/w6_kb_5_g2.png"],"7":["hero_crops/w7_kb_5_g1.png","hero_crops/w7_kb_5_g2.png"]},"vx_1":{"1":["hero_crops/w1_vx_1_g1.png","hero_crops/w1_vx_1_g2.png","hero_crops/w1_vx_1_g3.png"],"2":["hero_crops/w2_vx_1_g1.png","hero_crops/w2_vx_1_g2.png"],"3":["hero_crops/w3_vx_1_g1.png","hero_crops/w3_vx_1_g2.png"],"4":["hero_crops/w4_vx_1_g1.png","hero_crops/w4_vx_1_g2.png","hero_crops/w4_vx_1_g3.png"],"5":["hero_crops/w5_vx_1_g1.png","hero_crops/w5_vx_1_g2.png"],"6":["hero_crops/w6_vx_1_g1.png","hero_crops/w6_vx_1_g2.png"],"7":["hero_crops/w7_vx_1_g1.png","hero_crops/w7_vx_1_g2.png"]},"vx_2":{"1":["hero_crops/w1_vx_2_g1.png","hero_crops/w1_vx_2_g2.png","hero_crops/w1_vx_2_g3.png"],"2":["hero_crops/w2_vx_2_g1.png","hero_crops/w2_vx_2_g2.png"],"3":["hero_crops/w3_vx_2_g1.png","hero_crops/w3_vx_2_g2.png"],"4":["hero_crops/w4_vx_2_g1.png","hero_crops/w4_vx_2_g2.png","hero_crops/w4_vx_2_g3.png"],"5":["hero_crops/w5_vx_2_g1.png","hero_crops/w5_vx_2_g2.png"],"6":["hero_crops/w6_vx_2_g1.png","hero_crops/w6_vx_2_g2.png"],"7":["hero_crops/w7_vx_2_g1.png","hero_crops/w7_vx_2_g2.png"]},"vx_3":{"1":["hero_crops/w1_vx_3_g1.png","hero_crops/w1_vx_3_g2.png","hero_crops/w1_vx_3_g3.png"],"2":["hero_crops/w2_vx_3_g1.png","hero_crops/w2_vx_3_g2.png"],"3":["hero_crops/w3_vx_3_g1.png","hero_crops/w3_vx_3_g2.png"],"4":["hero_crops/w4_vx_3_g1.png","hero_crops/w4_vx_3_g2.png","hero_crops/w4_vx_3_g3.png"],"5":["hero_crops/w5_vx_3_g1.png","hero_crops/w5_vx_3_g2.png"],"6":["hero_crops/w6_vx_3_g1.png","hero_crops/w6_vx_3_g2.png"],"7":["hero_crops/w7_vx_3_g1.png","hero_crops/w7_vx_3_g2.png"]},"vx_4":{"1":["hero_crops/w1_vx_4_g1.png","hero_crops/w1_vx_4_g2.png","hero_crops/w1_vx_4_g3.png"],"2":["hero_crops/w2_vx_4_g1.png","hero_crops/w2_vx_4_g2.png"],"3":["hero_crops/w3_vx_4_g1.png","hero_crops/w3_vx_4_g2.png"],"4":["hero_crops/w4_vx_4_g1.png","hero_crops/w4_vx_4_g2.png","hero_crops/w4_vx_4_g3.png"],"5":["hero_crops/w5_vx_4_g1.png","hero_crops/w5_vx_4_g2.png"],"6":["hero_crops/w6_vx_4_g1.png","hero_crops/w6_vx_4_g2.png"],"7":["hero_crops/w7_vx_4_g1.png","hero_crops/w7_vx_4_g2.png"]},"vx_5":{"1":["hero_crops/w1_vx_5_g1.png","hero_crops/w1_vx_5_g2.png","hero_crops/w1_vx_5_g3.png"],"2":["hero_crops/w2_vx_5_g1.png","hero_crops/w2_vx_5_g2.png"],"3":["hero_crops/w3_vx_5_g1.png","hero_crops/w3_vx_5_g2.png"],"4":["hero_crops/w4_vx_5_g1.png","hero_crops/w4_vx_5_g2.png","hero_crops/w4_vx_5_g3.png"],"5":["hero_crops/w5_vx_5_g1.png","hero_crops/w5_vx_5_g2.png"],"6":["hero_crops/w6_vx_5_g1.png","hero_crops/w6_vx_5_g2.png"],"7":["hero_crops/w7_vx_5_g1.png","hero_crops/w7_vx_5_g2.png"]},"mm_1":{"1":["hero_crops/w1_mm_1_g1.png","hero_crops/w1_mm_1_g2.png","hero_crops/w1_mm_1_g3.png"],"2":["hero_crops/w2_mm_1_g1.png","hero_crops/w2_mm_1_g2.png","hero_crops/w2_mm_1_g3.png"],"3":["hero_crops/w3_mm_1_g1.png","hero_crops/w3_mm_1_g2.png","hero_crops/w3_mm_1_g3.png"],"4":["hero_crops/w4_mm_1_g1.png","hero_crops/w4_mm_1_g2.png"],"5":["hero_crops/w5_mm_1_g1.png","hero_crops/w5_mm_1_g2.png"],"6":["hero_crops/w6_mm_1_g1.png","hero_crops/w6_mm_1_g2.png"],"7":["hero_crops/w7_mm_1_g1.png","hero_crops/w7_mm_1_g2.png","hero_crops/w7_mm_1_g3.png"]},"mm_2":{"1":["hero_crops/w1_mm_2_g1.png","hero_crops/w1_mm_2_g2.png","hero_crops/w1_mm_2_g3.png"],"2":["hero_crops/w2_mm_2_g1.png","hero_crops/w2_mm_2_g2.png","hero_crops/w2_mm_2_g3.png"],"3":["hero_crops/w3_mm_2_g1.png","hero_crops/w3_mm_2_g2.png","hero_crops/w3_mm_2_g3.png"],"4":["hero_crops/w4_mm_2_g1.png","hero_crops/w4_mm_2_g2.png"],"5":["hero_crops/w5_mm_2_g1.png","hero_crops/w5_mm_2_g2.png"],"6":["hero_crops/w6_mm_2_g1.png","hero_crops/w6_mm_2_g2.png"],"7":["hero_crops/w7_mm_2_g1.png","hero_crops/w7_mm_2_g2.png","hero_crops/w7_mm_2_g3.png"]},"mm_3":{"1":["hero_crops/w1_mm_3_g1.png","hero_crops/w1_mm_3_g2.png","hero_crops/w1_mm_3_g3.png"],"2":["hero_crops/w2_mm_3_g1.png","hero_crops/w2_mm_3_g2.png","hero_crops/w2_mm_3_g3.png"],"3":["hero_crops/w3_mm_3_g1.png","hero_crops/w3_mm_3_g2.png","hero_crops/w3_mm_3_g3.png"],"4":["hero_crops/w4_mm_3_g1.png","hero_crops/w4_mm_3_g2.png"],"5":["hero_crops/w5_mm_3_g1.png","hero_crops/w5_mm_3_g2.png"],"6":["hero_crops/w6_mm_3_g1.png","hero_crops/w6_mm_3_g2.png"],"7":["hero_crops/w7_mm_3_g1.png","hero_crops/w7_mm_3_g2.png","hero_crops/w7_mm_3_g3.png"]},"mm_4":{"1":["hero_crops/w1_mm_4_g1.png","hero_crops/w1_mm_4_g2.png","hero_crops/w1_mm_4_g3.png"],"2":["hero_crops/w2_mm_4_g1.png","hero_crops/w2_mm_4_g2.png","hero_crops/w2_mm_4_g3.png"],"3":["hero_crops/w3_mm_4_g1.png","hero_crops/w3_mm_4_g2.png","hero_crops/w3_mm_4_g3.png"],"4":["hero_crops/w4_mm_4_g1.png","hero_crops/w4_mm_4_g2.png"],"5":["hero_crops/w5_mm_4_g1.png","hero_crops/w5_mm_4_g2.png"],"6":["hero_crops/w6_mm_4_g1.png","hero_crops/w6_mm_4_g2.png"],"7":["hero_crops/w7_mm_4_g1.png","hero_crops/w7_mm_4_g2.png","hero_crops/w7_mm_4_g3.png"]},"mm_5":{"1":["hero_crops/w1_mm_5_g1.png","hero_crops/w1_mm_5_g2.png","hero_crops/w1_mm_5_g3.png"],"2":["hero_crops/w2_mm_5_g1.png","hero_crops/w2_mm_5_g2.png","hero_crops/w2_mm_5_g3.png"],"3":["hero_crops/w3_mm_5_g1.png","hero_crops/w3_mm_5_g2.png","hero_crops/w3_mm_5_g3.png"],"4":["hero_crops/w4_mm_5_g1.png","hero_crops/w4_mm_5_g2.png"],"5":["hero_crops/w5_mm_5_g1.png","hero_crops/w5_mm_5_g2.png"],"6":["hero_crops/w6_mm_5_g1.png","hero_crops/w6_mm_5_g2.png"],"7":["hero_crops/w7_mm_5_g1.png","hero_crops/w7_mm_5_g2.png","hero_crops/w7_mm_5_g3.png"]},"pm_1":{"1":["hero_crops/w1_pm_1_g1.png","hero_crops/w1_pm_1_g2.png"],"2":["hero_crops/w2_pm_1_g1.png","hero_crops/w2_pm_1_g2.png"],"3":["hero_crops/w3_pm_1_g1.png","hero_crops/w3_pm_1_g2.png","hero_crops/w3_pm_1_g3.png"],"4":["hero_crops/w4_pm_1_g1.png","hero_crops/w4_pm_1_g2.png"],"5":["hero_crops/w5_pm_1_g1.png","hero_crops/w5_pm_1_g2.png","hero_crops/w5_pm_1_g3.png"],"6":[],"7":["hero_crops/w7_pm_1_g1.png","hero_crops/w7_pm_1_g2.png"]},"pm_2":{"1":["hero_crops/w1_pm_2_g1.png","hero_crops/w1_pm_2_g2.png"],"2":["hero_crops/w2_pm_2_g1.png","hero_crops/w2_pm_2_g2.png"],"3":["hero_crops/w3_pm_2_g1.png","hero_crops/w3_pm_2_g2.png","hero_crops/w3_pm_2_g3.png"],"4":["hero_crops/w4_pm_2_g1.png","hero_crops/w4_pm_2_g2.png"],"5":["hero_crops/w5_pm_2_g1.png","hero_crops/w5_pm_2_g2.png","hero_crops/w5_pm_2_g3.png"],"6":[],"7":["hero_crops/w7_pm_2_g1.png","hero_crops/w7_pm_2_g2.png"]},"pm_3":{"1":["hero_crops/w1_pm_3_g1.png","hero_crops/w1_pm_3_g2.png"],"2":["hero_crops/w2_pm_3_g1.png","hero_crops/w2_pm_3_g2.png"],"3":["hero_crops/w3_pm_3_g1.png","hero_crops/w3_pm_3_g2.png","hero_crops/w3_pm_3_g3.png"],"4":["hero_crops/w4_pm_3_g1.png","hero_crops/w4_pm_3_g2.png"],"5":["hero_crops/w5_pm_3_g1.png","hero_crops/w5_pm_3_g2.png","hero_crops/w5_pm_3_g3.png"],"6":[],"7":["hero_crops/w7_pm_3_g1.png","hero_crops/w7_pm_3_g2.png"]},"pm_4":{"1":["hero_crops/w1_pm_4_g1.png","hero_crops/w1_pm_4_g2.png"],"2":["hero_crops/w2_pm_4_g1.png","hero_crops/w2_pm_4_g2.png"],"3":["hero_crops/w3_pm_4_g1.png","hero_crops/w3_pm_4_g2.png","hero_crops/w3_pm_4_g3.png"],"4":["hero_crops/w4_pm_4_g1.png","hero_crops/w4_pm_4_g2.png"],"5":["hero_crops/w5_pm_4_g1.png","hero_crops/w5_pm_4_g2.png","hero_crops/w5_pm_4_g3.png"],"6":[],"7":["hero_crops/w7_pm_4_g1.png","hero_crops/w7_pm_4_g2.png"]},"pm_5":{"1":["hero_crops/w1_pm_5_g1.png","hero_crops/w1_pm_5_g2.png"],"2":["hero_crops/w2_pm_5_g1.png","hero_crops/w2_pm_5_g2.png"],"3":["hero_crops/w3_pm_5_g1.png","hero_crops/w3_pm_5_g2.png","hero_crops/w3_pm_5_g3.png"],"4":["hero_crops/w4_pm_5_g1.png","hero_crops/w4_pm_5_g2.png"],"5":["hero_crops/w5_pm_5_g1.png","hero_crops/w5_pm_5_g2.png","hero_crops/w5_pm_5_g3.png"],"6":[],"7":["hero_crops/w7_pm_5_g1.png","hero_crops/w7_pm_5_g2.png"]},"lv_1":{"1":["hero_crops/w1_lv_1_g1.png","hero_crops/w1_lv_1_g2.png","hero_crops/w1_lv_1_g3.png"],"2":["hero_crops/w2_lv_1_g1.png","hero_crops/w2_lv_1_g2.png"],"3":["hero_crops/w3_lv_1_g1.png","hero_crops/w3_lv_1_g2.png"],"4":["hero_crops/w4_lv_1_g1.png","hero_crops/w4_lv_1_g2.png"],"5":["hero_crops/w5_lv_1_g1.png","hero_crops/w5_lv_1_g2.png","hero_crops/w5_lv_1_g3.png"],"6":["hero_crops/w6_lv_1_g1.png","hero_crops/w6_lv_1_g2.png","hero_crops/w6_lv_1_g3.png"],"7":["hero_crops/w7_lv_1_g1.png","hero_crops/w7_lv_1_g2.png","hero_crops/w7_lv_1_g3.png"]},"lv_2":{"1":["hero_crops/w1_lv_2_g1.png","hero_crops/w1_lv_2_g2.png","hero_crops/w1_lv_2_g3.png"],"2":["hero_crops/w2_lv_2_g1.png","hero_crops/w2_lv_2_g2.png"],"3":["hero_crops/w3_lv_2_g1.png","hero_crops/w3_lv_2_g2.png"],"4":["hero_crops/w4_lv_2_g1.png","hero_crops/w4_lv_2_g2.png"],"5":["hero_crops/w5_lv_2_g1.png","hero_crops/w5_lv_2_g2.png","hero_crops/w5_lv_2_g3.png"],"6":["hero_crops/w6_lv_2_g1.png","hero_crops/w6_lv_2_g2.png","hero_crops/w6_lv_2_g3.png"],"7":["hero_crops/w7_lv_2_g1.png","hero_crops/w7_lv_2_g2.png","hero_crops/w7_lv_2_g3.png"]},"lv_3":{"1":["hero_crops/w1_lv_3_g1.png","hero_crops/w1_lv_3_g2.png","hero_crops/w1_lv_3_g3.png"],"2":["hero_crops/w2_lv_3_g1.png","hero_crops/w2_lv_3_g2.png"],"3":["hero_crops/w3_lv_3_g1.png","hero_crops/w3_lv_3_g2.png"],"4":["hero_crops/w4_lv_3_g1.png","hero_crops/w4_lv_3_g2.png"],"5":["hero_crops/w5_lv_3_g1.png","hero_crops/w5_lv_3_g2.png","hero_crops/w5_lv_3_g3.png"],"6":["hero_crops/w6_lv_3_g1.png","hero_crops/w6_lv_3_g2.png","hero_crops/w6_lv_3_g3.png"],"7":["hero_crops/w7_lv_3_g1.png","hero_crops/w7_lv_3_g2.png","hero_crops/w7_lv_3_g3.png"]},"lv_4":{"1":["hero_crops/w1_lv_4_g1.png","hero_crops/w1_lv_4_g2.png","hero_crops/w1_lv_4_g3.png"],"2":["hero_crops/w2_lv_4_g1.png","hero_crops/w2_lv_4_g2.png"],"3":["hero_crops/w3_lv_4_g1.png","hero_crops/w3_lv_4_g2.png"],"4":["hero_crops/w4_lv_4_g1.png","hero_crops/w4_lv_4_g2.png"],"5":["hero_crops/w5_lv_4_g1.png","hero_crops/w5_lv_4_g2.png","hero_crops/w5_lv_4_g3.png"],"6":["hero_crops/w6_lv_4_g1.png","hero_crops/w6_lv_4_g2.png","hero_crops/w6_lv_4_g3.png"],"7":["hero_crops/w7_lv_4_g1.png","hero_crops/w7_lv_4_g2.png","hero_crops/w7_lv_4_g3.png"]},"lv_5":{"1":["hero_crops/w1_lv_5_g1.png","hero_crops/w1_lv_5_g2.png","hero_crops/w1_lv_5_g3.png"],"2":["hero_crops/w2_lv_5_g1.png","hero_crops/w2_lv_5_g2.png"],"3":["hero_crops/w3_lv_5_g1.png","hero_crops/w3_lv_5_g2.png"],"4":["hero_crops/w4_lv_5_g1.png","hero_crops/w4_lv_5_g2.png"],"5":["hero_crops/w5_lv_5_g1.png","hero_crops/w5_lv_5_g2.png","hero_crops/w5_lv_5_g3.png"],"6":["hero_crops/w6_lv_5_g1.png","hero_crops/w6_lv_5_g2.png","hero_crops/w6_lv_5_g3.png"],"7":["hero_crops/w7_lv_5_g1.png","hero_crops/w7_lv_5_g2.png","hero_crops/w7_lv_5_g3.png"]},"ns_1":{"1":["hero_crops/w1_ns_1_g1.png","hero_crops/w1_ns_1_g2.png"],"2":["hero_crops/w2_ns_1_g1.png","hero_crops/w2_ns_1_g2.png","hero_crops/w2_ns_1_g3.png"],"3":["hero_crops/w3_ns_1_g1.png","hero_crops/w3_ns_1_g2.png"],"4":["hero_crops/w4_ns_1_g1.png","hero_crops/w4_ns_1_g2.png","hero_crops/w4_ns_1_g3.png"],"5":["hero_crops/w5_ns_1_g1.png","hero_crops/w5_ns_1_g2.png"],"6":["hero_crops/w6_ns_1_g1.png","hero_crops/w6_ns_1_g2.png","hero_crops/w6_ns_1_g3.png"],"7":["hero_crops/w7_ns_1_g1.png","hero_crops/w7_ns_1_g2.png"]},"ns_2":{"1":[],"2":[],"3":[],"4":[],"5":[],"6":["hero_crops/w6_ns_2_g1.png","hero_crops/w6_ns_2_g2.png","hero_crops/w6_ns_2_g3.png"],"7":["hero_crops/w7_ns_2_g1.png","hero_crops/w7_ns_2_g2.png"]},"ns_3":{"1":["hero_crops/w1_ns_3_g1.png","hero_crops/w1_ns_3_g2.png"],"2":["hero_crops/w2_ns_3_g1.png","hero_crops/w2_ns_3_g2.png","hero_crops/w2_ns_3_g3.png"],"3":["hero_crops/w3_ns_3_g1.png","hero_crops/w3_ns_3_g2.png"],"4":["hero_crops/w4_ns_3_g1.png","hero_crops/w4_ns_3_g2.png","hero_crops/w4_ns_3_g3.png"],"5":["hero_crops/w5_ns_3_g1.png","hero_crops/w5_ns_3_g2.png"],"6":["hero_crops/w6_ns_3_g1.png","hero_crops/w6_ns_3_g2.png","hero_crops/w6_ns_3_g3.png"],"7":["hero_crops/w7_ns_3_g1.png","hero_crops/w7_ns_3_g2.png"]},"ns_4":{"1":["hero_crops/w1_ns_4_g1.png","hero_crops/w1_ns_4_g2.png"],"2":["hero_crops/w2_ns_4_g1.png","hero_crops/w2_ns_4_g2.png","hero_crops/w2_ns_4_g3.png"],"3":["hero_crops/w3_ns_4_g1.png","hero_crops/w3_ns_4_g2.png"],"4":["hero_crops/w4_ns_4_g1.png","hero_crops/w4_ns_4_g2.png","hero_crops/w4_ns_4_g3.png"],"5":["hero_crops/w5_ns_4_g1.png","hero_crops/w5_ns_4_g2.png"],"6":["hero_crops/w6_ns_4_g1.png","hero_crops/w6_ns_4_g2.png","hero_crops/w6_ns_4_g3.png"],"7":["hero_crops/w7_ns_4_g1.png","hero_crops/w7_ns_4_g2.png"]},"ns_5":{"1":["hero_crops/w1_ns_5_g1.png","hero_crops/w1_ns_5_g2.png"],"2":["hero_crops/w2_ns_5_g1.png","hero_crops/w2_ns_5_g2.png","hero_crops/w2_ns_5_g3.png"],"3":["hero_crops/w3_ns_5_g1.png","hero_crops/w3_ns_5_g2.png"],"4":["hero_crops/w4_ns_5_g1.png","hero_crops/w4_ns_5_g2.png","hero_crops/w4_ns_5_g3.png"],"5":["hero_crops/w5_ns_5_g1.png","hero_crops/w5_ns_5_g2.png"],"6":["hero_crops/w6_ns_5_g1.png","hero_crops/w6_ns_5_g2.png","hero_crops/w6_ns_5_g3.png"],"7":["hero_crops/w7_ns_5_g1.png","hero_crops/w7_ns_5_g2.png"]},"un_1":{"1":["hero_crops/w1_un_1_g1.png","hero_crops/w1_un_1_g2.png"],"2":["hero_crops/w2_un_1_g1.png","hero_crops/w2_un_1_g2.png"],"3":[],"4":[],"5":["hero_crops/w5_un_1_g1.png","hero_crops/w5_un_1_g2.png","hero_crops/w5_un_1_g3.png"],"6":["hero_crops/w6_un_1_g1.png","hero_crops/w6_un_1_g2.png"],"7":["hero_crops/w7_un_1_g1.png","hero_crops/w7_un_1_g2.png"]},"un_2":{"1":["hero_crops/w1_un_2_g1.png","hero_crops/w1_un_2_g2.png"],"2":["hero_crops/w2_un_2_g1.png","hero_crops/w2_un_2_g2.png"],"3":[],"4":[],"5":["hero_crops/w5_un_2_g1.png","hero_crops/w5_un_2_g2.png","hero_crops/w5_un_2_g3.png"],"6":["hero_crops/w6_un_2_g1.png","hero_crops/w6_un_2_g2.png"],"7":["hero_crops/w7_un_2_g1.png","hero_crops/w7_un_2_g2.png"]},"un_3":{"1":["hero_crops/w1_un_3_g1.png","hero_crops/w1_un_3_g2.png"],"2":["hero_crops/w2_un_3_g1.png","hero_crops/w2_un_3_g2.png"],"3":[],"4":[],"5":["hero_crops/w5_un_3_g1.png","hero_crops/w5_un_3_g2.png","hero_crops/w5_un_3_g3.png"],"6":["hero_crops/w6_un_3_g1.png","hero_crops/w6_un_3_g2.png"],"7":["hero_crops/w7_un_3_g1.png","hero_crops/w7_un_3_g2.png"]},"un_4":{"1":["hero_crops/w1_un_4_g1.png","hero_crops/w1_un_4_g2.png"],"2":["hero_crops/w2_un_4_g1.png","hero_crops/w2_un_4_g2.png"],"3":[],"4":[],"5":["hero_crops/w5_un_4_g1.png","hero_crops/w5_un_4_g2.png","hero_crops/w5_un_4_g3.png"],"6":["hero_crops/w6_un_4_g1.png","hero_crops/w6_un_4_g2.png"],"7":["hero_crops/w7_un_4_g1.png","hero_crops/w7_un_4_g2.png"]},"un_5":{"1":["hero_crops/w1_un_5_g1.png","hero_crops/w1_un_5_g2.png"],"2":["hero_crops/w2_un_5_g1.png","hero_crops/w2_un_5_g2.png"],"3":[],"4":[],"5":["hero_crops/w5_un_5_g1.png","hero_crops/w5_un_5_g2.png","hero_crops/w5_un_5_g3.png"],"6":["hero_crops/w6_un_5_g1.png","hero_crops/w6_un_5_g2.png"],"7":["hero_crops/w7_un_5_g1.png","hero_crops/w7_un_5_g2.png"]}};
 
       let activeHeroWeekFilter = "all";
       let activeHeroTeamFilter = "all";
@@ -10507,7 +11539,7 @@
             let totalAllGames = 0;
             let rowsHtml = "";
 
-            for (let w = 1; w <= 6; w++) {
+            for (let w = 1; w <= 7; w++) {
               const wCrops = (cropsData && cropsData[w]) ? cropsData[w] : [];
               totalAllGames += wCrops.length;
 
@@ -10584,7 +11616,7 @@
         if (elTotalPlayers) elTotalPlayers.textContent = players.length;
         if (elTotalPicks) elTotalPicks.textContent = totalPicks;
         if (elTopHero) {
-          elTopHero.textContent = activeHeroWeekFilter === "all" ? "Semua Pekan (W1-6)" : "Pekan " + activeHeroWeekFilter;
+          elTopHero.textContent = activeHeroWeekFilter === "all" ? "Semua Pekan (W1-7)" : "Pekan " + activeHeroWeekFilter;
         }
       }
 
