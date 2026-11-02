@@ -1,4 +1,4 @@
-{
+﻿{
     "fw_1":  {
                  "1":  [
                            "hero_crops/w1_fw_1_g1.png",
@@ -19,6 +19,23 @@
                  "5":  [
                            "hero_crops/w5_fw_1_g1.png",
                            "hero_crops/w5_fw_1_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_fw_1_g1.png",
+                           "hero_crops/w7_fw_1_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_fw_1_g1.png",
+                           "hero_crops/w6_fw_1_g2.png",
+                           "hero_crops/w6_fw_1_g3.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_fw_1_g1.png",
+                           "hero_crops/w8_fw_1_g2.png"
+                       ],
+                 "9":  [
+                           "hero_crops/w9_fw_1_g1.png",
+                           "hero_crops/w9_fw_1_g2.png"
                        ]
              },
     "fw_2":  {
@@ -41,6 +58,23 @@
                  "5":  [
                            "hero_crops/w5_fw_2_g1.png",
                            "hero_crops/w5_fw_2_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_fw_2_g1.png",
+                           "hero_crops/w7_fw_2_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_fw_2_g1.png",
+                           "hero_crops/w6_fw_2_g2.png",
+                           "hero_crops/w6_fw_2_g3.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_fw_2_g1.png",
+                           "hero_crops/w8_fw_2_g2.png"
+                       ],
+                 "9":  [
+                           "hero_crops/w9_fw_2_g1.png",
+                           "hero_crops/w9_fw_2_g2.png"
                        ]
              },
     "fw_3":  {
@@ -63,6 +97,23 @@
                  "5":  [
                            "hero_crops/w5_fw_3_g1.png",
                            "hero_crops/w5_fw_3_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_fw_3_g1.png",
+                           "hero_crops/w7_fw_3_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_fw_3_g1.png",
+                           "hero_crops/w6_fw_3_g2.png",
+                           "hero_crops/w6_fw_3_g3.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_fw_3_g1.png",
+                           "hero_crops/w8_fw_3_g2.png"
+                       ],
+                 "9":  [
+                           "hero_crops/w9_fw_3_g1.png",
+                           "hero_crops/w9_fw_3_g2.png"
                        ]
              },
     "fw_4":  {
@@ -85,6 +136,23 @@
                  "5":  [
                            "hero_crops/w5_fw_4_g1.png",
                            "hero_crops/w5_fw_4_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_fw_4_g1.png",
+                           "hero_crops/w7_fw_4_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_fw_4_g1.png",
+                           "hero_crops/w6_fw_4_g2.png",
+                           "hero_crops/w6_fw_4_g3.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_fw_4_g1.png",
+                           "hero_crops/w8_fw_4_g2.png"
+                       ],
+                 "9":  [
+                           "hero_crops/w9_fw_4_g1.png",
+                           "hero_crops/w9_fw_4_g2.png"
                        ]
              },
     "fw_5":  {
@@ -107,6 +175,23 @@
                  "5":  [
                            "hero_crops/w5_fw_5_g1.png",
                            "hero_crops/w5_fw_5_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_fw_5_g1.png",
+                           "hero_crops/w7_fw_5_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_fw_5_g1.png",
+                           "hero_crops/w6_fw_5_g2.png",
+                           "hero_crops/w6_fw_5_g3.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_fw_5_g1.png",
+                           "hero_crops/w8_fw_5_g2.png"
+                       ],
+                 "9":  [
+                           "hero_crops/w9_fw_5_g1.png",
+                           "hero_crops/w9_fw_5_g2.png"
                        ]
              },
     "bo_1":  {
@@ -128,6 +213,21 @@
                  "5":  [
                            "hero_crops/w5_bo_1_g1.png",
                            "hero_crops/w5_bo_1_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_bo_1_g1.png",
+                           "hero_crops/w7_bo_1_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_bo_1_g1.png",
+                           "hero_crops/w6_bo_1_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_bo_1_g1.png",
+                           "hero_crops/w8_bo_1_g2.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "bo_2":  {
@@ -149,6 +249,21 @@
                  "5":  [
                            "hero_crops/w5_bo_2_g1.png",
                            "hero_crops/w5_bo_2_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_bo_2_g1.png",
+                           "hero_crops/w7_bo_2_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_bo_2_g1.png",
+                           "hero_crops/w6_bo_2_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_bo_2_g1.png",
+                           "hero_crops/w8_bo_2_g2.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "bo_3":  {
@@ -170,6 +285,21 @@
                  "5":  [
                            "hero_crops/w5_bo_3_g1.png",
                            "hero_crops/w5_bo_3_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_bo_3_g1.png",
+                           "hero_crops/w7_bo_3_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_bo_3_g1.png",
+                           "hero_crops/w6_bo_3_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_bo_3_g1.png",
+                           "hero_crops/w8_bo_3_g2.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "bo_4":  {
@@ -191,6 +321,21 @@
                  "5":  [
                            "hero_crops/w5_bo_4_g1.png",
                            "hero_crops/w5_bo_4_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_bo_4_g1.png",
+                           "hero_crops/w7_bo_4_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_bo_4_g1.png",
+                           "hero_crops/w6_bo_4_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_bo_4_g1.png",
+                           "hero_crops/w8_bo_4_g2.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "bo_5":  {
@@ -212,6 +357,21 @@
                  "5":  [
                            "hero_crops/w5_bo_5_g1.png",
                            "hero_crops/w5_bo_5_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_bo_5_g1.png",
+                           "hero_crops/w7_bo_5_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_bo_5_g1.png",
+                           "hero_crops/w6_bo_5_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_bo_5_g1.png",
+                           "hero_crops/w8_bo_5_g2.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "bj_1":  {
@@ -235,6 +395,22 @@
                  "5":  [
                            "hero_crops/w5_bj_1_g1.png",
                            "hero_crops/w5_bj_1_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_bj_1_g1.png",
+                           "hero_crops/w7_bj_1_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_bj_1_g1.png",
+                           "hero_crops/w6_bj_1_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_bj_1_g1.png",
+                           "hero_crops/w8_bj_1_g2.png",
+                           "hero_crops/w8_bj_1_g3.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "bj_2":  {
@@ -258,6 +434,22 @@
                  "5":  [
                            "hero_crops/w5_bj_2_g1.png",
                            "hero_crops/w5_bj_2_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_bj_2_g1.png",
+                           "hero_crops/w7_bj_2_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_bj_2_g1.png",
+                           "hero_crops/w6_bj_2_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_bj_2_g1.png",
+                           "hero_crops/w8_bj_2_g2.png",
+                           "hero_crops/w8_bj_2_g3.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "bj_3":  {
@@ -281,6 +473,22 @@
                  "5":  [
                            "hero_crops/w5_bj_3_g1.png",
                            "hero_crops/w5_bj_3_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_bj_3_g1.png",
+                           "hero_crops/w7_bj_3_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_bj_3_g1.png",
+                           "hero_crops/w6_bj_3_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_bj_3_g1.png",
+                           "hero_crops/w8_bj_3_g2.png",
+                           "hero_crops/w8_bj_3_g3.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "bj_4":  {
@@ -304,6 +512,22 @@
                  "5":  [
                            "hero_crops/w5_bj_4_g1.png",
                            "hero_crops/w5_bj_4_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_bj_4_g1.png",
+                           "hero_crops/w7_bj_4_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_bj_4_g1.png",
+                           "hero_crops/w6_bj_4_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_bj_4_g1.png",
+                           "hero_crops/w8_bj_4_g2.png",
+                           "hero_crops/w8_bj_4_g3.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "bj_5":  {
@@ -327,6 +551,22 @@
                  "5":  [
                            "hero_crops/w5_bj_5_g1.png",
                            "hero_crops/w5_bj_5_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_bj_5_g1.png",
+                           "hero_crops/w7_bj_5_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_bj_5_g1.png",
+                           "hero_crops/w6_bj_5_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_bj_5_g1.png",
+                           "hero_crops/w8_bj_5_g2.png",
+                           "hero_crops/w8_bj_5_g3.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "kb_1":  {
@@ -347,6 +587,20 @@
                            "hero_crops/w5_kb_1_g1.png",
                            "hero_crops/w5_kb_1_g2.png",
                            "hero_crops/w5_kb_1_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_kb_1_g1.png",
+                           "hero_crops/w7_kb_1_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_kb_1_g1.png",
+                           "hero_crops/w6_kb_1_g2.png"
+                       ],
+                 "8":  [
+
+                       ],
+                 "9":  [
+
                        ]
              },
     "kb_2":  {
@@ -369,6 +623,20 @@
                            "hero_crops/w5_kb_2_g1.png",
                            "hero_crops/w5_kb_2_g2.png",
                            "hero_crops/w5_kb_2_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_kb_2_g1.png",
+                           "hero_crops/w7_kb_2_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_kb_2_g1.png",
+                           "hero_crops/w6_kb_2_g2.png"
+                       ],
+                 "8":  [
+
+                       ],
+                 "9":  [
+
                        ]
              },
     "kb_3":  {
@@ -391,6 +659,20 @@
                            "hero_crops/w5_kb_3_g1.png",
                            "hero_crops/w5_kb_3_g2.png",
                            "hero_crops/w5_kb_3_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_kb_3_g1.png",
+                           "hero_crops/w7_kb_3_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_kb_3_g1.png",
+                           "hero_crops/w6_kb_3_g2.png"
+                       ],
+                 "8":  [
+
+                       ],
+                 "9":  [
+
                        ]
              },
     "kb_4":  {
@@ -413,6 +695,20 @@
                            "hero_crops/w5_kb_4_g1.png",
                            "hero_crops/w5_kb_4_g2.png",
                            "hero_crops/w5_kb_4_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_kb_4_g1.png",
+                           "hero_crops/w7_kb_4_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_kb_4_g1.png",
+                           "hero_crops/w6_kb_4_g2.png"
+                       ],
+                 "8":  [
+
+                       ],
+                 "9":  [
+
                        ]
              },
     "kb_5":  {
@@ -435,6 +731,20 @@
                            "hero_crops/w5_kb_5_g1.png",
                            "hero_crops/w5_kb_5_g2.png",
                            "hero_crops/w5_kb_5_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_kb_5_g1.png",
+                           "hero_crops/w7_kb_5_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_kb_5_g1.png",
+                           "hero_crops/w6_kb_5_g2.png"
+                       ],
+                 "8":  [
+
+                       ],
+                 "9":  [
+
                        ]
              },
     "vx_1":  {
@@ -459,6 +769,22 @@
                  "5":  [
                            "hero_crops/w5_vx_1_g1.png",
                            "hero_crops/w5_vx_1_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_vx_1_g1.png",
+                           "hero_crops/w7_vx_1_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_vx_1_g1.png",
+                           "hero_crops/w6_vx_1_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_vx_1_g1.png",
+                           "hero_crops/w8_vx_1_g2.png",
+                           "hero_crops/w8_vx_1_g3.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "vx_2":  {
@@ -483,6 +809,22 @@
                  "5":  [
                            "hero_crops/w5_vx_2_g1.png",
                            "hero_crops/w5_vx_2_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_vx_2_g1.png",
+                           "hero_crops/w7_vx_2_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_vx_2_g1.png",
+                           "hero_crops/w6_vx_2_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_vx_2_g1.png",
+                           "hero_crops/w8_vx_2_g2.png",
+                           "hero_crops/w8_vx_2_g3.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "vx_3":  {
@@ -507,6 +849,22 @@
                  "5":  [
                            "hero_crops/w5_vx_3_g1.png",
                            "hero_crops/w5_vx_3_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_vx_3_g1.png",
+                           "hero_crops/w7_vx_3_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_vx_3_g1.png",
+                           "hero_crops/w6_vx_3_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_vx_3_g1.png",
+                           "hero_crops/w8_vx_3_g2.png",
+                           "hero_crops/w8_vx_3_g3.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "vx_4":  {
@@ -531,6 +889,22 @@
                  "5":  [
                            "hero_crops/w5_vx_4_g1.png",
                            "hero_crops/w5_vx_4_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_vx_4_g1.png",
+                           "hero_crops/w7_vx_4_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_vx_4_g1.png",
+                           "hero_crops/w6_vx_4_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_vx_4_g1.png",
+                           "hero_crops/w8_vx_4_g2.png",
+                           "hero_crops/w8_vx_4_g3.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "vx_5":  {
@@ -555,6 +929,22 @@
                  "5":  [
                            "hero_crops/w5_vx_5_g1.png",
                            "hero_crops/w5_vx_5_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_vx_5_g1.png",
+                           "hero_crops/w7_vx_5_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_vx_5_g1.png",
+                           "hero_crops/w6_vx_5_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_vx_5_g1.png",
+                           "hero_crops/w8_vx_5_g2.png",
+                           "hero_crops/w8_vx_5_g3.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "mm_1":  {
@@ -580,6 +970,22 @@
                  "5":  [
                            "hero_crops/w5_mm_1_g1.png",
                            "hero_crops/w5_mm_1_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_mm_1_g1.png",
+                           "hero_crops/w7_mm_1_g2.png",
+                           "hero_crops/w7_mm_1_g3.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_mm_1_g1.png",
+                           "hero_crops/w6_mm_1_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_mm_1_g1.png",
+                           "hero_crops/w8_mm_1_g2.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "mm_2":  {
@@ -605,6 +1011,22 @@
                  "5":  [
                            "hero_crops/w5_mm_2_g1.png",
                            "hero_crops/w5_mm_2_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_mm_2_g1.png",
+                           "hero_crops/w7_mm_2_g2.png",
+                           "hero_crops/w7_mm_2_g3.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_mm_2_g1.png",
+                           "hero_crops/w6_mm_2_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_mm_2_g1.png",
+                           "hero_crops/w8_mm_2_g2.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "mm_3":  {
@@ -630,6 +1052,22 @@
                  "5":  [
                            "hero_crops/w5_mm_3_g1.png",
                            "hero_crops/w5_mm_3_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_mm_3_g1.png",
+                           "hero_crops/w7_mm_3_g2.png",
+                           "hero_crops/w7_mm_3_g3.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_mm_3_g1.png",
+                           "hero_crops/w6_mm_3_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_mm_3_g1.png",
+                           "hero_crops/w8_mm_3_g2.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "mm_4":  {
@@ -655,6 +1093,22 @@
                  "5":  [
                            "hero_crops/w5_mm_4_g1.png",
                            "hero_crops/w5_mm_4_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_mm_4_g1.png",
+                           "hero_crops/w7_mm_4_g2.png",
+                           "hero_crops/w7_mm_4_g3.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_mm_4_g1.png",
+                           "hero_crops/w6_mm_4_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_mm_4_g1.png",
+                           "hero_crops/w8_mm_4_g2.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "mm_5":  {
@@ -680,6 +1134,22 @@
                  "5":  [
                            "hero_crops/w5_mm_5_g1.png",
                            "hero_crops/w5_mm_5_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_mm_5_g1.png",
+                           "hero_crops/w7_mm_5_g2.png",
+                           "hero_crops/w7_mm_5_g3.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_mm_5_g1.png",
+                           "hero_crops/w6_mm_5_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_mm_5_g1.png",
+                           "hero_crops/w8_mm_5_g2.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "pm_1":  {
@@ -704,6 +1174,22 @@
                            "hero_crops/w5_pm_1_g1.png",
                            "hero_crops/w5_pm_1_g2.png",
                            "hero_crops/w5_pm_1_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_pm_1_g1.png",
+                           "hero_crops/w7_pm_1_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_pm_1_g1.png",
+                           "hero_crops/w6_pm_1_g2.png",
+                           "hero_crops/w6_pm_1_g3.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_pm_1_g1.png",
+                           "hero_crops/w8_pm_1_g2.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "pm_2":  {
@@ -728,6 +1214,22 @@
                            "hero_crops/w5_pm_2_g1.png",
                            "hero_crops/w5_pm_2_g2.png",
                            "hero_crops/w5_pm_2_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_pm_2_g1.png",
+                           "hero_crops/w7_pm_2_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_pm_2_g1.png",
+                           "hero_crops/w6_pm_2_g2.png",
+                           "hero_crops/w6_pm_2_g3.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_pm_2_g1.png",
+                           "hero_crops/w8_pm_2_g2.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "pm_3":  {
@@ -752,6 +1254,22 @@
                            "hero_crops/w5_pm_3_g1.png",
                            "hero_crops/w5_pm_3_g2.png",
                            "hero_crops/w5_pm_3_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_pm_3_g1.png",
+                           "hero_crops/w7_pm_3_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_pm_3_g1.png",
+                           "hero_crops/w6_pm_3_g2.png",
+                           "hero_crops/w6_pm_3_g3.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_pm_3_g1.png",
+                           "hero_crops/w8_pm_3_g2.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "pm_4":  {
@@ -776,6 +1294,22 @@
                            "hero_crops/w5_pm_4_g1.png",
                            "hero_crops/w5_pm_4_g2.png",
                            "hero_crops/w5_pm_4_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_pm_4_g1.png",
+                           "hero_crops/w7_pm_4_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_pm_4_g1.png",
+                           "hero_crops/w6_pm_4_g2.png",
+                           "hero_crops/w6_pm_4_g3.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_pm_4_g1.png",
+                           "hero_crops/w8_pm_4_g2.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "pm_5":  {
@@ -800,6 +1334,22 @@
                            "hero_crops/w5_pm_5_g1.png",
                            "hero_crops/w5_pm_5_g2.png",
                            "hero_crops/w5_pm_5_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_pm_5_g1.png",
+                           "hero_crops/w7_pm_5_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_pm_5_g1.png",
+                           "hero_crops/w6_pm_5_g2.png",
+                           "hero_crops/w6_pm_5_g3.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_pm_5_g1.png",
+                           "hero_crops/w8_pm_5_g2.png"
+                       ],
+                 "9":  [
+
                        ]
              },
     "lv_1":  {
@@ -824,6 +1374,24 @@
                            "hero_crops/w5_lv_1_g1.png",
                            "hero_crops/w5_lv_1_g2.png",
                            "hero_crops/w5_lv_1_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_lv_1_g1.png",
+                           "hero_crops/w7_lv_1_g2.png",
+                           "hero_crops/w7_lv_1_g3.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_lv_1_g1.png",
+                           "hero_crops/w6_lv_1_g2.png",
+                           "hero_crops/w6_lv_1_g3.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_lv_1_g1.png",
+                           "hero_crops/w8_lv_1_g2.png"
+                       ],
+                 "9":  [
+                           "hero_crops/w9_lv_1_g1.png",
+                           "hero_crops/w9_lv_1_g2.png"
                        ]
              },
     "lv_2":  {
@@ -848,6 +1416,24 @@
                            "hero_crops/w5_lv_2_g1.png",
                            "hero_crops/w5_lv_2_g2.png",
                            "hero_crops/w5_lv_2_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_lv_2_g1.png",
+                           "hero_crops/w7_lv_2_g2.png",
+                           "hero_crops/w7_lv_2_g3.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_lv_2_g1.png",
+                           "hero_crops/w6_lv_2_g2.png",
+                           "hero_crops/w6_lv_2_g3.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_lv_2_g1.png",
+                           "hero_crops/w8_lv_2_g2.png"
+                       ],
+                 "9":  [
+                           "hero_crops/w9_lv_2_g1.png",
+                           "hero_crops/w9_lv_2_g2.png"
                        ]
              },
     "lv_3":  {
@@ -872,6 +1458,24 @@
                            "hero_crops/w5_lv_3_g1.png",
                            "hero_crops/w5_lv_3_g2.png",
                            "hero_crops/w5_lv_3_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_lv_3_g1.png",
+                           "hero_crops/w7_lv_3_g2.png",
+                           "hero_crops/w7_lv_3_g3.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_lv_3_g1.png",
+                           "hero_crops/w6_lv_3_g2.png",
+                           "hero_crops/w6_lv_3_g3.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_lv_3_g1.png",
+                           "hero_crops/w8_lv_3_g2.png"
+                       ],
+                 "9":  [
+                           "hero_crops/w9_lv_3_g1.png",
+                           "hero_crops/w9_lv_3_g2.png"
                        ]
              },
     "lv_4":  {
@@ -896,6 +1500,24 @@
                            "hero_crops/w5_lv_4_g1.png",
                            "hero_crops/w5_lv_4_g2.png",
                            "hero_crops/w5_lv_4_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_lv_4_g1.png",
+                           "hero_crops/w7_lv_4_g2.png",
+                           "hero_crops/w7_lv_4_g3.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_lv_4_g1.png",
+                           "hero_crops/w6_lv_4_g2.png",
+                           "hero_crops/w6_lv_4_g3.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_lv_4_g1.png",
+                           "hero_crops/w8_lv_4_g2.png"
+                       ],
+                 "9":  [
+                           "hero_crops/w9_lv_4_g1.png",
+                           "hero_crops/w9_lv_4_g2.png"
                        ]
              },
     "lv_5":  {
@@ -920,6 +1542,24 @@
                            "hero_crops/w5_lv_5_g1.png",
                            "hero_crops/w5_lv_5_g2.png",
                            "hero_crops/w5_lv_5_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_lv_5_g1.png",
+                           "hero_crops/w7_lv_5_g2.png",
+                           "hero_crops/w7_lv_5_g3.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_lv_5_g1.png",
+                           "hero_crops/w6_lv_5_g2.png",
+                           "hero_crops/w6_lv_5_g3.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_lv_5_g1.png",
+                           "hero_crops/w8_lv_5_g2.png"
+                       ],
+                 "9":  [
+                           "hero_crops/w9_lv_5_g1.png",
+                           "hero_crops/w9_lv_5_g2.png"
                        ]
              },
     "ns_1":  {
@@ -944,6 +1584,23 @@
                  "5":  [
                            "hero_crops/w5_ns_1_g1.png",
                            "hero_crops/w5_ns_1_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_ns_1_g1.png",
+                           "hero_crops/w7_ns_1_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_ns_1_g1.png",
+                           "hero_crops/w6_ns_1_g2.png",
+                           "hero_crops/w6_ns_1_g3.png"
+                       ],
+                 "8":  [
+
+                       ],
+                 "9":  [
+                           "hero_crops/w9_ns_1_g1.png",
+                           "hero_crops/w9_ns_1_g2.png",
+                           "hero_crops/w9_ns_1_g3.png"
                        ]
              },
     "ns_2":  {
@@ -961,6 +1618,23 @@
                        ],
                  "5":  [
 
+                       ],
+                 "7":  [
+                           "hero_crops/w7_ns_2_g1.png",
+                           "hero_crops/w7_ns_2_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_ns_2_g1.png",
+                           "hero_crops/w6_ns_2_g2.png",
+                           "hero_crops/w6_ns_2_g3.png"
+                       ],
+                 "8":  [
+
+                       ],
+                 "9":  [
+                           "hero_crops/w9_ns_2_g1.png",
+                           "hero_crops/w9_ns_2_g2.png",
+                           "hero_crops/w9_ns_2_g3.png"
                        ]
              },
     "ns_3":  {
@@ -985,6 +1659,23 @@
                  "5":  [
                            "hero_crops/w5_ns_3_g1.png",
                            "hero_crops/w5_ns_3_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_ns_3_g1.png",
+                           "hero_crops/w7_ns_3_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_ns_3_g1.png",
+                           "hero_crops/w6_ns_3_g2.png",
+                           "hero_crops/w6_ns_3_g3.png"
+                       ],
+                 "8":  [
+
+                       ],
+                 "9":  [
+                           "hero_crops/w9_ns_3_g1.png",
+                           "hero_crops/w9_ns_3_g2.png",
+                           "hero_crops/w9_ns_3_g3.png"
                        ]
              },
     "ns_4":  {
@@ -1009,6 +1700,23 @@
                  "5":  [
                            "hero_crops/w5_ns_4_g1.png",
                            "hero_crops/w5_ns_4_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_ns_4_g1.png",
+                           "hero_crops/w7_ns_4_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_ns_4_g1.png",
+                           "hero_crops/w6_ns_4_g2.png",
+                           "hero_crops/w6_ns_4_g3.png"
+                       ],
+                 "8":  [
+
+                       ],
+                 "9":  [
+                           "hero_crops/w9_ns_4_g1.png",
+                           "hero_crops/w9_ns_4_g2.png",
+                           "hero_crops/w9_ns_4_g3.png"
                        ]
              },
     "ns_5":  {
@@ -1033,6 +1741,23 @@
                  "5":  [
                            "hero_crops/w5_ns_5_g1.png",
                            "hero_crops/w5_ns_5_g2.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_ns_5_g1.png",
+                           "hero_crops/w7_ns_5_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_ns_5_g1.png",
+                           "hero_crops/w6_ns_5_g2.png",
+                           "hero_crops/w6_ns_5_g3.png"
+                       ],
+                 "8":  [
+
+                       ],
+                 "9":  [
+                           "hero_crops/w9_ns_5_g1.png",
+                           "hero_crops/w9_ns_5_g2.png",
+                           "hero_crops/w9_ns_5_g3.png"
                        ]
              },
     "un_1":  {
@@ -1054,6 +1779,23 @@
                            "hero_crops/w5_un_1_g1.png",
                            "hero_crops/w5_un_1_g2.png",
                            "hero_crops/w5_un_1_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_un_1_g1.png",
+                           "hero_crops/w7_un_1_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_un_1_g1.png",
+                           "hero_crops/w6_un_1_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_un_1_g1.png",
+                           "hero_crops/w8_un_1_g2.png"
+                       ],
+                 "9":  [
+                           "hero_crops/w9_un_1_g1.png",
+                           "hero_crops/w9_un_1_g2.png",
+                           "hero_crops/w9_un_1_g3.png"
                        ]
              },
     "un_2":  {
@@ -1075,6 +1817,23 @@
                            "hero_crops/w5_un_2_g1.png",
                            "hero_crops/w5_un_2_g2.png",
                            "hero_crops/w5_un_2_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_un_2_g1.png",
+                           "hero_crops/w7_un_2_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_un_2_g1.png",
+                           "hero_crops/w6_un_2_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_un_2_g1.png",
+                           "hero_crops/w8_un_2_g2.png"
+                       ],
+                 "9":  [
+                           "hero_crops/w9_un_2_g1.png",
+                           "hero_crops/w9_un_2_g2.png",
+                           "hero_crops/w9_un_2_g3.png"
                        ]
              },
     "un_3":  {
@@ -1096,6 +1855,23 @@
                            "hero_crops/w5_un_3_g1.png",
                            "hero_crops/w5_un_3_g2.png",
                            "hero_crops/w5_un_3_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_un_3_g1.png",
+                           "hero_crops/w7_un_3_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_un_3_g1.png",
+                           "hero_crops/w6_un_3_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_un_3_g1.png",
+                           "hero_crops/w8_un_3_g2.png"
+                       ],
+                 "9":  [
+                           "hero_crops/w9_un_3_g1.png",
+                           "hero_crops/w9_un_3_g2.png",
+                           "hero_crops/w9_un_3_g3.png"
                        ]
              },
     "un_4":  {
@@ -1117,6 +1893,23 @@
                            "hero_crops/w5_un_4_g1.png",
                            "hero_crops/w5_un_4_g2.png",
                            "hero_crops/w5_un_4_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_un_4_g1.png",
+                           "hero_crops/w7_un_4_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_un_4_g1.png",
+                           "hero_crops/w6_un_4_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_un_4_g1.png",
+                           "hero_crops/w8_un_4_g2.png"
+                       ],
+                 "9":  [
+                           "hero_crops/w9_un_4_g1.png",
+                           "hero_crops/w9_un_4_g2.png",
+                           "hero_crops/w9_un_4_g3.png"
                        ]
              },
     "un_5":  {
@@ -1138,6 +1931,23 @@
                            "hero_crops/w5_un_5_g1.png",
                            "hero_crops/w5_un_5_g2.png",
                            "hero_crops/w5_un_5_g3.png"
+                       ],
+                 "7":  [
+                           "hero_crops/w7_un_5_g1.png",
+                           "hero_crops/w7_un_5_g2.png"
+                       ],
+                 "6":  [
+                           "hero_crops/w6_un_5_g1.png",
+                           "hero_crops/w6_un_5_g2.png"
+                       ],
+                 "8":  [
+                           "hero_crops/w8_un_5_g1.png",
+                           "hero_crops/w8_un_5_g2.png"
+                       ],
+                 "9":  [
+                           "hero_crops/w9_un_5_g1.png",
+                           "hero_crops/w9_un_5_g2.png",
+                           "hero_crops/w9_un_5_g3.png"
                        ]
              }
 }
