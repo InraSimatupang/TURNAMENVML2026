@@ -8358,7 +8358,7 @@
           const localP = localStorage.getItem(PLAYERS_STORAGE_KEY);
           if (localP) {
             const parsed = JSON.parse(localP);
-            if (Array.isArray(parsed) && (parsed.some(p => p.name === "NNAEL" || p.name === "Veri Sirait" || p.ign === "Zyye BCN" || p.ign === "Words" || p.ign === "NED nonok tegap" || p.assists === undefined || ((p.team === "Vortex" || p.team === "Pantang Mundur") && p.weekKills && p.weekKills[2] === 0)) || parsed.reduce((s, p) => s + (Number(p.kills) || 0), 0) < 2116)) {
+            if (Array.isArray(parsed) && (parsed.some(p => p.name === "NNAEL" || p.name === "Veri Sirait" || p.ign === "Zyye BCN" || p.ign === "Words" || p.ign === "NED nonok tegap" || p.assists === undefined || ((p.team === "Vortex" || p.team === "Pantang Mundur") && p.weekKills && p.weekKills[2] === 0)) || parsed.reduce((s, p) => s + (Number(p.kills) || 0), 0) < 3797)) {
               players = getDefaultPlayers();
               try { localStorage.setItem(PLAYERS_STORAGE_KEY, JSON.stringify(players)); } catch (e) { }
             } else {
@@ -8403,7 +8403,7 @@
               if (data.players && Array.isArray(data.players) && data.players.length > 0) {
                 const cloudKills = data.players.reduce((s, p) => s + (Number(p.kills) || 0), 0);
                 const hasOutdated = data.players.some(p => p.ign === "Words" || p.name === "Veri Sirait" || p.name === "NNAEL" || p.ign === "Zyye BCN");
-                if (cloudKills >= 2116 && !hasOutdated) {
+                if (cloudKills >= 3797 && !hasOutdated) {
                   players = data.players;
                   syncPlayerMetadata();
                   try { localStorage.setItem(PLAYERS_STORAGE_KEY, JSON.stringify(players)); } catch (e) { }
