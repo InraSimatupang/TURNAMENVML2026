@@ -7963,45 +7963,340 @@
 
       function getDefaultWeek1Results() {
         return {
-          1: { scoreA: 0, scoreB: 2, status: "COMPLETED", date: "12/09/2026", time: "16:41" },
-          2: { scoreA: 1, scoreB: 2, status: "COMPLETED", date: "13/09/2026", time: "16:13" },
-          3: { scoreA: 1, scoreB: 2, status: "COMPLETED", date: "13/09/2026", time: "14:34" },
-          4: { scoreA: 2, scoreB: 0, status: "COMPLETED", date: "13/09/2026", time: "16:13" },
-          5: { scoreA: 2, scoreB: 0, status: "COMPLETED", date: "13/09/2026", time: "17:39" },
-          6: { scoreA: 2, scoreB: 1, status: "COMPLETED", date: "19/09/2026", time: "14:42" },
-          7: { scoreA: 0, scoreB: 2, status: "COMPLETED", date: "19/09/2026", time: "13:48" },
-          8: { scoreA: 0, scoreB: 2, status: "COMPLETED", date: "20/09/2026", time: "13:52" },
-          9: { scoreA: 2, scoreB: 1, status: "COMPLETED", date: "20/09/2026", time: "14:25" },
-          10: { scoreA: 2, scoreB: 0, status: "COMPLETED", date: "30/09/2026", time: "19:44" },
-          11: { scoreA: 0, scoreB: 2, status: "COMPLETED", date: "27/09/2026", time: "", isWO: true, woTeam: "Ulat Nangka", note: "WO (Ulat Nangka)" },
-          12: { scoreA: 2, scoreB: 0, status: "COMPLETED", date: "27/09/2026", time: "" },
-          13: { scoreA: 1, scoreB: 2, status: "COMPLETED", date: "27/09/2026", time: "" },
-          14: { scoreA: 0, scoreB: 2, status: "COMPLETED", date: "28/09/2026", time: "" },
-          15: { scoreA: 0, scoreB: 2, status: "COMPLETED", date: "27/09/2026", time: "", isWO: true, woTeam: "Kaum Begadang", note: "WO (Kaum Begadang)" },
-          16: { scoreA: 0, scoreB: 2, status: "COMPLETED", date: "03/10/2026", time: "14:59" },
-          17: { scoreA: 0, scoreB: 2, status: "COMPLETED", date: "03/10/2026", time: "15:14" },
-          18: { scoreA: 2, scoreB: 0, status: "COMPLETED", date: "04/10/2026", time: "14:05" },
-          19: { scoreA: 2, scoreB: 1, status: "COMPLETED", date: "04/10/2026", time: "14:25" },
-          20: { scoreA: 0, scoreB: 2, status: "COMPLETED", date: "04/10/2026", time: "", isWO: true, woTeam: "Bahaya & Jahil ( BAHLIL )", note: "WO (Bahaya & Jahil ( BAHLIL ))" },
-          21: { scoreA: 0, scoreB: 2, status: "COMPLETED", date: "10/10/2026", time: "" },
-          22: { scoreA: 1, scoreB: 2, status: "COMPLETED", date: "10/10/2026", time: "" },
-          23: { scoreA: 2, scoreB: 0, status: "COMPLETED", date: "08/10/2026", time: "" },
-          24: { scoreA: 1, scoreB: 2, status: "COMPLETED", date: "11/10/2026", time: "" },
-          25: { scoreA: 0, scoreB: 2, status: "COMPLETED", date: "09/10/2026", time: "" },
-          27: { scoreA: 2, scoreB: 1, status: "COMPLETED", date: "31/10/2026", time: "14:44" },
-          // Week 8
-          36: { scoreA: 0, scoreB: 2, status: "COMPLETED", date: "29/10/2026", time: "20:43" },
-          37: { scoreA: 2, scoreB: 1, status: "COMPLETED", date: "31/10/2026", time: "15:19" },
-          38: { scoreA: 0, scoreB: 2, status: "COMPLETED", date: "31/10/2026", time: "", isWO: true, woTeam: "Kaum Begadang", note: "WO (Kaum Begadang)" },
-          39: { scoreA: 0, scoreB: 2, status: "COMPLETED", date: "30/10/2026", time: "21:09" },
-          40: { scoreA: 2, scoreB: 1, status: "COMPLETED", date: "01/11/2026", time: "14:31" },
-          // Week 9
-          41: { scoreA: 2, scoreB: 0, status: "COMPLETED", date: "27/10/2026", time: "21:46" },
-          42: { scoreA: 1, scoreB: 2, status: "COMPLETED", date: "30/10/2026", time: "21:16" },
-          43: { scoreA: 0, scoreB: 2, status: "COMPLETED", date: "30/10/2026", time: "", isWO: true, woTeam: "Kaum Begadang", note: "WO (Kaum Begadang)" },
-          44: { scoreA: 0, scoreB: 2, status: "COMPLETED", date: "01/11/2026", time: "", isWO: true, woTeam: "Bahaya & Jahil ( BAHLIL )", note: "WO (Bahaya & Jahil ( BAHLIL ))" },
-          45: { scoreA: 2, scoreB: 0, status: "COMPLETED", date: "02/11/2026", time: "21:20" }
-        };
+          "1": {
+                    "scoreA": 0,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "12/09/2026",
+                    "time": "16:41"
+          },
+          "2": {
+                    "scoreA": 1,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "13/09/2026",
+                    "time": "16:13"
+          },
+          "3": {
+                    "scoreA": 1,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "13/09/2026",
+                    "time": "14:34"
+          },
+          "4": {
+                    "scoreA": 2,
+                    "scoreB": 0,
+                    "status": "COMPLETED",
+                    "date": "13/09/2026",
+                    "time": "16:13"
+          },
+          "5": {
+                    "scoreA": 2,
+                    "scoreB": 0,
+                    "status": "COMPLETED",
+                    "date": "13/09/2026",
+                    "time": "17:39"
+          },
+          "6": {
+                    "scoreA": 2,
+                    "scoreB": 1,
+                    "status": "COMPLETED",
+                    "date": "19/09/2026",
+                    "time": "14:42"
+          },
+          "7": {
+                    "scoreA": 0,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "19/09/2026",
+                    "time": "13:48"
+          },
+          "8": {
+                    "scoreA": 0,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "20/09/2026",
+                    "time": "13:52"
+          },
+          "9": {
+                    "scoreA": 2,
+                    "scoreB": 1,
+                    "status": "COMPLETED",
+                    "date": "20/09/2026",
+                    "time": "14:25"
+          },
+          "10": {
+                    "scoreA": 2,
+                    "scoreB": 0,
+                    "status": "COMPLETED",
+                    "date": "30/09/2026",
+                    "time": "19:44"
+          },
+          "11": {
+                    "scoreA": 0,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "27/09/2026",
+                    "time": "",
+                    "isWO": true,
+                    "woTeam": "Ulat Nangka",
+                    "note": "WO (Ulat Nangka)"
+          },
+          "12": {
+                    "scoreA": 2,
+                    "scoreB": 0,
+                    "status": "COMPLETED",
+                    "date": "27/09/2026",
+                    "time": ""
+          },
+          "13": {
+                    "scoreA": 1,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "27/09/2026",
+                    "time": ""
+          },
+          "14": {
+                    "scoreA": 0,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "28/09/2026",
+                    "time": ""
+          },
+          "15": {
+                    "scoreA": 0,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "27/09/2026",
+                    "time": "",
+                    "isWO": true,
+                    "woTeam": "Kaum Begadang",
+                    "note": "WO (Kaum Begadang)"
+          },
+          "16": {
+                    "scoreA": 0,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "03/10/2026",
+                    "time": "14:59"
+          },
+          "17": {
+                    "scoreA": 0,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "03/10/2026",
+                    "time": "15:14"
+          },
+          "18": {
+                    "scoreA": 2,
+                    "scoreB": 0,
+                    "status": "COMPLETED",
+                    "date": "04/10/2026",
+                    "time": "14:05"
+          },
+          "19": {
+                    "scoreA": 2,
+                    "scoreB": 1,
+                    "status": "COMPLETED",
+                    "date": "04/10/2026",
+                    "time": "14:25"
+          },
+          "20": {
+                    "scoreA": 0,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "04/10/2026",
+                    "time": "",
+                    "isWO": true,
+                    "woTeam": "Bahaya & Jahil ( BAHLIL )",
+                    "note": "WO (Bahaya & Jahil ( BAHLIL ))"
+          },
+          "21": {
+                    "scoreA": 0,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "10/10/2026",
+                    "time": ""
+          },
+          "22": {
+                    "scoreA": 1,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "10/10/2026",
+                    "time": ""
+          },
+          "23": {
+                    "scoreA": 2,
+                    "scoreB": 0,
+                    "status": "COMPLETED",
+                    "date": "08/10/2026",
+                    "time": ""
+          },
+          "24": {
+                    "scoreA": 1,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "11/10/2026",
+                    "time": ""
+          },
+          "25": {
+                    "scoreA": 0,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "09/10/2026",
+                    "time": ""
+          },
+          "26": {
+                    "scoreA": 2,
+                    "scoreB": 1,
+                    "status": "COMPLETED",
+                    "date": "18/10/2026",
+                    "time": "16:28"
+          },
+          "27": {
+                    "scoreA": 2,
+                    "scoreB": 1,
+                    "status": "COMPLETED",
+                    "date": "31/10/2026",
+                    "time": "14:44"
+          },
+          "28": {
+                    "scoreA": 2,
+                    "scoreB": 0,
+                    "status": "COMPLETED",
+                    "date": "19/10/2026",
+                    "time": "09:04"
+          },
+          "29": {
+                    "scoreA": 2,
+                    "scoreB": 0,
+                    "status": "COMPLETED",
+                    "date": "18/10/2026",
+                    "time": "15:53"
+          },
+          "30": {
+                    "scoreA": 2,
+                    "scoreB": 0,
+                    "status": "COMPLETED",
+                    "date": "18/10/2026",
+                    "time": "13:24"
+          },
+          "31": {
+                    "scoreA": 2,
+                    "scoreB": 0,
+                    "status": "COMPLETED",
+                    "date": "24/10/2026",
+                    "time": "13:25"
+          },
+          "32": {
+                    "scoreA": 1,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "24/10/2026",
+                    "time": "14:54"
+          },
+          "33": {
+                    "scoreA": 0,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "25/10/2026",
+                    "time": "14:00"
+          },
+          "34": {
+                    "scoreA": 0,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "25/10/2026",
+                    "time": "13:53"
+          },
+          "35": {
+                    "scoreA": 1,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "25/10/2026",
+                    "time": "14:05"
+          },
+          "36": {
+                    "scoreA": 0,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "29/10/2026",
+                    "time": "20:43"
+          },
+          "37": {
+                    "scoreA": 2,
+                    "scoreB": 1,
+                    "status": "COMPLETED",
+                    "date": "31/10/2026",
+                    "time": "15:19"
+          },
+          "38": {
+                    "scoreA": 0,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "31/10/2026",
+                    "time": "",
+                    "isWO": true,
+                    "woTeam": "Kaum Begadang",
+                    "note": "WO (Kaum Begadang)"
+          },
+          "39": {
+                    "scoreA": 0,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "30/10/2026",
+                    "time": "21:09"
+          },
+          "40": {
+                    "scoreA": 2,
+                    "scoreB": 1,
+                    "status": "COMPLETED",
+                    "date": "01/11/2026",
+                    "time": "14:31"
+          },
+          "41": {
+                    "scoreA": 2,
+                    "scoreB": 0,
+                    "status": "COMPLETED",
+                    "date": "27/10/2026",
+                    "time": "21:46"
+          },
+          "42": {
+                    "scoreA": 1,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "30/10/2026",
+                    "time": "21:16"
+          },
+          "43": {
+                    "scoreA": 0,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "30/10/2026",
+                    "time": "",
+                    "isWO": true,
+                    "woTeam": "Kaum Begadang",
+                    "note": "WO (Kaum Begadang)"
+          },
+          "44": {
+                    "scoreA": 0,
+                    "scoreB": 2,
+                    "status": "COMPLETED",
+                    "date": "01/11/2026",
+                    "time": "",
+                    "isWO": true,
+                    "woTeam": "Bahaya & Jahil ( BAHLIL )",
+                    "note": "WO (Bahaya & Jahil ( BAHLIL ))"
+          },
+          "45": {
+                    "scoreA": 2,
+                    "scoreB": 0,
+                    "status": "COMPLETED",
+                    "date": "02/11/2026",
+                    "time": "21:20"
+          }
+};
       }
 
       let players = getDefaultPlayers();
