@@ -5914,6 +5914,78 @@
       }
     }
 
+    /* Black Owl Modal Photo Slider CSS */
+    .champ-slider-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 38px;
+      height: 38px;
+      border-radius: 50%;
+      background: rgba(2, 11, 24, 0.88);
+      border: 1.5px solid rgba(255, 215, 0, 0.6);
+      color: #ffd700;
+      font-size: 18px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 12;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 14px rgba(0, 0, 0, 0.7);
+    }
+    .champ-slider-arrow:hover {
+      background: linear-gradient(135deg, #ffd700 0%, #f59e0b 100%);
+      color: #050b14;
+      transform: translateY(-50%) scale(1.1);
+      box-shadow: 0 0 16px rgba(255, 215, 0, 0.75);
+    }
+    .champ-slider-arrow.prev {
+      left: 10px;
+    }
+    .champ-slider-arrow.next {
+      right: 10px;
+    }
+    .champ-slider-count-badge {
+      position: absolute;
+      top: 12px;
+      right: 12px;
+      background: rgba(2, 11, 24, 0.88);
+      border: 1px solid rgba(255, 215, 0, 0.4);
+      color: #ffd700;
+      font-weight: 800;
+      font-size: 11px;
+      padding: 3px 10px;
+      border-radius: 12px;
+      letter-spacing: 0.5px;
+      z-index: 10;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.6);
+    }
+    .champ-modal-dots {
+      display: flex;
+      justify-content: center;
+      gap: 6px;
+      margin-top: 5px;
+    }
+    .champ-modal-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.25);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .champ-modal-dot:hover {
+      background: rgba(255, 215, 0, 0.5);
+    }
+    .champ-modal-dot.active {
+      width: 20px;
+      border-radius: 10px;
+      background: linear-gradient(90deg, #ffd700, #f59e0b);
+      box-shadow: 0 0 8px rgba(255, 215, 0, 0.6);
+    }
+
     /* Champion Celebration Modal Styles */
     .trophy-modal-overlay {
       position: fixed;
@@ -7305,12 +7377,29 @@
       <div class="champ-modal-body">
         <canvas id="trophyModalCanvas" class="trophy-modal-canvas"></canvas>
         <div class="champ-grid">
-          <!-- Left Column: Photo of Black Owl Champions -->
+          <!-- Left Column: Photo Slider of Black Owl Champions -->
           <div class="champ-photo-col">
-            <div class="champ-photo-frame">
-              <img src="champion_black_owl.jpeg" onerror="this.src='Juara 1 Black Owl/WhatsApp Image 2026-11-15 at 4.52.48 PM (1).jpeg'" alt="Juara 1 VML 2026 - Black Owl" class="champ-photo-img">
+            <div class="champ-photo-frame" id="champPhotoSliderStage">
+              <!-- Navigation Arrows -->
+              <button type="button" class="champ-slider-arrow prev" id="btnChampModalPrev" aria-label="Foto Sebelumnya" title="Foto Sebelumnya">❮</button>
+              <button type="button" class="champ-slider-arrow next" id="btnChampModalNext" aria-label="Foto Berikutnya" title="Foto Berikutnya">❯</button>
+
+              <!-- Image -->
+              <img id="champModalImg" src="Juara 1 Black Owl/bo_champ_1.jpeg" onerror="this.src='Juara 1 Black Owl/WhatsApp Image 2026-11-15 at 4.52.46 PM (2).jpeg'" alt="Juara 1 VML 2026 - Black Owl" class="champ-photo-img" style="transition: opacity 0.25s ease;">
+              
+              <!-- Badges -->
               <div class="champ-photo-badge">🥇 1ST PLACE WINNER</div>
-              <div class="champ-photo-caption">Momen Kemenangan Roster BLACK OWL di Grand Final VML 2026</div>
+              <div class="champ-slider-count-badge" id="champModalCounter">1 / 3</div>
+
+              <!-- Caption & Dots -->
+              <div class="champ-photo-caption">
+                <div id="champModalCaptionText">Penyerahan Hadiah &amp; Piagam Kemenangan Juara 1 VML 2026</div>
+                <div class="champ-modal-dots" id="champModalDots">
+                  <span class="champ-modal-dot active" data-slide="0"></span>
+                  <span class="champ-modal-dot" data-slide="1"></span>
+                  <span class="champ-modal-dot" data-slide="2"></span>
+                </div>
+              </div>
             </div>
           </div>
 
@@ -14601,7 +14690,98 @@
         }
       ];
 
-      function setupChampionsSlider() {
+            /* =========================================================
+         BLACK OWL CHAMPION MODAL PHOTO SLIDER
+      ========================================================= */
+      const BLACK_OWL_SLIDES = [
+        {
+          img: "Juara 1 Black Owl/bo_champ_1.jpeg",
+          fallback: "Juara 1 Black Owl/WhatsApp Image 2026-11-15 at 4.52.46 PM (2).jpeg",
+          caption: "Penyerahan Hadiah & Piagam Kemenangan Juara 1 VML 2026"
+        },
+        {
+          img: "Juara 1 Black Owl/bo_champ_2.jpeg",
+          fallback: "Juara 1 Black Owl/WhatsApp Image 2026-11-15 at 4.52.47 PM (1).jpeg",
+          caption: "Selebrasi Pengangkatan Piala Juara 1 oleh Roster BLACK OWL"
+        },
+        {
+          img: "Juara 1 Black Owl/bo_champ_3.jpeg",
+          fallback: "Juara 1 Black Owl/WhatsApp Image 2026-11-15 at 4.52.48 PM (1).jpeg",
+          caption: "Momen Foto Bersama Para Juara VML 2026 di Panggung Grand Final"
+        }
+      ];
+
+      function setupBlackOwlModalSlider() {
+        let cur = 0;
+        let timer = null;
+        const imgEl = document.getElementById("champModalImg");
+        const capEl = document.getElementById("champModalCaptionText");
+        const countEl = document.getElementById("champModalCounter");
+        const prevBtn = document.getElementById("btnChampModalPrev");
+        const nextBtn = document.getElementById("btnChampModalNext");
+        const dots = document.querySelectorAll(".champ-modal-dot");
+        const stage = document.getElementById("champPhotoSliderStage");
+
+        if (!imgEl) return;
+
+        function show(idx) {
+          if (idx < 0) idx = BLACK_OWL_SLIDES.length - 1;
+          if (idx >= BLACK_OWL_SLIDES.length) idx = 0;
+          cur = idx;
+          const data = BLACK_OWL_SLIDES[idx];
+
+          imgEl.style.opacity = "0.2";
+          setTimeout(() => {
+            imgEl.src = data.img;
+            imgEl.onerror = function() { this.src = data.fallback; };
+            if (capEl) capEl.textContent = data.caption;
+            if (countEl) countEl.textContent = (cur + 1) + " / " + BLACK_OWL_SLIDES.length;
+            imgEl.style.opacity = "1";
+          }, 150);
+
+          dots.forEach((d, i) => d.classList.toggle("active", i === idx));
+        }
+
+        function next() { show(cur + 1); }
+        function prev() { show(cur - 1); }
+
+        function start() {
+          stop();
+          timer = setInterval(next, 3800);
+        }
+        function stop() {
+          if (timer) { clearInterval(timer); timer = null; }
+        }
+
+        if (nextBtn) nextBtn.addEventListener("click", () => { next(); start(); });
+        if (prevBtn) prevBtn.addEventListener("click", () => { prev(); start(); });
+
+        dots.forEach((d, i) => {
+          d.addEventListener("click", () => { show(i); start(); });
+        });
+
+        if (stage) {
+          stage.addEventListener("mouseenter", stop);
+          stage.addEventListener("mouseleave", start);
+
+          let touchStartX = 0;
+          stage.addEventListener("touchstart", (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            stop();
+          }, { passive: true });
+          stage.addEventListener("touchend", (e) => {
+            const touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 40) next();
+            else if (touchEndX - touchStartX > 40) prev();
+            start();
+          }, { passive: true });
+        }
+
+        show(0);
+        start();
+      }
+
+function setupChampionsSlider() {
         let currentSlide = 0;
         let isPlaying = true;
         let slideTimer = null;
@@ -14930,6 +15110,7 @@ function setupTrophyLiftAnimation() {
       async function init() {
         setupTrophyLiftAnimation();
         setupChampionsSlider();
+        setupBlackOwlModalSlider();
         // Automatically pop up Champion Celebration on site load
         setTimeout(() => {
           const champModal = document.getElementById("trophyCelebrationModal");
