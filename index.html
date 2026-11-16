@@ -5685,6 +5685,232 @@
   
 
   
+    /* VML Champions Photo Slider CSS */
+    .vml-slider-wrapper {
+      position: relative;
+      border-radius: 16px;
+      overflow: hidden;
+      border: 2px solid #ffd700;
+      box-shadow: 0 14px 45px rgba(0, 0, 0, 0.85), 0 0 30px rgba(255, 215, 0, 0.3);
+      max-width: 980px;
+      margin: 0 auto;
+      background: radial-gradient(circle at center, #0a1426 0%, #020712 100%);
+      user-select: none;
+    }
+    .vml-slider-stage {
+      position: relative;
+      width: 100%;
+      height: 520px;
+      max-height: 72vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background: #000;
+      cursor: pointer;
+    }
+    .vml-slider-img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      display: block;
+      margin: 0 auto;
+      transition: opacity 0.25s ease, transform 0.3s ease;
+    }
+    .vml-slider-img.fade-out {
+      opacity: 0.15;
+      transform: scale(0.98);
+    }
+    .vml-slider-btn {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 48px;
+      height: 48px;
+      border-radius: 50%;
+      background: rgba(2, 11, 24, 0.85);
+      border: 1.5px solid rgba(255, 215, 0, 0.65);
+      color: #ffd700;
+      font-size: 22px;
+      font-weight: 900;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      z-index: 15;
+      transition: all 0.25s ease;
+      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.7);
+    }
+    .vml-slider-btn:hover {
+      background: linear-gradient(135deg, #ffd700 0%, #f59e0b 100%);
+      color: #050b14;
+      transform: translateY(-50%) scale(1.12);
+      box-shadow: 0 0 20px rgba(255, 215, 0, 0.75);
+    }
+    .vml-slider-btn.prev {
+      left: 14px;
+    }
+    .vml-slider-btn.next {
+      right: 14px;
+    }
+    .vml-slider-top-badges {
+      position: absolute;
+      top: 14px;
+      left: 16px;
+      right: 16px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 12;
+      pointer-events: none;
+    }
+    .vml-slider-counter {
+      background: rgba(2, 11, 24, 0.88);
+      border: 1px solid rgba(255, 215, 0, 0.4);
+      color: #ffd700;
+      font-weight: 900;
+      font-size: 11.5px;
+      letter-spacing: 1px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.6);
+    }
+    .vml-slider-category-badge {
+      background: linear-gradient(135deg, #ffd700 0%, #f59e0b 100%);
+      color: #050b14;
+      font-weight: 900;
+      font-size: 11px;
+      letter-spacing: 0.8px;
+      padding: 4px 12px;
+      border-radius: 20px;
+      box-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+      text-transform: uppercase;
+    }
+    .vml-slider-caption-overlay {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: linear-gradient(180deg, transparent 0%, rgba(2, 11, 24, 0.88) 35%, rgba(1, 6, 14, 0.98) 100%);
+      padding: 24px 24px 16px;
+      text-align: center;
+      z-index: 10;
+      pointer-events: none;
+    }
+    .vml-slider-caption-title {
+      font-family: var(--font-display, var(--font-bebas, sans-serif));
+      font-size: 20px;
+      font-weight: 900;
+      color: #ffd700;
+      letter-spacing: 1px;
+      text-shadow: 0 0 12px rgba(255, 215, 0, 0.6), 0 2px 4px rgba(0, 0, 0, 0.9);
+      margin-bottom: 4px;
+    }
+    .vml-slider-caption-desc {
+      font-size: 12.5px;
+      color: #e2e8f0;
+      max-width: 720px;
+      margin: 0 auto;
+      line-height: 1.45;
+      text-shadow: 0 1px 4px rgba(0, 0, 0, 0.85);
+    }
+    .vml-slider-pills-bar {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      padding: 14px 4px 6px;
+      scrollbar-width: thin;
+      scrollbar-color: rgba(255, 215, 0, 0.3) transparent;
+      justify-content: flex-start;
+      margin-top: 4px;
+    }
+    .vml-slider-pill {
+      background: rgba(255, 255, 255, 0.04);
+      border: 1px solid rgba(255, 255, 255, 0.12);
+      color: #94a3b8;
+      font-size: 12px;
+      font-weight: 700;
+      padding: 6px 14px;
+      border-radius: 20px;
+      cursor: pointer;
+      white-space: nowrap;
+      transition: all 0.2s ease;
+      flex-shrink: 0;
+    }
+    .vml-slider-pill:hover {
+      background: rgba(255, 215, 0, 0.15);
+      border-color: rgba(255, 215, 0, 0.4);
+      color: #fef08a;
+    }
+    .vml-slider-pill.active {
+      background: linear-gradient(135deg, rgba(255, 215, 0, 0.25) 0%, rgba(245, 158, 11, 0.2) 100%);
+      border: 1.5px solid #ffd700;
+      color: #ffd700;
+      font-weight: 800;
+      box-shadow: 0 0 14px rgba(255, 215, 0, 0.4);
+    }
+    .vml-slider-dots {
+      display: flex;
+      justify-content: center;
+      gap: 8px;
+      margin-top: 10px;
+      margin-bottom: 4px;
+    }
+    .vml-slider-dot {
+      width: 10px;
+      height: 10px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.2);
+      cursor: pointer;
+      transition: all 0.25s ease;
+    }
+    .vml-slider-dot:hover {
+      background: rgba(255, 215, 0, 0.5);
+    }
+    .vml-slider-dot.active {
+      width: 26px;
+      border-radius: 12px;
+      background: linear-gradient(90deg, #ffd700, #f59e0b);
+      box-shadow: 0 0 10px rgba(255, 215, 0, 0.6);
+    }
+    .btn-slider-autoplay {
+      background: rgba(255, 255, 255, 0.05);
+      border: 1px solid rgba(255, 255, 255, 0.15);
+      color: #cbd5e1;
+      font-size: 11.5px;
+      font-weight: 700;
+      padding: 4px 10px;
+      border-radius: 16px;
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      gap: 5px;
+      transition: all 0.2s ease;
+    }
+    .btn-slider-autoplay:hover {
+      background: rgba(255, 215, 0, 0.15);
+      border-color: #ffd700;
+      color: #ffd700;
+    }
+    @media (max-width: 768px) {
+      .vml-slider-stage {
+        height: 380px;
+      }
+      .vml-slider-btn {
+        width: 38px;
+        height: 38px;
+        font-size: 16px;
+      }
+      .vml-slider-caption-title {
+        font-size: 16px;
+      }
+      .vml-slider-caption-desc {
+        font-size: 11px;
+      }
+    }
+
     /* Champion Celebration Modal Styles */
     .trophy-modal-overlay {
       position: fixed;
@@ -6686,24 +6912,68 @@
           </ul>
         </div>
 
-        <!-- Standings Champions Photo Card -->
-        <div class="standings-info-card standings-champion-card" style="margin-top: 20px; border-left: 4px solid #f59e0b;">
+        <!-- Standings Champions Photo Slider Gallery -->
+        <div class="standings-info-card standings-champion-card" style="margin-top: 24px; border-left: 4px solid #ffd700;">
           <div class="standings-info-head">
             <div class="standings-info-title">
-              <div class="standings-info-title-icon" style="background: rgba(245, 158, 11, 0.15); border-color: rgba(245, 158, 11, 0.35); color: #f59e0b;">🏆</div>
-              <span style="color: #fff; font-weight: 800;">Momen Foto Bersama Para Juara VML 2026</span>
+              <div class="standings-info-title-icon" style="background: rgba(255, 215, 0, 0.15); border-color: rgba(255, 215, 0, 0.4); color: #ffd700;">🏆</div>
+              <span style="color: #fff; font-weight: 800; font-size: 16px;">Dokumentasi &amp; Galeri Juara VML 2026</span>
             </div>
-            <div class="standings-hashtag" style="color: #f59e0b; border-color: rgba(245, 158, 11, 0.3);">#VML2026CHAMPIONS</div>
+            <div class="standings-hashtag" style="color: #ffd700; border-color: rgba(255, 215, 0, 0.35);">#VML2026CHAMPIONS</div>
           </div>
-          <div style="font-size: 13px; color: var(--text-dim); margin-bottom: 16px;">
-            Dokumentasi selebrasi dan pengangkatan piala kehormatan para juara turnamen <b>Victorindo Mobile Legends (VML) 2026</b>.
-          </div>
-          <div class="champion-photo-frame" style="position: relative; border-radius: 14px; overflow: hidden; border: 2px solid #ffd700; box-shadow: 0 14px 40px rgba(0,0,0,0.8), 0 0 28px rgba(255, 215, 0, 0.35); max-width: 960px; margin: 0 auto; background: radial-gradient(circle at center, #0f1c33 0%, #030710 100%);">
-            <img src="champion_black_owl.jpeg" onerror="this.src='Juara 1 Black Owl/WhatsApp Image 2026-11-15 at 4.52.48 PM (1).jpeg'" alt="Momen Foto Bersama Juara 1 VML 2026 - Black Owl" style="width: 100%; height: auto; max-height: 540px; object-fit: contain; display: block; margin: 0 auto; cursor: pointer; transition: transform 0.4s ease;" onclick="document.getElementById('btnOpenTrophyModal') && document.getElementById('btnOpenTrophyModal').click();" title="Klik untuk melihat selebrasi juara penuh">
-            <div style="position: absolute; bottom: 0; inset-inline: 0; background: linear-gradient(180deg, transparent 0%, rgba(2, 11, 24, 0.95) 85%); padding: 20px 24px 16px; text-align: center; pointer-events: none;">
-              <div style="font-family: var(--font-display); font-size: 20px; font-weight: 900; color: #ffd700; letter-spacing: 1px; text-shadow: 0 0 12px rgba(255,215,0,0.6);">🏆 SANG JUARA VML 2026: BLACK OWL</div>
-              <div style="font-size: 13px; color: #e2e8f0; margin-top: 4px;">Panggung Kehormatan Grand Final · Victorindo Mobile Legends</div>
+          <div style="font-size: 13px; color: var(--text-dim); margin-bottom: 16px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 8px;">
+            <span>Dokumentasi resmi selebrasi penyerahan piala juara, foto bersama seluruh tim, dan penganugerahan penghargaan individu turnamen <b>Victorindo Mobile Legends 2026</b>.</span>
+            <div class="slider-ctrl-right">
+              <button type="button" class="btn-slider-autoplay" id="btnSliderAutoplay" title="Jeda / Lanjutkan Auto Slide">
+                <span id="sliderPlayIcon">⏸️</span> <span id="sliderPlayText">Auto-Slide: Nyala</span>
+              </button>
             </div>
+          </div>
+
+          <!-- Main Slider Viewport -->
+          <div class="vml-slider-wrapper">
+            <!-- Floating Navigation Buttons -->
+            <button type="button" class="vml-slider-btn prev" id="btnSliderPrev" aria-label="Foto Sebelumnya" title="Foto Sebelumnya (❮)">❮</button>
+            <button type="button" class="vml-slider-btn next" id="btnSliderNext" aria-label="Foto Berikutnya" title="Foto Berikutnya (❯)">❯</button>
+
+            <!-- Slide Counter & Badge -->
+            <div class="vml-slider-top-badges">
+              <span class="vml-slider-counter" id="sliderCounterText">1 / 7</span>
+              <span class="vml-slider-category-badge" id="sliderCategoryBadge">👥 ALL PLAYERS &amp; COMMITTEES</span>
+            </div>
+
+            <!-- Image Stage -->
+            <div class="vml-slider-stage" id="sliderStage">
+              <img id="sliderMainImg" src="gallery_final/1_semua_player.jpeg" onerror="this.src='Semua player/WhatsApp Image 2026-11-15 at 4.52.41 PM.jpeg'" alt="Dokumentasi VML 2026" class="vml-slider-img" onclick="document.getElementById('btnOpenTrophyModal') && document.getElementById('btnOpenTrophyModal').click();" title="Klik untuk membuka selebrasi juara">
+            </div>
+
+            <!-- Slide Caption Overlay -->
+            <div class="vml-slider-caption-overlay">
+              <div class="vml-slider-caption-title" id="sliderTitleText">Momen Foto Bersama Seluruh Player &amp; Panitia VML 2026</div>
+              <div class="vml-slider-caption-desc" id="sliderDescText">Dokumentasi kebersamaan seluruh pemain dari 10 tim dan panitia resmi turnamen Victorindo Mobile Legends 2026 di panggung Grand Final.</div>
+            </div>
+          </div>
+
+          <!-- Thumbnails / Navigation Pills -->
+          <div class="vml-slider-pills-bar" id="sliderPillsBar">
+            <button type="button" class="vml-slider-pill active" data-slide="0">👥 Semua Player</button>
+            <button type="button" class="vml-slider-pill" data-slide="1">🥇 Juara 1: Black Owl</button>
+            <button type="button" class="vml-slider-pill" data-slide="2">🥈 Juara 2: Ulat Nangka</button>
+            <button type="button" class="vml-slider-pill" data-slide="3">🥉 Juara 3: Forge Wolf</button>
+            <button type="button" class="vml-slider-pill" data-slide="4">⚔️ Top Kill</button>
+            <button type="button" class="vml-slider-pill" data-slide="5">🤝 Top Assist</button>
+            <button type="button" class="vml-slider-pill" data-slide="6">👑 Top KDA</button>
+          </div>
+
+          <!-- Dots Indicator -->
+          <div class="vml-slider-dots" id="sliderDotsBar">
+            <span class="vml-slider-dot active" data-slide="0"></span>
+            <span class="vml-slider-dot" data-slide="1"></span>
+            <span class="vml-slider-dot" data-slide="2"></span>
+            <span class="vml-slider-dot" data-slide="3"></span>
+            <span class="vml-slider-dot" data-slide="4"></span>
+            <span class="vml-slider-dot" data-slide="5"></span>
+            <span class="vml-slider-dot" data-slide="6"></span>
           </div>
         </div>
       </section>
@@ -14231,7 +14501,206 @@
             /* =========================================================
          GLOBAL CINEMATIC TROPHY LIFT ANIMATION ENGINE (ALL PAGES)
       ========================================================= */
-      function setupTrophyLiftAnimation() {
+            /* =========================================================
+         CHAMPIONS & AWARDS PHOTO SLIDER ENGINE
+      ========================================================= */
+      const CHAMPION_SLIDES = [
+        {
+          id: 1,
+          category: "FOTO BERSAMA",
+          badge: "👥 ALL PLAYERS & COMMITTEES",
+          title: "Momen Foto Bersama Seluruh Player & Panitia VML 2026",
+          desc: "Dokumentasi kebersamaan seluruh pemain dari 10 tim dan panitia resmi turnamen Victorindo Mobile Legends 2026 di panggung Grand Final.",
+          img: "gallery_final/1_semua_player.jpeg",
+          fallback: "Semua player/WhatsApp Image 2026-11-15 at 4.52.41 PM.jpeg"
+        },
+        {
+          id: 2,
+          category: "JUARA 1",
+          badge: "🥇 1ST PLACE CHAMPION",
+          title: "Penyerahan Piala Juara 1: BLACK OWL",
+          desc: "Selamat kepada tim BLACK OWL atas kemenangan gemilang dan dinobatkan sebagai Juara 1 Turnamen Victorindo Mobile Legends 2026!",
+          img: "gallery_final/2_juara1_black_owl.jpeg",
+          fallback: "Juara 1 Black Owl/WhatsApp Image 2026-11-15 at 4.52.48 PM (1).jpeg"
+        },
+        {
+          id: 3,
+          category: "JUARA 2",
+          badge: "🥈 2ND PLACE / RUNNER-UP",
+          title: "Penyerahan Juara 2 (Runner-Up): ULAT NANGKA",
+          desc: "Apresiasi setinggi-tingginya kepada tim ULAT NANGKA atas performa tangguh, konsistensi, dan daya juang luar biasa sebagai Runner-Up VML 2026.",
+          img: "gallery_final/3_juara2_ulat_nangka.jpeg",
+          fallback: "Juara 2 Ulat Nangka/Juara 2 Ulat Nangka.jpeg"
+        },
+        {
+          id: 4,
+          category: "JUARA 3",
+          badge: "🥉 3RD PLACE / 2ND RUNNER-UP",
+          title: "Penyerahan Juara 3 (2nd Runner-Up): FORGE WOLF",
+          desc: "Penghargaan Juara 3 diberikan kepada tim FORGE WOLF yang tampil spektakuler sepanjang turnamen dengan rekor tak terkalahkan di regular season.",
+          img: "gallery_final/4_juara3_forge_wolf.jpeg",
+          fallback: "Juara 3 Forge Wolf/Juara 3 Forge Wolf.jpeg"
+        },
+        {
+          id: 5,
+          category: "TOP KILL",
+          badge: "⚔️ TOP KILLER AWARD",
+          title: "Penghargaan Individu: TOP KILL VML 2026",
+          desc: "Penghargaan individu khusus untuk pemain paling mematikan dengan akumulasi kill tertinggi sepanjang kompetisi Victorindo Mobile Legends 2026.",
+          img: "gallery_final/5_top_kill.jpeg",
+          fallback: "TOP KILL/WhatsApp Image 2026-11-15 at 4.52.49 PM (1).jpeg"
+        },
+        {
+          id: 6,
+          category: "TOP ASSIST",
+          badge: "🤝 TOP ASSIST AWARD",
+          title: "Penghargaan Individu: TOP ASSIST VML 2026",
+          desc: "Penghargaan individu untuk playmaker dan pengumpan terbaik yang mencatatkan rekor assist terbanyak bagi kemenangan timnya.",
+          img: "gallery_final/6_top_assist.jpeg",
+          fallback: "TOP ASSIT/WhatsApp Image 2026-11-15 at 4.52.43 PM (1).jpeg"
+        },
+        {
+          id: 7,
+          category: "TOP KDA",
+          badge: "👑 TOP KDA RATIO AWARD",
+          title: "Penghargaan Individu: TOP KDA RATIO VML 2026",
+          desc: "Penghargaan prestisius untuk pemain dengan efisiensi pertempuran tertinggi (rasio Kill + Assist dibanding Death) di turnamen VML 2026.",
+          img: "gallery_final/7_top_kda.jpeg",
+          fallback: "TOP KDA/WhatsApp Image 2026-11-15 at 4.52.49 PM.jpeg"
+        }
+      ];
+
+      function setupChampionsSlider() {
+        let currentSlide = 0;
+        let isPlaying = true;
+        let slideTimer = null;
+
+        const mainImg = document.getElementById("sliderMainImg");
+        const titleEl = document.getElementById("sliderTitleText");
+        const descEl = document.getElementById("sliderDescText");
+        const counterEl = document.getElementById("sliderCounterText");
+        const badgeEl = document.getElementById("sliderCategoryBadge");
+        const btnPrev = document.getElementById("btnSliderPrev");
+        const btnNext = document.getElementById("btnSliderNext");
+        const btnPlay = document.getElementById("btnSliderAutoplay");
+        const playIcon = document.getElementById("sliderPlayIcon");
+        const playText = document.getElementById("sliderPlayText");
+        const stage = document.getElementById("sliderStage");
+        const pills = document.querySelectorAll(".vml-slider-pill");
+        const dots = document.querySelectorAll(".vml-slider-dot");
+
+        if (!mainImg) return;
+
+        function renderSlide(idx, animated = true) {
+          if (idx < 0) idx = CHAMPION_SLIDES.length - 1;
+          if (idx >= CHAMPION_SLIDES.length) idx = 0;
+          currentSlide = idx;
+          const data = CHAMPION_SLIDES[idx];
+
+          if (animated) {
+            mainImg.classList.add("fade-out");
+            setTimeout(() => {
+              updateContent(data);
+              mainImg.classList.remove("fade-out");
+            }, 180);
+          } else {
+            updateContent(data);
+          }
+
+          pills.forEach((p, i) => p.classList.toggle("active", i === idx));
+          dots.forEach((d, i) => d.classList.toggle("active", i === idx));
+
+          const activePill = pills[idx];
+          if (activePill && activePill.parentElement) {
+            activePill.parentElement.scrollTo({
+              left: activePill.offsetLeft - 80,
+              behavior: "smooth"
+            });
+          }
+        }
+
+        function updateContent(data) {
+          mainImg.src = data.img;
+          mainImg.onerror = function() { this.src = data.fallback; };
+          mainImg.alt = data.title;
+          if (titleEl) titleEl.textContent = data.title;
+          if (descEl) descEl.textContent = data.desc;
+          if (counterEl) counterEl.textContent = (currentSlide + 1) + " / " + CHAMPION_SLIDES.length;
+          if (badgeEl) badgeEl.textContent = data.badge;
+        }
+
+        function nextSlide() { renderSlide(currentSlide + 1); }
+        function prevSlide() { renderSlide(currentSlide - 1); }
+
+        function startAutoPlay() {
+          stopAutoPlay();
+          if (isPlaying) {
+            slideTimer = setInterval(nextSlide, 4500);
+          }
+        }
+
+        function stopAutoPlay() {
+          if (slideTimer) {
+            clearInterval(slideTimer);
+            slideTimer = null;
+          }
+        }
+
+        if (btnNext) btnNext.addEventListener("click", () => { nextSlide(); startAutoPlay(); });
+        if (btnPrev) btnPrev.addEventListener("click", () => { prevSlide(); startAutoPlay(); });
+
+        pills.forEach((p, idx) => {
+          p.addEventListener("click", () => { renderSlide(idx); startAutoPlay(); });
+        });
+        dots.forEach((d, idx) => {
+          d.addEventListener("click", () => { renderSlide(idx); startAutoPlay(); });
+        });
+
+        if (btnPlay) {
+          btnPlay.addEventListener("click", () => {
+            isPlaying = !isPlaying;
+            if (isPlaying) {
+              if (playIcon) playIcon.textContent = "⏸️";
+              if (playText) playText.textContent = "Auto-Slide: Nyala";
+              startAutoPlay();
+            } else {
+              if (playIcon) playIcon.textContent = "▶️";
+              if (playText) playText.textContent = "Auto-Slide: Jeda";
+              stopAutoPlay();
+            }
+          });
+        }
+
+        if (stage) {
+          stage.addEventListener("mouseenter", stopAutoPlay);
+          stage.addEventListener("mouseleave", () => { if (isPlaying) startAutoPlay(); });
+
+          let touchStartX = 0;
+          stage.addEventListener("touchstart", (e) => {
+            touchStartX = e.changedTouches[0].screenX;
+            stopAutoPlay();
+          }, { passive: true });
+          stage.addEventListener("touchend", (e) => {
+            const touchEndX = e.changedTouches[0].screenX;
+            if (touchStartX - touchEndX > 50) nextSlide();
+            else if (touchEndX - touchStartX > 50) prevSlide();
+            if (isPlaying) startAutoPlay();
+          }, { passive: true });
+        }
+
+        document.addEventListener("keydown", (e) => {
+          const standingsSec = document.getElementById("page-standings");
+          if (standingsSec && standingsSec.classList.contains("active")) {
+            if (e.key === "ArrowLeft") { prevSlide(); startAutoPlay(); }
+            else if (e.key === "ArrowRight") { nextSlide(); startAutoPlay(); }
+          }
+        });
+
+        renderSlide(0, false);
+        startAutoPlay();
+      }
+
+function setupTrophyLiftAnimation() {
         const globalBg = document.getElementById("globalTrophyLiftBg");
         const canvas = document.getElementById("globalTrophyCanvas");
         const modalCanvas = document.getElementById("trophyModalCanvas");
@@ -14429,6 +14898,7 @@
 
       async function init() {
         setupTrophyLiftAnimation();
+        setupChampionsSlider();
         // Automatically pop up Champion Celebration on site load
         setTimeout(() => {
           const champModal = document.getElementById("trophyCelebrationModal");
