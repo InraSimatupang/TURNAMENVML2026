@@ -6115,15 +6115,20 @@
       box-shadow: 0 10px 35px rgba(0,0,0,0.85), 0 0 30px rgba(255, 215, 0, 0.25);
       background: radial-gradient(circle at center, #0f1c33 0%, #030710 100%);
       text-align: center;
+      min-height: 420px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
     }
     .champ-photo-img {
       width: 100%;
       height: auto;
-      max-height: 480px;
+      min-height: 340px;
+      max-height: 460px;
       object-fit: contain;
       display: block;
       margin: 0 auto;
-      transition: transform 0.4s ease;
+      transition: opacity 0.25s ease, transform 0.3s ease;
     }
     .champ-photo-frame:hover .champ-photo-img {
       transform: scale(1.02);
@@ -7385,7 +7390,7 @@
               <button type="button" class="champ-slider-arrow next" id="btnChampModalNext" aria-label="Foto Berikutnya" title="Foto Berikutnya">❯</button>
 
               <!-- Image -->
-              <img id="champModalImg" src="Juara 1 Black Owl/bo_champ_1.jpeg" onerror="this.src='Juara 1 Black Owl/WhatsApp Image 2026-11-15 at 4.52.46 PM (2).jpeg'" alt="Juara 1 VML 2026 - Black Owl" class="champ-photo-img" style="transition: opacity 0.25s ease;">
+              <img id="champModalImg" src="Juara 1 Black Owl/slide 1.jpeg" onerror="this.onerror=null; this.src='Juara 1 Black Owl/slide  1.jpeg';" alt="Juara 1 VML 2026 - Black Owl" class="champ-photo-img" style="transition: opacity 0.25s ease;">
               
               <!-- Badges -->
               <div class="champ-photo-badge">🥇 1ST PLACE WINNER</div>
@@ -7393,7 +7398,7 @@
 
               <!-- Caption & Dots -->
               <div class="champ-photo-caption">
-                <div id="champModalCaptionText">Penyerahan Hadiah &amp; Piagam Kemenangan Juara 1 VML 2026</div>
+                <div id="champModalCaptionText">Slide 1: Penyerahan Hadiah &amp; Piagam Kemenangan Juara 1 VML 2026</div>
                 <div class="champ-modal-dots" id="champModalDots">
                   <span class="champ-modal-dot active" data-slide="0"></span>
                   <span class="champ-modal-dot" data-slide="1"></span>
@@ -14640,8 +14645,8 @@
           badge: "🥇 1ST PLACE CHAMPION",
           title: "Penyerahan Piala Juara 1: BLACK OWL",
           desc: "Selamat kepada tim BLACK OWL atas kemenangan gemilang dan dinobatkan sebagai Juara 1 Turnamen Victorindo Mobile Legends 2026!",
-          img: "gallery_final/2_juara1_black_owl.jpeg",
-          fallback: "Juara 1 Black Owl/WhatsApp Image 2026-11-15 at 4.52.48 PM (1).jpeg"
+          img: "Juara 1 Black Owl/slide 1.jpeg",
+          fallback: "Juara 1 Black Owl/slide  1.jpeg"
         },
         {
           id: 3,
@@ -14695,19 +14700,25 @@
       ========================================================= */
       const BLACK_OWL_SLIDES = [
         {
-          img: "Juara 1 Black Owl/bo_champ_1.jpeg",
-          fallback: "Juara 1 Black Owl/WhatsApp Image 2026-11-15 at 4.52.46 PM (2).jpeg",
-          caption: "Penyerahan Hadiah & Piagam Kemenangan Juara 1 VML 2026"
+          id: 1,
+          name: "Slide 1",
+          img: "Juara 1 Black Owl/slide 1.jpeg",
+          fallback: "Juara 1 Black Owl/slide  1.jpeg",
+          caption: "Slide 1: Penyerahan Hadiah & Piagam Juara 1 VML 2026 (Black Owl)"
         },
         {
-          img: "Juara 1 Black Owl/bo_champ_2.jpeg",
-          fallback: "Juara 1 Black Owl/WhatsApp Image 2026-11-15 at 4.52.47 PM (1).jpeg",
-          caption: "Selebrasi Pengangkatan Piala Juara 1 oleh Roster BLACK OWL"
+          id: 2,
+          name: "Slide 2",
+          img: "Juara 1 Black Owl/slide 2.jpeg",
+          fallback: "Juara 1 Black Owl/slide  2.jpeg",
+          caption: "Slide 2: Momen Pengangkatan Piala Juara 1 oleh Roster BLACK OWL"
         },
         {
-          img: "Juara 1 Black Owl/bo_champ_3.jpeg",
-          fallback: "Juara 1 Black Owl/WhatsApp Image 2026-11-15 at 4.52.48 PM (1).jpeg",
-          caption: "Momen Foto Bersama Para Juara VML 2026 di Panggung Grand Final"
+          id: 3,
+          name: "Slide 3",
+          img: "Juara 1 Black Owl/slide 3.jpeg",
+          fallback: "Juara 1 Black Owl/slide  3.jpeg",
+          caption: "Slide 3: Momen Foto Bersama Para Juara VML 2026 di Panggung Grand Final"
         }
       ];
 
